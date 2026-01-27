@@ -13,6 +13,6 @@ module.exports = {
     },
 
     timeouts: {
-        pageLoad: 30000,
+        pageLoad: 58000,
     }
 };

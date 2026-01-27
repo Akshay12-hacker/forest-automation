@@ -1,23 +1,32 @@
-const { chromium, firefox } = require('playwright');
-const config = require('../config/app.config');
+const { chromium } = require('playwright');
+const path = require('path');
 const { log } = require('../utils/logger');
 
+const PROFILE_DIR = path.resolve(__dirname, '../../forest-browser-profile');
+
 async function launchBrowser() {
-    log('Launching browser...');
+  log(`Using browser profile at: ${PROFILE_DIR}`);
 
-    const browser = await chromium.launch({
-        headless: config.headless,
-        args: config.browserArgs,
-    });
+  const context = await chromium.launchPersistentContext(
+    PROFILE_DIR,
+    {
+      headless: false,
+      slowMo: 40,
+      viewport: null,
+      args: [
+        '--start-maximized',
+        '--disable-blink-features=AutomationControlled'
+      ]
+    }
+  );
 
-    const context = await browser.newContext({
-        viewport: null,
-    });
+  const page = context.pages().length
+    ? context.pages()[0]
+    : await context.newPage();
 
-    const page = await context.newPage();
+  log('Persistent browser launched');
 
-    log('Browser launched successfully.');
-    return { browser, context, page };
+  return { context, page };
 }
 
 module.exports = { launchBrowser };
