@@ -3,31 +3,26 @@ const { log } = require('../utils/logger');
 async function dashboardFlow(page) {
   log('Phase 4: Dashboard flow started');
 
-  // Ensure we are on dashboard
-  await page.waitForURL(/DashBoardHome\.aspx/, {
+  // ✅ Ensure dashboard by URL CHECK, not wait
+  if (!page.url().includes('DashBoardHome.aspx')) {
+    await page.waitForURL(/DashBoardHome\.aspx/, { timeout: 30000 });
+  }
+
+  log('Dashboard page confirmed');
+
+  // 🔥 Click as SOON as visible (not after full load)
+  const bookPermitLink = page.locator('a:has-text("Book Permit")');
+
+  await bookPermitLink.waitFor({
+    state: 'visible',
     timeout: 30000
   });
 
-  log('Dashboard page detected');
+  await bookPermitLink.click();
+  log('"Book Permit" sidebar link clicked immediately when visible');
 
-  // 🔹 Wait for Book Permit option
-  const bookPermit = page.locator(
-    'a',{hasText: 'Book Permit'}
-  );
-
-  await bookPermit.waitFor({ timeout: 30000 });
-  log('"Book Permit" option found');
-
-  // Click Book Permit
-  await bookPermit.click();
-  log('"Book Permit" clicked');
-
-  // Wait for navigation away from dashboard
-  await page.waitForURL(url => !url.includes('DashBoardHome.aspx'), {
-    timeout: 30000
-  });
-
-  log('Successfully exited dashboard to permit flow');
+  // ❌ DO NOT wait for full load
+  // Let next phase decide what to wait for
 }
 
 module.exports = { dashboardFlow };
