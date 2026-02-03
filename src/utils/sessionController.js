@@ -1,27 +1,34 @@
-const { log } = require('../utils/logger');
+const { log } = require('./logger');
 
 async function ensureLoggedIn(page) {
-  // If already logged in
-  if (page.url().includes('DashBoardHome.aspx')) {
-    log('✅ Already on dashboard, login skipped');
-    return;
+  const loginButton = page.locator('a.myButton:has-text("WANT TO LOGIN?")');
+
+  // 🔍 HARD CHECK — if login button exists, user is NOT logged in
+  if (await loginButton.count() === 0) {
+    log('✅ User already logged in');
+    return true;
   }
 
-  // If on login page → manual login required
-  if (page.url().includes('LoginUserProfilePage.aspx')) {
-    log('🔐 Login required. Please login (email + password + captcha)');
-     // officer logs in manually
+  // ❌ NOT LOGGED IN → MUST LOGIN
+  log('🔐 User not logged in, login required');
 
-    // 🔥 WAIT FOR DASHBOARD AFTER LOGIN
-    await page.waitForURL(/DashBoardHome\.aspx/, {
-      timeout: 120000 // captcha + human time
-    });
+  // Open login UI
+  await loginButton.click();
+  await page.locator('span.redButton:has-text("User Login")').click();
 
-    log('✅ Login completed, dashboard reached');
-    return;
-  }
+  // Wait for login page
+  await page.waitForURL(/LoginUserProfilePage\.aspx/, { timeout: 30000 });
+  log('🧑‍💻 Login page opened — please login manually (captcha)');
 
-  throw new Error(`Unexpected URL during login: ${page.url()}`);
+
+
+  // 🔒 REAL CONFIRMATION — login button disappears
+  await page.waitForFunction(() => {
+    return !document.querySelector('a.myButton');
+  }, { timeout: 120000 });
+
+  log('✅ Login completed, session active');
+  return true;
 }
 
 module.exports = { ensureLoggedIn };

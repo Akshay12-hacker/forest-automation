@@ -1,7 +1,7 @@
 const { log } = require('../utils/logger');
 
 async function homeFlow(page) {
-  log('Opening forest homepage');
+  log('Home flow started');
 
   await page.goto('https://forest.mponline.gov.in/', {
     waitUntil: 'domcontentloaded',
@@ -10,26 +10,16 @@ async function homeFlow(page) {
 
   log('Homepage DOM loaded');
 
-  // Wait for "Want to Login?"
-  const wantLogin = page.locator('text=/want to login/i');
-  await wantLogin.waitFor({ timeout: 60000 });
+  const loginButton = page.locator('a.myButton:has-text("WANT TO LOGIN?")');
 
-  log('"Want to Login?" detected');
+  // 🔍 ONLY CHECK: does login button exist?
+  if (await loginButton.count() > 0) {
+    log('🔐 Login button present on homepage');
+    return { needsLogin: true };
+  }
 
-  await wantLogin.hover();
-  log('"Want to Login?" hovered');
-
-  const userLogin = page.locator('text=/user login/i');
-  await userLogin.waitFor({ timeout: 20000 });
-  await userLogin.click();
-
-  log('"User Login" clicked');
-
-  await page.waitForURL(/LoginUserProfilePage\.aspx/, {
-    timeout: 60000
-  });
-
-  log('Reached LoginUserProfilePage.aspx');
+  log('ℹ️ Login button not present on homepage');
+  return { needsLogin: false };
 }
 
 module.exports = { homeFlow };

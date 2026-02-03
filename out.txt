@@ -1,0 +1,1646 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head> 
+
+    <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NBN7BZ7V');</script>
+<!-- End Google Tag Manager -->
+
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="google-site-verification" content="PkMPedMw-_fEbSOVoLmAfNjc6UL4iF-Q9aRqlZGz8VM" /><meta name="title" content="Madhya Pradesh Forest Department – Online Safari Booking &amp; Forest Services | MPOnline" /><meta name="description" content="Book jungle safaris, park and tiger-reserve permits, register as new user, and manage your booking status via the MPOnline Forest Portal of Madhya Pradesh." /><meta name="keywords" content="Madhya Pradesh forest safari booking, tiger reserve permit MP, national park permit Madhya Pradesh online, MPOnline forest user registration, MP forest permit cancellation" /><link rel="canonical" href="https://forest.mponline.gov.in/" />
+
+ <!-- Open Graph / Facebook tags -->
+ <meta property="og:title" content="Madhya Pradesh Forest Department – Online Safari Booking &amp; Services" /><meta property="og:description" content="Official MPOnline portal for booking forest park and tiger-reserve safaris, user registration and checking permit status in Madhya Pradesh." /><meta property="og:type" content="website" /><meta property="og:url" content="https://forest.mponline.gov.in/" />
+ <!-- <meta property="og:image" content="URL-to-representative-image-of-wildlife-safari-MP" /> -->
+
+ <!-- Twitter card -->
+ <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Madhya Pradesh Forest Department – Safari Booking &amp; Online Services" /><meta name="twitter:description" content="Book your forest and tiger-reserve safari online, register new user and manage your booking via MPOnline Forest Portal." />
+
+ <!-- Service‐specific meta tags (optional) -->
+ <meta name="service:safari-booking" content="Online booking of park and tiger-reserve safari permits in Madhya Pradesh via MPOnline" /><meta name="service:user-registration" content="New user registration for MPOnline Forest Portal of Madhya Pradesh" /><meta name="service:booking-status" content="Check permit and booking status for forest safaris in Madhya Pradesh online" /><title>
+	Forest Department Madhya Pradesh
+</title><link rel="stylesheet" type="text/css" href="css/Style2.css" /><link rel="stylesheet" type="text/css" href="css/NewStyle.css" /><link rel="stylesheet" type="text/css" href="css/animate.css" /><link href="css/Table_style.css" rel="stylesheet" type="text/css" /><link href="css/Login.css" rel="stylesheet" type="text/css" /><link href="css/StyleSheet.css" rel="stylesheet" type="text/css" /><link href="css/font-awesome.css" rel="stylesheet" /><link href="css/DashBoard.css" rel="stylesheet" /><link href="css/style_inner.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquary.min.js" type="text/javascript"></script>
+    <script src="/js/modernizr.custom.js" type="text/javascript"></script>
+    
+    <script src="/js/jquery.effects.core.js" type="text/javascript"></script>
+
+    
+    <meta name="google-site-verification" content="PkMPedMw-_fEbSOVoLmAfNjc6UL4iF-Q9aRqlZGz8VM" />
+    <meta name="title" content="Madhya Pradesh Forest Department – Online Safari Booking & Forest Services | MPOnline" />
+    <meta name="description" content="Book jungle safaris, park and tiger-reserve permits, register as new user, and manage your booking status via the MPOnline Forest Portal of Madhya Pradesh." />
+    <meta name="keywords" content="Madhya Pradesh forest safari booking, tiger reserve permit MP, national park permit Madhya Pradesh online, MPOnline forest user registration, MP forest permit cancellation" />
+    <link rel="canonical" href="https://forest.mponline.gov.in/" />
+
+    <!-- Open Graph / Facebook tags -->
+    <meta property="og:title" content="Madhya Pradesh Forest Department – Online Safari Booking & Services" />
+    <meta property="og:description" content="Official MPOnline portal for booking forest park and tiger-reserve safaris, user registration and checking permit status in Madhya Pradesh." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://forest.mponline.gov.in/" />
+    <!-- <meta property="og:image" content="URL-to-representative-image-of-wildlife-safari-MP" /> -->
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Madhya Pradesh Forest Department – Safari Booking & Online Services" />
+    <meta name="twitter:description" content="Book your forest and tiger-reserve safari online, register new user and manage your booking via MPOnline Forest Portal." />
+
+    <!-- Service‐specific meta tags (optional) -->
+    <meta name="service:safari-booking" content="Online booking of park and tiger-reserve safari permits in Madhya Pradesh via MPOnline" />
+    <meta name="service:user-registration" content="New user registration for MPOnline Forest Portal of Madhya Pradesh" />
+    <meta name="service:booking-status" content="Check permit and booking status for forest safaris in Madhya Pradesh online" />
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBN7BZ7V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <form name="aspnetForm" method="post" action="./" id="aspnetForm" autocomplete="off" autofill="off">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY1NDU2MTA1Mg9kFgJmD2QWAgIDD2QWAgIJDw8WAh4EVGV4dAUeU2VydmVkIGJ5OiBCSEFHQVQgU0lOR0ggU2VydmVyZGRkwocZp9qrHyeYHV4uey23lTG6sLM=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+    <div class="NP_header">
+        <div class="NP_header_in">
+            <a href="/Index.aspx">
+                <img src="/Images/Logos/nationalpark_logo.png" class="srvc_logo" alt="" style="height: 64px;" />
+            </a><a href="http://mptiger.mponline.gov.in/" target="_blank">
+                <img src="/Images/Logos/mpfoundation_logo.png" class="save_logo" alt="" style="height: 62px;" /></a>
+        </div>
+    </div>
+    <div id="ctl00_divLogger" style="margin: 0px 50px 0 auto; min-width: 150px;
+        float: right; display: none;">
+        <div id="ctl00_dd" class="wrapper-dropdown-5" tabindex="1" style="min-width: 150px;
+            top: 0px; padding: 10px 40px 0px 10px; height: 28px; text-align: left; margin-right: 11px;
+            min-width: 150px;">
+            <img src="/images/docs-icon.png" height="11" style="padding-right: 4px;" />
+            <span id="ctl00_lblProfileName"></span>
+            <ul class="dropdown" style="border-bottom-left-radius: 0.6em;">
+                <li style="margin-right: 9px;"><a href="/DashBoardHome.aspx"><i class="icon-cog"
+                    style="height: 30px; padding-top: 13px;"></i>DashBoard </a></li>
+                <li style="margin-right: 9px;"><a href="/Index.aspx?action=logout"><i class="icon-remove"
+                    style="height: 30px; padding-top: 13px;"></i>Log out </a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div>
+        
+    <style>
+        .searchResult {
+            width: 457px;
+            background-color: white;
+            border-radius: 17px;
+            margin-left: 10px;
+            margin-top: -16px;
+            font-size: 85%;
+        }
+
+        .searchResultUl {
+            padding-top: 5px;
+            width: 410px;
+        }
+
+        .searchResultLi {
+            display: block;
+            margin-left: -26px;
+            padding-bottom: 2px;
+            padding-top: 2px;
+            /*background-color: White;*/
+            border-bottom: 1px dotted #ceccc4a6;
+        }
+
+            .searchResultLi:hover {
+                background-color: #dcdcca4d;
+            }
+
+        .searchResultAnchorRed {
+            float: right;
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(223, 117, 20);
+            padding: 1px 8px 3px 8px;
+            margin-left: 1px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 90%;
+            z-index: 999;
+            margin-right: 25px;
+        }
+
+            .searchResultAnchorRed:hover {
+                background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+            }
+
+        .searchResultAnchorPrimary {
+            float: right;
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(28, 184, 65);
+            padding: 1px 8px 2px 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 90%;
+            z-index: 999;
+        }
+
+            .searchResultAnchorPrimary:hover {
+                background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+            }
+
+        .searchResultAnchorSecondary {
+            float: right;
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(152, 149, 52);
+            padding: 1px 8px 2px 8px;
+            margin-left: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 90%;
+            z-index: 999;
+        }
+
+            .searchResultAnchorSecondary:hover {
+                background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+            }
+
+        .txtSearch:focus {
+            outline: none;
+            /*border-bottom: 2px solid bisque;*/
+        }
+
+        .txtSearch {
+            width: 89%;
+            top: -1px;
+            position: relative; /* margin-top: 3px; */
+            margin-left: 10px; /* border: 1px solid white; */ /* border-bottom: 2px solid #ffffff; */
+            height: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            color: white;
+            background: 0px none transparent; /*padding-left: 5px;*/
+            outline: none;
+            border-style: none;
+            transition: all 100ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+
+            .txtSearch::placeholder {
+                color: white;
+            }
+
+        .MainMenuInitiator {
+            width: 30px;
+            margin: 5px 0px 0px 5px;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .MainMenuInitiatorImg {
+            height: 24px;
+            width: 24px;
+            border-radius: 25px;
+            border: 2px solid white;
+            margin: 5px 0px 0px 5px;
+            padding: 5px;
+            cursor: pointer;
+            background: linear-gradient(119deg, rgba(189,106,27,1) 7%, rgba(235,156,82,1) 100%);
+            margin: 3px;
+        }
+
+        .MainAlertInitiatorImg {
+            height: 24px;
+            width: 24px;
+            border-radius: 25px;
+            border: 2px solid white;
+            margin: 5px 0px 0px 5px;
+            padding: 5px;
+            cursor: pointer;
+            background: linear-gradient(119deg, rgba(189,106,27,1) 7%, rgba(235,156,82,1) 100%);
+        }
+
+        .MainSearchInitiatorImg {
+            height: 24px;
+            width: 24px;
+            border-radius: 25px;
+            border: 2px solid white;
+            margin: 5px 0px 0px 5px;
+            padding: 5px;
+            cursor: pointer;
+            background: linear-gradient(119deg, rgba(189,106,27,1) 7%, rgba(235,156,82,1) 100%);
+        }
+
+        .MainSearchInitiatorImgEnlarge {
+            width: 452px;
+        }
+
+        .MainSearchInitiatorImgEnlargeMobile {
+            width: 400px !important;
+        }
+
+        .MainSearchInitiatorImgNormal {
+            width: 24px;
+        }
+
+        .locationtext {
+            background-color: #115211;
+            border-radius: 7px;
+            padding: 1px 7px;
+        }
+
+        #subMenuClose:hover {
+            -webkit-box-shadow: 0px 0px 30px 0px white;
+            -moz-box-shadow: 0px 0px 30px 0px white;
+            box-shadow: 0px 0px 30px 0px white;
+        }
+
+        .pin {
+            position: relative;
+        }
+
+            .pin div {
+                color: #FFEB3B;
+                position: relative;
+                top: -5px;
+                left: -38px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+
+                .pin div span {
+                    /*text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,0 0 0.2em #87F;*/
+                    cursor: pointer;
+                }
+
+                    .pin div span:hover {
+                        text-shadow: 0 0 0.2em red, 0 0 0.2em red,0 0 0.2em red;
+                    }
+
+            .pin image:hover {
+                text-shadow: 0 0 0.2em red, 0 0 0.2em red,0 0 0.2em red;
+            }
+
+        .wrapDiv {
+            display: none;
+        }
+
+        .categoryHeader {
+            background-color: rgba(255, 255, 255, 0.63);
+            position: absolute;
+            top: 538px;
+            left: 50px;
+            z-index: 99999;
+            display: none;
+            -webkit-box-shadow: 0px -4px 5px -3px white inset;
+            -moz-box-shadow: 0px -4px 5px -3px white inset;
+            box-shadow: 0px -4px 5px -3px white inset;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .divNotice {
+            display: block;
+            position: absolute;
+            z-index: 99999;
+            top: 150px;
+            left: 50px;
+            color: black;
+            -webkit-box-shadow: 0px -4px 5px -3px white inset;
+            -moz-box-shadow: 0px -4px 5px -3px white inset;
+            box-shadow: 0px -4px 5px -3px yellow inset;
+            font-size: 12px;
+            font-family: cursive;
+            width: 300px;
+            border: 1px solid #d1cab5;
+            background-color: white;
+            padding: 3px;
+        }
+
+        .eBrochure {
+            padding: 9px 8px;
+            margin-top: 0px;
+            margin-left: -67px;
+            border: 1px solid #f5e0ab;
+            background-color: #f5e0ab;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            text-transform: capitalize;
+            color: #a98130;
+        }
+
+        /* POP UP CLASS*/
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: visible;
+            opacity: 0;
+            z-index: 0;
+        }
+
+            .overlay:target {
+                visibility: visible;
+                opacity: 1;
+            }
+
+        .popup {
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            width: 39%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+
+            .popup h2 {
+                margin-top: 0;
+                color: #008000;
+                font-family: Tahoma, Arial, sans-serif;
+            }
+
+            .popup .closePopUp {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+            }
+
+                .popup .closePopUp:hover {
+                    color: #06D85F;
+                }
+
+            .popup .contentPopup {
+                min-height: 30%;
+                overflow: auto;
+                font-family: cursive;
+                color: #e24545;
+            }
+
+        @media screen and (max-width: 700px) {
+            .box {
+                width: 70%;
+            }
+
+            .popup {
+                width: 70%;
+            }
+        }
+
+        .blink_me {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .navMobile {
+            width: 100% !important;
+        }
+
+            .navMobile li a {
+                padding: 12px 5px !important;
+                font-size: 12px;
+            }
+    </style>
+
+    <img id="imgCategoryHeader" src="images/Logos/Icon_TigerReserve.png" class="categoryHeader" />
+    <div id="subMenu" style="position: relative; top: -68px; left: 10px; width: 1329px; height: 616px; background-image: url(images/MPMap.jpg); z-index: 9999; overflow: hidden; display: none;">
+        <div id="popupNotice" class="overlay" style="display: none;">
+            <div class="popup" style="margin-top: 50px">
+                <a class="closePopUp" href="#" onclick="$('#popupNotice').hide();">&times;</a>
+                <div class="contentPopup">
+                    <ul>
+                        <li>Bookings of next 120 days will be open today at 11:00 AM.</li>
+
+                        <li>Pench Tiger Reserve entry timing for Morning safari from 08 Jan 2024 to 13 Jan 2024  at 7:30 AM.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img id="subMenuClose" src="images/Close.png" style="position: relative; top: 8px; left: 10px; cursor: pointer; z-index: 999; background-color: #fdac02;"
+            onclick="hideSubMenus();" />
+        <div id="TigerReserve" class="wrapDiv">
+            <div class="pin" style="top: 414px; left: 845px; z-index: 99;">
+                <div>
+                    <span onclick="window.location='Search.aspx?park=2'" class="locationtext">Kanha Tiger
+                        Reserve</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 50px; left: 550px;">
+                <div>
+                    <span onclick="window.location = 'https://forest.mponline.gov.in/Tier2Forest/SelectTripCategoryEntryNew.aspx?T=Tier2&ParkID=MNP'"                
+                        class="locationtext">Madhav Tiger Reserve</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+
+            <div class="pin" style="top: 250px; left: 580px;">
+                <div>
+                    <span onclick="window.location = 'Search.aspx?park=RTR'" class="locationtext">Ratapani Wildlife Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+
+            <div class="pin" style="top: 248px; left: 885px;">
+                <div style="position: relative; top: -4px; left: -84px;">
+                    <span onclick="window.location = 'Search.aspx?park=1'" class="locationtext">Bandhavgarh Tiger Reserve</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 84px; left: 803px;">
+                <div>
+                    <span onclick="window.location = 'Search.aspx?park=3'" class="locationtext">Panna Tiger
+                        Reserve</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 240px; left: 717px;">
+                <div>
+                    <span onclick="window.location = 'Search.aspx?park=4'" class="locationtext">Pench Tiger
+                        Reserve</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 140px; left: 618px;">
+                <div>
+                    <span onclick="window.location = 'Search.aspx?park=5'" class="locationtext">Satpura
+                        Tiger Reserve</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 22px; left: 936px;">
+                <div>
+                    <span onclick="window.location = 'Search.aspx?park=STR'" class="locationtext">Sanjay-Dubri
+                        Tiger Reserve</span>
+                    
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: -62px; left: 684px;">
+                <div style="position: relative; top: -6px; left: -80px;">
+                    <span onclick="window.location = 'Search.aspx?park=6'" class="locationtext">Veerangana Durgavati Tiger Reserve</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+        </div>
+        <div id="Fossil" class="wrapDiv">
+            <div class="pin" style="top: 368px; left: 343px; z-index: 99;">
+                <div style="position: relative;">
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Dinosor National
+                        Park</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 291px; left: 834px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Ghugua National
+                        Park</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+        </div>
+        <div id="WildernessHistory" class="wrapDiv">
+            
+            <div class="pin" style="top: 40px; left: 550px;">
+                <div>
+                    <span onclick="window.location = 'https://forest.mponline.gov.in/Tier2Forest/SelectTripCategoryEntry.aspx?T=Tier2&ParkID=KPS'"
+                        class="locationtext">Kuno National Park</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+
+
+            <div class="pin" style="top: 188px; left: 580px; display: none">
+                <div>
+                    <span onclick="window.location = 'https://forest.mponline.gov.in/Tier2Forest/SelectTripCategoryEntryNew.aspx?T=Tier2&ParkID=MNP'"
+                        class="locationtext">Madhav National Park</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+
+
+            
+            
+        </div>
+        <div id="GhariyalConservation" class="wrapDiv">
+            <div class="pin" style="top: 15px; left: 546px; z-index: 99; display: none;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">National Chambal
+                        Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 91px; left: 801px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Ken Ghariyal Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 111px; left: 952px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Son Ghariyal Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+        </div>
+        <div id="Birds" class="wrapDiv">
+            <div class="pin" style="top: 85px; left: 618px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Karera Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: -24px; left: 594px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Ghatigaon Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 199px; left: 314px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Sailana Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 245px; left: 308px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Sadarpur Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+        </div>
+        <div id="WildernessLandscape" class="wrapDiv">
+            <div class="pin" style="top: 42px; left: 540px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Palpur-Kuno Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 312px; left: 486px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Kheoni Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 86px; left: 986px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Bagdara Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 151px; left: 751px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Veerangana Durgavati
+                        Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 146px; left: 702px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Noradehi Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 136px; left: 608px;">
+                <div>
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">Singodi Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+        </div>
+        <div id="Others" class="wrapDiv">
+            <div class="pin" style="top: 359px; left: 409px; z-index: 99;">
+                <div style="position: relative;">
+                    
+                    <span onclick="window.location = '#popupNotice'" class="locationtext">RalaMandal Sanctuary</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            <div class="pin" style="top: 283px; left: 527px;">
+                <div>
+                    
+                    <span onclick="window.location = 'https://forest.mponline.gov.in/Tier2Forest/SelectTripCategoryEntryNew.aspx?ParkID=VVNP&T=Tier2'"
+                        class="locationtext">Van Vihar National Park-Zoo</span>
+                </div>
+                <img src="images/BlueCircleAnim2.gif" />
+            </div>
+            
+        </div>
+        <div id="Special" class="wrapDiv" style="display: block;">
+            <div class="pin" style="top: 396px; left: 634px; z-index: 99;">
+                <div style="position: relative; left: -20px;">
+                    <span onclick="window.location = 'https://forest.mponline.gov.in/Tier2Forest/SelectTripCategoryEntryNew.aspx?T=Tier2&ParkID=PCMR'"
+                        class="locationtext">Pachmarhi</span>
+                </div>
+                <img src="Images/BlueCircleAnim2.gif">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div style="width: 450px; display: block; height: 100px; display: none; border-radius: 5px 5px; background-color: White; margin: 20px 10px 10px 10px; padding: 10px 10px; color: red; font-family: cursive; text-align: left; font-size: 13px;"
+            class="closePopUp">
+            <h2 style="color: green; color: green; margin-top: 0; font-size: 18px; margin-bottom: 0.5em;">
+                <img src="Images/Yahoo.png" /></h2>
+            <div style="margin-top: 5px;">
+                <div class="AlertBoxDiv">
+                    <div class="AlertBoxDiv">
+                        <a href="/Tier2Forest/SearchNightSafari.aspx?T=Tier2&ParkID=VVNP">Van Vihar National Park - Late Night Safari</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main_menu_dv" id="MainMenu" style="display: none;">
+        <ul id="nav">
+            <li class="eBrochure" style="cursor: pointer;" onclick="callMenuInitiatorReverse();">e Brochure > </li>
+            <li><a href="#">Tiger Reserves</a>
+                <ul style="z-index: 99999;">
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=STR">Sanjay-Dubri Tiger Reserve</a>
+                    </li>
+                    
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=3">Panna Tiger Reserve</a></li>
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=5">Satpura Tiger Reserve</a></li>
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=2">Kanha Tiger Reserve</a></li>
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=1">Bandhavgarh Tiger Reserve</a></li>
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=4">Pench Tiger Reserve</a> </li>
+                </ul>
+            </li>
+            <li><a href="#">National Parks</a>
+                <ul style="z-index: 99999;">
+                    <li><a href="Tier2Forest/SelectTripCategoryEntryNew.aspx?ParkID=KPS&T=Tier2">Kuno National Park<img src="Images/new.gif" alt="" /></a></li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Dinosaur National Park</a></li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Ghughwa National Park</a></li>
+                    <li><a href="Tier2Forest/SelectTripCategoryEntryNew.aspx?ParkID=VVNP&T=Tier2">Van Vihar
+                        National Park-Zoo<img src="Images/new.gif" alt="" /></a></li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Madhav National Park</a></li>
+                    <li><a href="#">The other 6 National Parks are notified as Tiger Reserve as well</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sanctuaries </a>
+                <ul style="z-index: 99999;">
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=RTR">Ratapani Wildlife Sanchuary</a> </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Sardarpur Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Sailana Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Ghatigaon Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Karera Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">National Chambal Sanctuary</a>
+
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Son Ghariyal Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Ken Ghariyal Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Bori Sanctuary</a>
+                    </li>
+                    
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Panpatha Sanctuary</a>
+                    </li>
+
+                </ul>
+                <ul style="left: 327px; z-index: 99999;">
+
+                    
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Bagdara Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Veerangana Durgavati
+                        Sanctuary</a> </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Nauradehi Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Singodi Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">RalaMandal Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Oracha Sanctuary</a>
+                    </li>
+
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Narsinhgarh Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Gandhi Sagar Sanctuary</a>
+                    </li>
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Gangau Sanctuary</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Zoo</a>
+                <ul style="z-index: 99999;">
+                    <li><a href="#" onclick="javascript:alert('Coming Soon...!');">Mukundpur Zoo</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Special Sites</a>
+                <ul style="z-index: 99999;">
+                    <li><a href="eBrochure/eBrochureDetailsV2.aspx?parkid=PCMR">Pachmarhi</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="MainMenuInitiator" id="MainMenuInitiator1">
+        <div id="MainMenuInitiator" class="MainMenuInitiatorImg" title="Click here for eBrochure">
+            <img src="/images/Menu.png" alt="Menu" style="height: 24px; width: 24px;" onclick="callMenuInitiator();" />
+        </div>
+        <div class="MainAlertInitiatorImg" id="alertIcon" title="Latest Alerts & Notifications">
+            <img src="/images/Bell.png" alt="Alert" style="height: 24px; width: 24px;" onclick="callAlertInitiator();" />
+        </div>
+        <div class="MainSearchInitiatorImg" id="SearchDiv" title="Search your Park and directly Book Permit">
+            <input type="text" id="searchPark" onkeyup="showSearchResult();" class="txtSearch"
+                style="display: none;" placeholder="Type anything about Park and book your permit" />
+
+            <img src="/images/SearchIcon.png" id="searchIcon" alt="Search" style="height: 24px; width: 24px;"
+                onclick="callSearchInitiator();" />
+            <img src="/images/SearchIcon.png" id="searchIcon2" alt="Search" style="height: 24px; width: 24px; display: none;" />
+            <img src="/images/CloseCircleWhite.png" alt="Search" id="ImgClose" style="height: 30px; width: 30px; margin-top: -3px; margin-left: 1px; display: none;" />
+        </div>
+        <div id="divResult" class="searchResult">
+        </div>
+    </div>
+
+    <div id="popupNotice123" class="popup" style="margin-top: 30px; padding: 5px 10px 5px 15px; font-size: 11px; width: 27%; display: none;">
+
+        <div id="divNotice1" class="contentPopup" style="display: none;">
+            <strong style="color: red;">Forest Permit Booking Updates:-</strong>
+            <a class="closePopUp" style="align-content: center; font-size: medium; margin-left: 750px; margin-top: -18px" title="Close" href="#" onclick="$('#popupNotice123').hide();">X</a>
+            <hr />
+            <ul style="margin-left: -23px;">
+                
+
+                
+
+
+                
+                
+                
+                
+            </ul>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="main">
+        <div style="width: 716px; display: none; height: 54px; border-radius: 5px 5px; background-color: White; margin: 1px 1px 1px 10px; padding: 5px 1px; color: red; font-family: Arial,'Arial Rounded MT'; text-align: left; font-size: 15px; opacity: 0.8; position: absolute; top: 0px; left: 267px;"
+            class="closePopUp">
+            <p style="margin: 0px;">
+                Hurray.....!
+            Golden Tiger Pass and it's permit will launched today @ 4:00 PM.
+          
+            </p>
+            
+            
+        </div>
+        
+
+        <div id="AlertTab" style="display: none; opacity: 0.65; width: 90%; height: 35%; border-radius: 5px 5px; background-color: White; margin: 5px 10px 10px 2px; padding: 5px 5px; font-family: cursive; text-align: left; font-size: 15px; position: absolute; top: 125px !important; left: 60px;"
+            class="closePopUp">
+            <div style="font-size: 10px; margin-top: 5px; float: left; font-weight: bold; text-shadow: 2px 2px 5px darkgrey; width: 100%;">
+                <div style="color: red; font-size: 17px; width: 100%; border-bottom: 3px solid red;">
+                    
+                    <img src="/images/Bell.png" class="MainAlertInitiatorImg" alt="Alert" style="margin-right: 10px;" /><span> Forest Permit Booking Updates:-</span>
+                    <span style="float: right;">
+                        <img src="/images/close.png" alt="Alert" style="cursor: pointer; margin-right: 10px; background-color: #bd6a1b; height: 26px;" onclick="callAlertInitiatorReverse();" />
+                    </span>
+                </div>
+                <div style="margin-top: 10px; float: left; color: red; width: 100%; font-size: 11px; font-weight: bold; margin-top: 5px; float: left; font-weight: 400; text-shadow: 1px 0px 0px darkgrey;">
+
+                    <div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td>
+                                        
+
+                                      <span>Latest Update:</span>
+                                        <p style="color: black">
+                                            सतपुड़ा टाइगर रिज़र्व – भीमकुंड (कपिलधारा निजी वाहन) के लिए ऑनलाइन बुकिंग को तत्काल प्रभाव से स्थगित किया जाता है।
+                                            दिनांक 09/01/2026 एवं उसके पश्चात की सभी जारी सफारी परमिट निरस्त मानी जाएँगी। संबंधित बुकिंग के रिफंड की प्रक्रिया प्रारंभ की जाएगी।
+                                        </p>
+
+                                       
+
+
+                                       
+
+                                        
+
+
+
+                                        <span>PARK ENTRY TICKET TARIFF :</span>
+
+                                        <p style="color: black">
+                                            A 10% increase will be levied on park entry tickets starting next season 2025-26 from 1st JULY 2025 
+                                            ( MP Govt. Order no F 14-82-1988 dated 22/10/24) <a href="Images/Letter%209787-%20अधिसूचना%20के%20प्रकाशन%20बावत।.pdf"
+                                                target="_blank">Click here</a> for more details...
+
+                                         
+                                        </p>
+
+
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ul id="cbp-bislideshow" class="cbp-bislideshow" onclick="if (PosVal > 200) { $('#sideNavi').css('right', '50px'); }">
+        
+        <li>
+            <img src="images/img1.jpg" alt="" />
+        </li>
+        <li>
+            <img class="lazy" data-src="images/img2.jpg" alt="" />
+        </li>
+        <li>
+            <img class="lazy" data-src="images/img3.jpg" alt="" />
+        </li>
+        <li>
+            <img class="lazy" data-src="images/img5.jpg" alt="" />
+        </li>
+        
+        
+        
+    </ul>
+    <div id="cbp-bicontrols" class="cbp-bicontrols">
+        <span class="cbp-biprev"></span><span class="cbp-bipause"></span><span class="cbp-binext"></span>
+        <p style="width: 50px; height: 20px; margin: -77px 13px; color: rgba(255, 255, 255, 0.65); float: right; position: relative; padding: 0px 2px; font-weight: bold; font-size: 13px;"
+            id="divCount">
+        </p>
+    </div>
+    <!-- sidenavi menu //-->
+    <div id="sideNavi">
+        <!-- sidenavi menu //-->
+        <div class="side-navi-item-default">
+        </div>
+        <div class="side-navi-item item1 ">
+        </div>
+        <div class="side-navi-item item2">
+        </div>
+        <!-- sidenavi data //-->
+        <div class="side-navi-data">
+            <div class="side-navi-tab">
+                <div class="sidebar_title">
+                    Quick Links
+                </div>
+                <div class="sidebar_quicklinks">
+                    <ul>
+                        
+                        <li>
+                            <table border="0" style="width: 70%; padding-left: 15px;">
+
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="httpS://forest.mponline.gov.in/Images/Preview.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 10px;"
+                                            onclick="showPhotographyDtls();">Single Day Photography Shoot</a>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </li>
+                        <li style="display: none;">
+                            <table border="0" style="width: 70%; padding-left: 10px;">
+                                <tr>
+                                    <td>
+                                        <img src="/Images/CheckStatus.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 16px;" href="#" onclick="$('#SearchTbl').toggle('slow');">Check Permit Status</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 70%; padding-left: 10px; display: none;" border="0" id="SearchTbl">
+                                <tr>
+                                    <td style="vertical-align: inherit; width: 77%;">
+                                        <input type="text" id="txtPermitSearch" style="width: 98%;" class="txtCss" placeholder="Permit ID" />
+                                    </td>
+                                    <td style="vertical-align: top; text-align: center; width: 13%;">
+                                        <img src="/images/searchsmall.png" id="imgSearch" style="padding-left: 10px; height: 21px; position: relative; top: 0px; cursor: pointer;"
+                                            onclick="showAppDtls();" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        
+
+                        <li>
+                            <table border="0" style="width: 70%; padding-left: 10px;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="httpS://forest.mponline.gov.in/Images/Preview.png" alt="" height="30" /></td>
+                                    <td><a style="background-image: none; padding-left: 16px;" href="httpS://forest.mponline.gov.in/Tier2Forest/DuplicatReciept.aspx">Duplicate Payment Receipt</a></td>
+                                </tr>
+
+                            </table>
+                        </li>
+                        <li>
+                            <table border="0" style="width: 70%; padding-left: 10px;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="httpS://forest.mponline.gov.in/Images/Preview.png" alt="" height="30" /></td>
+                                    <td><a style="background-image: none; padding-left: 16px;" href="httpS://forest.mponline.gov.in/Tier2Forest/Cancellation/PermitCancellation.aspx">Cancel Permit</a></td>
+                                </tr>
+
+                            </table>
+                        </li>
+                        <li>
+                            <table border="0" style="width: 70%; padding-left: 10px;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="/Images/MyDashBoard.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 10px;" target="_blank" href="https://forest.mponline.gov.in/DashBoardHome.aspx">My DashBoard</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table border="0" style="width: 70%; padding-left: 10px;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="/Images/QuickLinksIcon.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 10px;" target="_blank" href="https://forest.mponline.gov.in/Images/SafariBookingRules_Session_2022-23_English.pdf">RuleBook (English)</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li style="display: none;">
+                            <table border="0" style="width: 70%; padding-left: 10px; display: none;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="/Images/QuickLinksIcon.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 10px;" target="_blank" href="https://forest.mponline.gov.in/Images/Tourism Rule_Amendment Eng_21Aug.pdf">Amendment in RuleBook(English)</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table border="0" style="width: 70%; padding-left: 10px;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="/Images/QuickLinksIcon.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 10px;" target="_blank" href="https://forest.mponline.gov.in/Images/SafariBookingRules_Session_2022-23_Hindi.pdf">RuleBook (Hindi)</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li style="display: none;">
+                            <table border="0" style="width: 70%; padding-left: 10px; display: none;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="/Images/QuickLinksIcon.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 10px;" target="_blank" href="https://forest.mponline.gov.in/Images/Tourism Rule Amendment_Hindi_21Aug.pdf">Amendment in RuleBook(Hindi)</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table border="0" style="width: 70%; padding-left: 10px;">
+                                <tr>
+                                    <td style="width: 18%;">
+                                        <img src="/Images/FAQIcon.png" alt="" height="30" />
+                                    </td>
+                                    <td>
+                                        <a style="background-image: none; padding-left: 10px;" href="https://forest.mponline.gov.in/forestfaq.aspx"
+                                            target="_blank">FAQs</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="side-navi-tab">
+                <div class="sidebar_title">
+                    Contact Us
+                </div>
+                <div class="BlockContent">
+                    <p>
+                        For Queries Related to
+                        <ul>
+                            <li>Ticket Booking</li>
+                            <li>Ticket Cancellation</li>
+                            <li>Re-Schedule Ticket</li>
+                            <li>Add On Tickets</li>
+                        </ul>
+                        Mail Us @<br />
+                        <span style="padding-left: 15px; padding-top: 20px;">forest@mponline.gov.in</span>
+                        <br />
+                        <br />
+                        <p style="padding-top: 0px; margin: 0 0; padding-bottom: 10px; padding-left: 33px; font-size: 16px; font-family: cursive;">
+                        </p>
+                        Call Us @
+                        <br />
+                        <span style="padding-left: 15px; padding-top: 20px;">0755 - 6720266</span>
+                    </p>
+                    <p style="color: red; font-size: 12px;">
+                        <sup>*</sup>Customer Care Timings @MPOnline<br />
+                        <span style="padding-left: 10px;">08:00am-08:00pm IST Monday to Friday<br />
+                        </span><span style="padding-left: 10px;">09:30am-06:30pm IST Saturday-Sunday</span>
+                        
+                    </p>
+                    <p>
+                        <span>Lodge Grievance @: <a href="https://helpdesk.mponline.gov.in" style="text-decoration: none">HelpDesk Portal</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="NPcontainer">
+        <div class="booknow_button" style="cursor: pointer;">
+            <img src="images/booknow_btn.png" id="imgBookNow" />
+            
+        </div>
+        <div class="button_book" id="divSlider" style="cursor: pointer; width: 0px; display: none;">
+            <!--<img src="images/book_slider.png" />-->
+            <div class="clicklinks" onmouseleave="hideMenu();">
+                <div class="logo_dv Tiger_logo_dv" style="margin-top: -1px; width: 96px;">
+                    <a href="#" onclick="showSubMenus('TigerReserve');">
+                        <img src="images/blank_mplogo.png" alt="" />
+                    </a>
+                </div>
+                <div class="logo_dv Special_logo_dv" style="width: 120px">
+                    <a href="#" onclick="showSubMenus('Special');">
+                        <img src="images/blank_mplogo.png" alt="" />
+                    </a>
+                </div>
+                <div class="logo_dv Wildness_History_logo_dv" style="width: 120px">
+                    <a href="#" onclick="showSubMenus('WildernessHistory');">
+                        <img src="images/blank_mplogo.png" alt="" />
+                    </a>
+                </div>
+                <div class="logo_dv Ghadiyal_Conservation_logo_dv" style="width: 140px">
+                    <a href="#" onclick="showSubMenus('GhariyalConservation');">
+                        <img src="images/blank_mplogo.png" alt="" />
+                    </a>
+                </div>
+                <div class="logo_dv Bird_Conservation_logo_dv" style="width: 140px; padding-top: 4px;">
+                    <a href="#" onclick="showSubMenus('Birds');">
+                        <img src="images/blank_mplogo.png" alt="" />
+                    </a>
+                </div>
+                <div class="logo_dv Wildness_Landscape_logo_dv" style="width: 120px">
+                    <a href="#" onclick="showSubMenus('WildernessLandscape');">
+                        <img src="images/blank_mplogo.png" alt="" />
+                    </a>
+                </div>
+                <div class="logo_dv Fossil_logo_dv border_none" style="width: 96px">
+                    <a href="#" onclick="showSubMenus('Fossil');">
+                        <img src="images/blank_mplogo.png" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="clearFix">
+        </div>
+    </div>
+  
+     <script src="js/googleajax/AIA.js" type="text/javascript"></script>
+    <script src="js/jquery.imagesloaded.min.js" type="text/javascript"></script>
+    <script src="js/cbpBGSlideshow.js" type="text/javascript"></script>
+    <script src="js/jquery.popupwindow.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            cbpBGSlideshow.init();
+        });
+    </script>
+    <script src="js/SideNavi.js" type="text/javascript"></script>
+    <script src="js/jQueryRotate.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function showAppDtls() {
+
+            var TicketID = $('#txtPermitSearch').val();
+            if (TicketID != '') {
+                var features = "center:yes;resizable:yes;dialogHeight:550px;dialogWidth:850px;status:on;unadorned:on";
+                var pageURL = 'https://forest.mponline.gov.in/BookPermitHistory/TicketReciept.aspx?TicketID=' + TicketID;
+
+                $.popupWindow(pageURL, { center: 'screen', resizable: false, height: 550, width: 900, status: true, location: false, scrollbars: true });
+            }
+        }
+
+        function showPhotographyDtls() {
+           /* debugger;*/
+
+            var features = "center:yes;resizable:yes;dialogHeight:550px;dialogWidth:850px;status:on;unadorned:on";
+            var pageURL = 'https://forest.mponline.gov.in/SingleDayPhotographyDtls.aspx';
+            //var pageURL = 'http://localhost:53007//SingleDayPhotographyDtls.aspx';
+            $.popupWindow(pageURL, { center: 'screen', resizable: false, height: 350, width: 800, status: true, location: false, scrollbars: true });
+
+        }
+
+        function showSubMenus(cat) {
+            $(this).removeClass();
+            $('#Mainheader').hide();
+            $('#MainFooter').hide();
+            $('#MainMenu').hide();
+            $('#sideNavi').hide();
+
+            var x = 'zoomIn';
+            $('#subMenu').show().removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+
+
+                $('#divNotice').show();
+                $('.wrapDiv').hide();
+                if (cat == 'TigerReserve') {
+                    $('#TigerReserve').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Logos/Icon_TigerReserve.png').fadeIn('slow');
+                }
+                else if (cat == 'Fossil') {
+                    $('#Fossil').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Logos/Icon_Fossil.png').fadeIn('slow');
+                }
+                else if (cat == 'WildernessHistory') {
+                    $('#WildernessHistory').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Logos/Icon_Wilderness_History.png').fadeIn('slow');
+                }
+                else if (cat == 'GhariyalConservation') {
+                    $('#GhariyalConservation').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Logos/Icon_Ghariyal_Conservation.png').fadeIn('slow');
+                }
+                else if (cat == 'Birds') {
+                    $('#Birds').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Logos/Icon_Birds_Conservation.png').fadeIn('slow');
+
+                } else if (cat == 'WildernessLandscape') {
+                    $('#WildernessLandscape').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Logos/Icon_Wilderness_Landscape.png').fadeIn('slow');
+
+                } else if (cat == 'HistoricPlaces') {
+                    $('#HistoricPlaces').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Icon_HistoricPlaces.png').fadeIn('slow');
+
+                } else if (cat == 'VerySmallPA') {
+                    $('#VerySmallPA').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Icon_PreservedAreas.png').fadeIn('slow');
+
+                } else if (cat == 'Others') {
+                    $('#Others').show();
+                    $('#imgCategoryHeader').attr('src', 'images/Logos/Icon_Other.png').fadeIn('slow');
+
+                } else if (cat == 'Special') {
+                    $('#Special').show();
+                    $('#imgCategoryHeader').attr('src', 'Images/Logos/Icon_Special_Sites.png').fadeIn('slow');
+                }
+            });
+
+        }
+        function hideSubMenus() {
+            $('#imgCategoryHeader').hide();
+            $('#divNotice').hide();
+            var x = 'zoomOut';
+            $('#subMenu').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass().hide();
+
+                $('#Mainheader').show('slow');
+                $('#MainFooter').show('slow');
+                $('#MainMenu').show('slow');
+                $('#sideNavi').show('slow');
+
+            });
+
+
+        }
+        $(document).keyup(function (e) {
+            if (e.keyCode === 13) hideSubMenus();     // enter
+            if (e.keyCode === 27) hideSubMenus();   // esc
+        });
+        $(document).ready(function () {
+            //showSubMenus('TigerReserve');
+
+
+            SideNavi.init('right', {
+                container: '#sideNavi',
+                defaultitem: '.side-navi-item-default',
+                item: '.side-navi-item',
+                data: '.side-navi-data',
+                tab: '.side-navi-tab',
+                active: '.active'
+            });
+
+            $("#imgBookNow").rotate({
+                bind: {
+                    mouseover: function () {
+
+                        $(this).rotate({
+                            angle: 0,
+                            animateTo: 19
+                        }); showMenu(); if (PosVal > 200) { $('#sideNavi').css('right', '50px'); }
+                    },
+                    mouseout: function () {
+                        $(this).rotate({
+                            angle: 19,
+                            animateTo: 0
+                        });
+                    }
+                }
+            });
+
+        });
+
+        function showMenu() {
+
+            var position = $('#imgBookNow').offset();
+            $("#divSlider").show().animate({
+                left: position.left + $('#imgBookNow').width() - 50,
+                //top: position.top + 15,
+                opacity: '1',
+                width: '900'
+            }, 1000);
+        }
+        function hideMenu() {
+
+            $("#divSlider").animate({
+                opacity: '1',
+                width: '0px'
+            }, 1500, function () { $("#divSlider").hide(); });
+        }
+    </script>
+    <script type="text/javascript">
+        var isSearchOpen = false;
+        function callMenuInitiator() {
+            $('#MainMenuInitiator').hide();
+            if (isSearchOpen) {
+                callSearchInitiator();
+            }
+            $('#MainMenu').show(100);
+        }
+        function callMenuInitiatorReverse() {
+            $('#MainMenu').hide();
+            $('#MainMenuInitiator').show();
+        }
+
+        function callAlertInitiator() {
+            /*debugger;*/
+            $('#alertIcon').hide();
+            if (isSearchOpen) {
+                callSearchInitiator();
+            }
+            $('#AlertTab').show();
+        }
+        function callAlertInitiatorReverse() {
+           /* debugger;*/
+            $('#alertIcon').show();
+            $('#AlertTab').hide();
+        }
+
+        function callSearchInitiator() {
+            if (isSearchOpen) {
+                $('#searchPark').hide();
+                $('#SearchDiv').removeClass('MainSearchInitiatorImgEnlarge');
+                $('#SearchDiv').removeClass('MainSearchInitiatorImgEnlargeMobile');
+                $('#SearchDiv').addClass('MainSearchInitiatorImgNormal');
+                var imgSearch = $('#searchIcon2');
+                $('#searchIcon').attr('src', imgSearch.attr('src'));
+                isSearchOpen = false;
+                $('#divResult').empty();
+                $('#searchPark').val('');
+            }
+            else {
+                $('#searchPark').show();
+                $('#SearchDiv').removeClass('MainSearchInitiatorImgNormal');
+                if (window.innerWidth < 767) {
+                    $('#SearchDiv').addClass('MainSearchInitiatorImgEnlargeMobile');
+                } else { $('#SearchDiv').addClass('MainSearchInitiatorImgEnlarge'); }
+                var imgClose = $('#ImgClose');
+                $('#searchIcon').attr('src', imgClose.attr('src'));
+                $('#searchPark').focus();
+                isSearchOpen = true;
+            }
+        }
+
+        /* General Search  */
+        function showSearchResult() {
+            //debugger;
+            var Sval = $('#searchPark').val();
+            if (Sval.length > 2) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "index.aspx/GeneralSearch",
+                    data: '{SearchText: "' + Sval + '" }',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: OnSuccess,
+                    failure: function (response) {
+                        alert(response.d);
+                    }
+                });
+            } else {
+                $('#divResult').empty();
+            }
+        }
+
+        function OnSuccess(response) {
+            /*debugger;*/
+            var ulObj = $('<ul>');
+
+            var result = JSON.parse(response.d);
+            var resultObj = result["SearchResult"];
+            for (var i = 0; i < resultObj.length; i++) {
+                var li = $('<li>');
+                var ParkName = resultObj[i]["ParkName"];
+                var IsBookingAvailable = JSON.parse(resultObj[i]["IsBookingAvailable"].toLowerCase());
+                var IsBrochureAvailable = JSON.parse(resultObj[i]["IsBrochureAvailable"].toLowerCase());
+                var IsNightSafariBookingAvailable = JSON.parse(resultObj[i]["IsNightSafariBookingAvailable"].toLowerCase());;
+                var BookingLink = resultObj[i]["BookingLink"];
+                var NightSafariBookingLink = resultObj[i]["NightSafariBookingLink"];
+                var BrochureLink = resultObj[i]["BrochureLink"];
+                var IsWebSiteAvailable = JSON.parse(resultObj[i]["IsWebSiteAvailable"].toLowerCase());
+                var WebSiteLink = resultObj[i]["WebSiteLink"];
+                var span = $('<span>' + ParkName + '</span>');
+                li.append(span);
+                if (IsBookingAvailable) {
+                    //var linkBrochure = $('<a>');
+                    //linkBrochure.attr({ 'href': BrochureLink, 'target': '_blank' });
+                    var BookingText = 'Book Now';
+                    if (IsNightSafariBookingAvailable) { BookingText = 'Book Day Safari'; }
+                    li.append($('<a>').attr({ 'href': BookingLink, 'target': '_self' }).text(BookingText).addClass('searchResultAnchorPrimary'));
+                }
+
+
+                if (IsBrochureAvailable) {
+                    //var linkBrochure = $('<a>');
+                    //linkBrochure.attr({ 'href': BrochureLink, 'target': '_blank' });
+                    li.append($('<a>').attr({ 'href': BrochureLink, 'target': '_blank' }).text('Brochure').addClass('searchResultAnchorRed'));
+                }
+
+                if (IsNightSafariBookingAvailable) {
+                    //var linkBrochure = $('<a>');
+                    //linkBrochure.attr({ 'href': BrochureLink, 'target': '_blank' });
+                    li.append($('<a>').attr({ 'href': NightSafariBookingLink, 'target': '_self' }).text('Book Night Safari').addClass('searchResultAnchorSecondary'));
+                }
+
+                if (IsWebSiteAvailable) {
+
+                    li.append($('<a>').attr({ 'href': WebSiteLink, 'target': '_blank' }).text('WebSite').addClass('searchResultAnchorRed'));
+                }
+
+                li.addClass("searchResultLi");
+                ulObj.append(li);
+            }
+            ulObj.addClass("searchResultUl");
+            $('#divResult').empty();
+            $('#divResult').html(ulObj);
+
+        }
+
+        $(function () {
+            callAlertInitiator();
+        });
+
+        //document.addEventListener("DOMContentLoaded", function () {
+
+        //    // Select ALL dropdowns with this class (in case more than one exists)
+        //    var dropdowns = document.querySelectorAll(".wrapper-dropdown-5");
+
+        //    dropdowns.forEach(function (dd) {
+
+        //        dd.addEventListener("click", function (e) {
+        //            this.classList.toggle("active");
+        //            e.stopPropagation();
+        //        });
+
+        //    });
+
+        //    // Close if clicked outside
+        //    document.addEventListener("click", function () {
+        //        dropdowns.forEach(function (dd) {
+        //            dd.classList.remove("active");
+        //        });
+        //    });
+
+        //});
+    </script>
+
+
+
+    </div>
+    <div class="NP_footer" id="NP_footer" style="position: fixed; bottom: 0px;">
+        <div id="ctl00_myToolTip" class="myToolTip" style="float: left;">
+            <a href="#" class="myButton" style="height: 18px;">WANT TO LOGIN?</a> <span class="tooltip">
+                <span class="redButton" onclick="window.location='../LoginUserProfilePage.aspx?Flag=Login';">
+                    User Login</span> <span class="pinkButton" onclick="window.location='../G2G/Login.aspx';">
+                        Department Login</span></span>
+        </div>
+         <div style="margin-top: -36px;display: inline-block;">
+                
+             Powered by:<a href="https://mponline.gov.in/"><img src="https://mponline.gov.in/Quick Links/PortalImages/MPOHeaderFooterLogo/footerlogo.png" alt="" /></a>
+         </div>
+        <div id="divLoggedIN" style="float: right;">
+            <span id="ctl00_lblLoggedIn"></span>
+            <span id="ctl00_lblShoeServerName" style="float: left; margin-left: 5px;
+                color: white;">Served by: BHAGAT SINGH Server</span>
+        </div>
+        
+    </div>
+    </form>
+    <script type="text/javascript">
+        //        $(window).resize(function () {
+        $(function () {
+            //alert(window.innerWidth);
+            var slideWidth = parseInt(window.innerHeight) - 38;
+            if (window.innerWidth < 767) {
+                $('.NP_header').css({ 'width': '116%' });
+                $('#MainMenu').css({ 'width': '116%' });
+                $('#nav').addClass('navMobile');
+                $('.eBrochure').css({ 'margin-left': '5px' });
+                $('#AlertTab').css({ 'left': '10px', 'top': '170px', 'width': '98%', 'height': '300px' });
+                $('#cbp-bislideshow').css({ 'height': slideWidth + 'px' });
+                $('#NP_footer').css({ 'bottom': '37px' });
+                $('#ctl00_lblShoeServerName').hide();
+
+            }
+            else {
+                $('.NP_header').css({ 'width': '100%' });
+                $('#MainMenu').css({ 'width': '100%' });
+                $('#nav').removeClass('navMobile');
+                $('.eBrochure').css({ 'margin-left': '-67px' });
+                $('#AlertTab').css({ 'left': '60px', 'top': '110px', 'width': '60%', 'height': '30%' });
+                $('#ctl00_lblShoeServerName').show();
+                $('#cbp-bislideshow').css({ 'height': '100%' });
+                $('#NP_footer').css({ 'bottom': '0px' });
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        //alert('hi');
+        //function DropDown(el) {
+        //    debugger;
+        //    this.dd = el;
+        //    this.initEvents();
+        //}
+        //DropDown.prototype = {
+        //    initEvents: function () {
+        //        var obj = this;
+
+        //        obj.dd.bind('click', function (event) {
+
+        //            $(this).toggleClass('active');
+        //            event.stopPropagation();
+        //        });
+        //    }
+        //}
+        //$(function () {
+
+        //    var dd = new DropDown($('#dd'));
+
+        //    $(document).click(function () {
+        //        // all dropdowns
+        //        $('.wrapper-dropdown-5').removeClass('active');
+        //    });
+
+        //});
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Select ALL dropdowns with this class (in case more than one exists)
+            var dropdowns = document.querySelectorAll(".wrapper-dropdown-5");
+
+            dropdowns.forEach(function (dd) {
+
+                dd.addEventListener("click", function (e) {
+                    this.classList.toggle("active");
+                    e.stopPropagation();
+                });
+
+            });
+
+            // Close if clicked outside
+            document.addEventListener("click", function () {
+                dropdowns.forEach(function (dd) {
+                    dd.classList.remove("active");
+                });
+            });
+
+        });
+    </script>
+    <script type="text/javascript"> 
+        document.addEventListener('keydown', function (event) {
+            // F12
+            if (event.key === "F12" || event.keyCode === 123) {
+                event.preventDefault();
+                return false;
+            }
+
+            // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            if ((event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) ||
+                (event.ctrlKey && event.key === 'U')) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        // Disable right click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Detect DevTools open
+        (function () {
+            let devtoolsOpen = false;
+            const threshold = 160;
+
+            function detectDevTools() {
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                return widthThreshold || heightThreshold;
+            }
+
+            function check() {
+                if (detectDevTools()) {
+                    if (!devtoolsOpen) {
+                        devtoolsOpen = true;
+                        alert('Developer tools are open!');
+                        window.location.href = "https://forest.mponline.gov.in/Index.aspx"; // Take action
+                    }
+                } else {
+                    devtoolsOpen = false;
+                }
+            }
+
+            setInterval(check, 1000); // check every second
+        })();
+
+    </script>
+</body>
+</html>

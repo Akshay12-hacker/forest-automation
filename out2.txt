@@ -1,0 +1,832 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head> 
+
+    <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NBN7BZ7V');</script>
+<!-- End Google Tag Manager -->
+
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="google-site-verification" content="PkMPedMw-_fEbSOVoLmAfNjc6UL4iF-Q9aRqlZGz8VM" /><meta name="title" content="Madhya Pradesh Forest Department – Online Safari Booking &amp; Forest Services | MPOnline" /><meta name="description" content="Book jungle safaris, park and tiger-reserve permits, register as new user, and manage your booking status via the MPOnline Forest Portal of Madhya Pradesh." /><meta name="keywords" content="Madhya Pradesh forest safari booking, tiger reserve permit MP, national park permit Madhya Pradesh online, MPOnline forest user registration, MP forest permit cancellation" /><link rel="canonical" href="https://forest.mponline.gov.in/" />
+
+ <!-- Open Graph / Facebook tags -->
+ <meta property="og:title" content="Madhya Pradesh Forest Department – Online Safari Booking &amp; Services" /><meta property="og:description" content="Official MPOnline portal for booking forest park and tiger-reserve safaris, user registration and checking permit status in Madhya Pradesh." /><meta property="og:type" content="website" /><meta property="og:url" content="https://forest.mponline.gov.in/" />
+ <!-- <meta property="og:image" content="URL-to-representative-image-of-wildlife-safari-MP" /> -->
+
+ <!-- Twitter card -->
+ <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Madhya Pradesh Forest Department – Safari Booking &amp; Online Services" /><meta name="twitter:description" content="Book your forest and tiger-reserve safari online, register new user and manage your booking via MPOnline Forest Portal." />
+
+ <!-- Service‐specific meta tags (optional) -->
+ <meta name="service:safari-booking" content="Online booking of park and tiger-reserve safari permits in Madhya Pradesh via MPOnline" /><meta name="service:user-registration" content="New user registration for MPOnline Forest Portal of Madhya Pradesh" /><meta name="service:booking-status" content="Check permit and booking status for forest safaris in Madhya Pradesh online" /><title>
+	Forest Department Madhya Pradesh
+</title><link rel="stylesheet" type="text/css" href="css/Style2.css" /><link rel="stylesheet" type="text/css" href="css/NewStyle.css" /><link rel="stylesheet" type="text/css" href="css/animate.css" /><link href="css/Table_style.css" rel="stylesheet" type="text/css" /><link href="css/Login.css" rel="stylesheet" type="text/css" /><link href="css/StyleSheet.css" rel="stylesheet" type="text/css" /><link href="css/font-awesome.css" rel="stylesheet" /><link href="css/DashBoard.css" rel="stylesheet" /><link href="css/style_inner.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquary.min.js" type="text/javascript"></script>
+    <script src="/js/modernizr.custom.js" type="text/javascript"></script>
+    
+    <script src="/js/jquery.effects.core.js" type="text/javascript"></script>
+
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBN7BZ7V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <form name="aspnetForm" method="post" action="./Search.aspx?park=1" id="aspnetForm" autocomplete="off" autofill="off">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMjI5NTM5MjA2D2QWAmYPZBYCAgMPZBYEAgMPZBYMAgYPFgIeCWlubmVyaHRtbAVvPGltZyBzcmM9J2h0dHBzOi8vZm9yZXN0Lm1wb25saW5lLmdvdi5pbi9JbWFnZXMvTG9nb3MvQmFuZGh2Z2FyaFJlY2llcHQucG5nJyBhbHQ9J0JhbmRoYXZnYXJoIFRpZ2VyIFJlc2VydmUnIC8+ZAIJDxYEHwAFP1NpbmdsZSBTZWF0IFNhZmFyaSBQZXJtaXQgQm9va2luZyBhdCAyIFBNLiBmb3IgMDEgRmVicnVhcnkgMjAyNh4EaHJlZgUcU2luZ2xlU2VhdFNlYXJjaC5hc3B4P3Bhcms9MWQCCg8WAh4HVmlzaWJsZWdkAgsPFgQfAQUVc2VhcmNoTmV3LmFzcHg/cGFyaz0xHwAFP1ByZW1pdW0gVGF0a2FsIEJvb2tpbmcgZm9yIDAyIEZlYnJ1YXJ5IDIwMjYgdG8gMDcgRmVicnVhcnkgMjAyNmQCDA8WAh8CZ2QCEg8PZBYCHghyZWFkb25seQUEdHJ1ZWQCCQ8PFgIeBFRleHQFGVNlcnZlZCBieTogS1NISVBSQSBTZXJ2ZXJkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBQUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRyZEZ1bGxWZWhpY2xlBSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkRnVsbFZlaGljbGUFJmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkcmRTaW5nbGVTZWF0BSZjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJkU2luZ2xlU2VhdAUhY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRidG5zaG93Pqg72VHq9x/BLHDd8KECyRLWawg=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BBBC20B8" />
+    <div class="NP_header">
+        <div class="NP_header_in">
+            <a href="/Index.aspx">
+                <img src="/Images/Logos/nationalpark_logo.png" class="srvc_logo" alt="" style="height: 64px;" />
+            </a><a href="http://mptiger.mponline.gov.in/" target="_blank">
+                <img src="/Images/Logos/mpfoundation_logo.png" class="save_logo" alt="" style="height: 62px;" /></a>
+        </div>
+    </div>
+    <div id="ctl00_divLogger" style="margin: 0px 50px 0 auto; min-width: 150px;
+        float: right; display: none;">
+        <div id="ctl00_dd" class="wrapper-dropdown-5" tabindex="1" style="min-width: 150px;
+            top: 0px; padding: 10px 40px 0px 10px; height: 28px; text-align: left; margin-right: 11px;
+            min-width: 150px;">
+            <img src="/images/docs-icon.png" height="11" style="padding-right: 4px;" />
+            <span id="ctl00_lblProfileName"></span>
+            <ul class="dropdown" style="border-bottom-left-radius: 0.6em;">
+                <li style="margin-right: 9px;"><a href="/DashBoardHome.aspx"><i class="icon-cog"
+                    style="height: 30px; padding-top: 13px;"></i>DashBoard </a></li>
+                <li style="margin-right: 9px;"><a href="/Index.aspx?action=logout"><i class="icon-remove"
+                    style="height: 30px; padding-top: 13px;"></i>Log out </a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div>
+        
+    <link href="css/Style.css" rel="stylesheet" type="text/css" />
+    <link href="css/Login.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery-ui.css" type="text/css" rel="stylesheet" />
+    <link href="css/jquery.ui.accordion.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/jquery.ui.core.min.css" rel="stylesheet" type="text/css" />-->
+    <link href="css/jquery.ui.theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <script src="JS/jquery-A.AA.A.min.js" type="text/javascript"></script>
+    <script src="JS/jquery.ui-A.J.D.accordion.min.js" type="text/javascript"></script>
+    <script src="JS/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+    <script src="JS/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/portal_validations.js"></script>
+    <script src="js/newPortal_Validations.js"></script>
+    <script src="js/jquery.popupwindow.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+
+        $(function () {
+        //var parkName = getUrlParameter('park');
+        //if (parkName == 'kanha') { $('#kanhaParkHeading').show(); }
+        //else if (parkName == 'panna') { $('#pannaParkHeading').show(); }
+        //else if (parkName == 'bandhavgarh') { $('#bandhavgarhParkHeading').show(); }
+        //else if (parkName == 'satpura') { $('#satpuraParkHeading').show(); }
+        //else if (parkName == 'pench') { $('#penchParkHeading').show(); }
+
+            
+            var Dat = new Date();
+            var currDt = new Date();
+
+            Dat.setDate(Dat.getDate() + 1);
+
+
+            // $("#txtdate").val($.datepicker.formatDate('D, dd MM yy', Dat));
+            $("#txtdate").val('');
+            $("#txtdate").datepicker({
+                dateFormat: 'D, dd MM yy',
+                numberOfMonths: 2,
+                minDate: 'Sun, 01 October 2017',
+                showButtonPanel: false,
+                beforeShowDay: function (dt) {
+                    return [dt <= new Date(currDt) ? false : true];
+                },
+                onChange: function (formated, dates) {
+                    $('#txtdate').val(formated);
+                    $('#txtdate').DatePickerHide();
+                },
+                starts: 1,
+                position: 'r'
+            });
+
+
+            
+
+
+        });
+
+        //function otherParkfn(parkType) {
+        //    // alert( 'BookNow.htm?park=' + parkType + '&otherpark=Y&Jdt='+$('#txtdate').val()+ '&PType='+$("input[type='radio'][name='permittype']:checked").val());
+
+        //    window.location.href = 'BookNow.htm?park=' + parkType + '&otherpark=Y&Jdt=' + $('#txtdate').val() + '&PType=' + $("input[type='radio'][name='permittype']:checked").val();
+        //}
+        //function search() {
+        //    $('#searchResult').slideDown(2000);
+        //}
+        //function reset() {
+        //    $('#searchResult').slideUp(1000);
+        //}
+        //function showLogin() {
+
+        //    $('#divLogin').fadeIn(0500);
+        //}
+        //function hideLogin() {
+        //    $('#divLogin').fadeOut(0500);
+        //}
+        //function login() {
+        //    $('#divLogin').fadeOut(0500);
+        //    $('#divLoginMenu').hide();
+        //    $('#dd').show();
+        //}
+        //function openRegistration() {
+        //    window.open('Registration.html');
+        //}
+
+
+        function validate() {
+
+            //debugger;
+            // ticket type is checked
+
+            var rdFullVehicle = $('#rdFullVehicle').is(':checked');
+            var rdSingleSeat = $('#rdSingleSeat').is(':checked');
+
+            if (rdFullVehicle || rdSingleSeat) {
+                $('#hidtempdate').val($('#txtdate').val());
+                return true;
+            }
+            else {
+                alert('Please Select Permit Type...!');
+                return false;
+            }
+
+            //date check
+            var inp = $("#txtdate").val();
+            var datesuff = new Date(inp);
+            var newDate = datesuff.toString('dd-MM-yy');
+            var date = new Date();
+            // var date1=(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();2017-06-30
+            var end = (date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear());
+            if (jQuery.trim(inp).length == '') {
+                alert('Please select safari date.');
+                return false;
+
+            }
+            else if (newDate < end) {
+                alert('Please select Valid safari date.');
+                return false;
+
+            }
+
+            //reset date
+            var PayDate = document.getElementById('txtdate').value;
+            var hdn1 = document.getElementById('hidtempdate');
+            if (PayDate == '') {
+                document.getElementById('txtdate').value = hdn1.value;
+                return true;
+            }
+        }
+
+
+    </script>
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$From_dt" id="From_dt" value="10/1/2022 12:00:00 AM" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$To_dt" id="To_dt" value="6/30/2026 11:59:59 PM" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$diff" id="diff" value="4168" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$xslGrp" id="xslGrp" />
+    <div class="forest_container">
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$hidtempdate" id="hidtempdate" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$Hdnticket_id" id="Hdnticket_id" />
+        <div id="ParkHeading" class="forest_head"><img src='https://forest.mponline.gov.in/Images/Logos/BandhvgarhReciept.png' alt='Bandhavgarh Tiger Reserve' /></div>
+        <style>
+            .glance {
+                float: right;
+                font-family: cursive;
+                font-size: 14px;
+                margin-right: 10px;
+                cursor: pointer;
+                color: crimson;
+            }
+
+                .glance:hover {
+                    color: green;
+                }
+        </style>
+        <div class="lft-div" style="width: 100%;">
+            <div class="search-head" style="height:85px">
+                <img src="images/quicksearch_icn.png" alt="" />QUICK SEARCH
+
+                 
+
+                <div id="divCustomInfo" style="float: right; padding-right: 20px; font-size: 13px; font-family: cursive; font-weight: bold; color: #cc3232;">
+                </div>
+                
+                <div class="glance" style="margin-right: -2px;">
+                    <a href="SingleSeatSearch.aspx?park=1" id="SingleSeatlink" target="_self" style="color: crimson; text-decoration: none;">Single Seat Safari Permit Booking at 2 PM. for 01 February 2026</a>
+                    <img src="Images/help2.png" id="PM2Img2" style="margin-left: 1px; margin-top: -5px;" alt="Tatkal Permit Booking Against Cancelled/Rescheduled Permits within 5 Days of Excursion" title="Single Seat Safari Permit Booking before 1 Day of Excursion" onclick="$(&#39;#2PMHelp&#39;).show();" /><br />
+
+                    <a href="searchNew.aspx?park=1" id="TatkalLink" target="_self" style="color: crimson; text-decoration: none;">Premium Tatkal Booking for 02 February 2026 to 07 February 2026</a>
+                    
+                    <img src="Images/help2.png" id="ImgHelp2" style="margin-left: 1px; margin-top: -5px;" alt="Premium Tatkal Permit Booking Against Cancelled/Rescheduled Permits before 7 Days of Excursion" title="Premium Tatkal Permit Booking Against Cancelled/Rescheduled Permits before 7 Days of Excursion" onclick="$(&#39;#TatkalHelp&#39;).show();" />
+                    <div id="TatkalHelp" style="display: none; width: 290px; position: absolute; height: 144px; background-color: white; top: 30%; right: 4.5%; border: 3px solid rgb(167, 158, 158); border-radius: 12px;">
+                        <img id="subMenuClose" src="images/Close.png" style="position: relative; top: 1px; left: 2px; cursor: pointer; z-index: 999; background-color: #fdac02;"
+                            onclick="$('#TatkalHelp').hide();" />
+                        <br />
+                        <div style="text-align: center; margin-top: -51px;">
+                            <p style="font-weight: bold; margin-left: 13%;">
+                                ::Premium Tatkal Permit Booking::
+                            </p>
+                            <p style="line-height: 22px; text-align: left; margin-left: 10px; margin-right: 10px; color: black;">
+                                "Premium Tatkal Booking" will open for booking 7 days prior to the Excursion Date, at 11:00 A.M.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="2PMHelp" style="display: none; width: 330px; position: absolute; height: 144px; background-color: white; top: 30%; right: 4.5%; border: 3px solid rgb(167, 158, 158); border-radius: 12px;">
+                        <img id="subMenuClose2PM" src="images/Close.png" style="position: relative; top: 1px; left: 2px; cursor: pointer; z-index: 999; background-color: #fdac02;"
+                            onclick="$('#2PMHelp').hide();" />
+                        <br />
+                        <div style="text-align: center; margin-top: -51px;">
+                            <p style="font-weight: bold; margin-left: 13%;">
+                                ::Single Seat Safari Permit Booking::
+                            </p>
+                            <p style="line-height: 22px; text-align: left; margin-left: 10px; margin-right: 10px; color: black;">
+                                Single Seat Safari Permit Booking 1 day prior to the Excursion Date, at 2:00 P.M.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="glance" style="margin-right: -2px;">
+                    <a href="Images/GuidlinesForBKCSBPV.pdf" id="RuleForBKCBPV" title="Rules For Bheemkund Churna(Safari By Private Vehicle)" target="_blank" style="color: crimson; text-decoration: none;"></a>
+                    
+                </div>
+            </div>
+            <div id="divGlance" style="overflow: auto; display: none; overflow: auto; width: 847px; position: absolute; height: 471px; top: 101px; left: 280px; background-color: rgb(238, 238, 233);">
+                <img id="subMenuClose" src="images/Close.png" style="position: relative; top: 0px; left: 2px; height: 18px; width: 18px; cursor: pointer; z-index: 999; background-color: #fdac02;"
+                    onclick="$('#divGlance').hide();" />
+                <br />
+                <div style="text-align: center; margin-top: -36px;">
+                    <img src="Images/ForestNewRule2025-26.png" style="width: 100%;" />
+                    
+                    <br />
+                    
+                    <div style="font-size: 12px; text-align: left; margin-left: 10px; font-weight: bold;">
+                        Official Rule Book <a href="/Images/SafariBookingRules_Session_2021-22_English.pdf"
+                            target="_blank"><b style="color: red;">Click Here to Download</b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="qsearch-tab">
+                <div class="srch-field">
+                    <span id="lbltickettype">Permit Type :</span>
+                </div>
+                <div class="radio-field">
+                    <input id="rdFullVehicle" type="radio" name="ctl00$ContentPlaceHolder1$Seat" value="N" /><label for="rdFullVehicle">Full Vehicle</label>
+                </div>
+                <div class="radio-field">
+                    <input id="rdSingleSeat" type="radio" name="ctl00$ContentPlaceHolder1$Seat" value="S" /><label for="rdSingleSeat">Single Seat</label>
+                </div>
+                <div class="date-field">
+                    Date
+                </div>
+                <div class="text_box">
+                    <input name="ctl00$ContentPlaceHolder1$txtdate" type="text" value="10/1/2022 12:00:00 AM" maxlength="12" id="txtdate" class="clnd" onkeypress="return CreateDateTextBox(this,event,true)" readonly="true" style="cursor: pointer; width: 172px;" />
+                    <div>
+                        <input type="image" name="ctl00$ContentPlaceHolder1$btnshow" id="btnshow" src="Images/search_btn_hvr.png" onclick="return validate();" border="0" style="cursor: pointer; margin-top: 14px; margin-left: 10px;" />
+                    </div>
+                </div>
+                <div>
+                    <input type="image" src="images/reset.png" style="cursor: pointer; margin-top: 17px; margin-left: -10px;"
+                        onclick="reset();" alt="Reset" />
+                </div>
+            </div>
+            <style>
+                .spanOtherPark {
+                    background-color: #66cdaa;
+                    padding: 5px 8px 5px 8px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    margin-right: 5px;
+                }
+
+                    .spanOtherPark:hover {
+                        background-color: #3ddca6;
+                    }
+            </style>
+            <div id="searchResult" class="excrsion" style="display: none;">
+                
+            </div>
+            <div style="height: 0px;">
+                &nbsp;
+            </div>
+            <div id="tblzonetype" class="imp-note" style="display: none;">
+                
+                <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="float: left;">
+                            <table>
+                                <tr>
+                                    <td>Legends::
+                                    </td>
+                                </tr>
+                                <tr id="tdBUFFER" style="display: none;">
+	<td style="width: 180px;" class="BufferHeader">
+                                        <span id="lblbufferhad" style="font-size: 15px;">BUFFER/OTHER ZONES -</span>
+                                    </td>
+	<td>
+                                        <span id="lblBuffer" style="font-family: cursive; font-size: 15px; color: #ea930b;"></span>
+                                    </td>
+</tr>
+
+                                <tr id="tdCORE" style="display: none;">
+	<td style="width: 180px" class="CoreHeader">
+                                        <span id="lblcorehad" style="font-size: 15px;">CORE ZONES -</span>
+                                    </td>
+	<td>
+                                        <span id="lblCore" style="font-family: cursive; font-size: 15px; color: #5987d8;"></span>
+                                    </td>
+</tr>
+
+                            </table>
+                        </td>
+                        <td style="float: right;">
+                            <table style="margin-right: 12px; margin-top: 19px;">
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <img src="images/close_btn.png" alt="Park Close(Holiday off/Week off)" /><span style="font-family: cursive; font-size: 14px; color: #d94f25; position: relative; top: -6px;">&nbsp;Park Close(Holiday
+                                                off/Week off)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: inline-block;">
+                                            <img src="images/Bookingclose_btn.png" alt="Citizen Booking Closed" /><span style="font-family: cursive; font-size: 14px; color: #960718; position: relative; top: -6px;">&nbsp;Citizen Booking
+                                                Closed for the day </span>
+                                        </div>
+                                        <img src="Images/help2.png" style="margin-left: 1px; margin-top: -5px; cursor: pointer; margin-bottom: 3px; display: inline-block;"
+                                            alt="Park Closed" title="Park Closed"
+                                            onclick="$('#ParkClosedHelp').show();" />
+                                        <div id="ParkClosedHelp" style="display: none; width: 322px; height: 135px; background-color: white; border: 3px solid rgb(167, 158, 158); border-radius: 12px; position: absolute; right: 65px; top: 636px;">
+                                            <img id="Img1" src="images/Close.png" style="position: relative; top: 2px; left: 4px; cursor: pointer; z-index: 999; background-color: #fdac02; border-radius: 5px;"
+                                                onclick="$('#ParkClosedHelp').hide();" />
+                                            <br />
+                                            <div style="text-align: center; margin-top: -51px;">
+                                                <p style="font-weight: bold;">
+                                                    ::Alert::
+                                                </p>
+                                                <p style="line-height: 19px; margin-left: 10px; margin-right: 10px; color: black; font-size: 13px; text-align: justify;">
+                                                    Citizen booking (General) closes at 5 PM a day before Safari date(as per policy).
+                                                    if you wish to explore safari availability for this date either in Tatkal option
+                                                    or at park gate counter. Booking is subjected to availability of the seat. <a style="text-decoration: none;"
+                                                        target="_blank" href="/images/english rule_final.pdf">Click here</a> to view
+                                                    booking policy (rule book).
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table style="float: right; position: relative; top: -60px; margin-right: 12px; display: none;">
+                    <tr>
+                        <td>
+                            <div>
+                                <img src="images/Avail_Pre.png" alt="Premium Date Permit" /><span style="color: #f389a0; position: relative; top: -6px;">&nbsp;Premium Date Permit</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <img src="images/Avail_btn.png" alt="Non Premium Date Permit" /><span style="color: #1b8f1b; position: relative; top: -6px;">&nbsp;Non Premium Date Permit</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="imp-note">
+                <div class="search-head">
+                    <img src="images/notification_icn.png" alt="" />Important Note
+                    <div class="glance" onclick="$('#divGlance').show();" style="float: right;">
+                        New Rule Book for Session 2025-26 at a glance
+                    </div>
+                </div>
+                <ul class="BlockContent" style="font-size: 12px;">
+                    
+                    <li style="color: red; font-weight: bold;">In the event that a Registered Vehicle is unavailable at Madhav Tiger Reserve for safari, the park management may permit the use of a Private Vehicle at standard buffer rates.</li>
+                    <li style="color: red; font-weight: bold;">Visitors are required to hire a guide from Tiger Reserve during their visit. Additional charges for the guide and park vehicles must be paid separately at the gate.</li>
+                    <li style="color: red; font-weight: bold;">Dear Customer, To get permission of “Single Day Photography Shoot” please contact to Field Director of Concern Park.<a style="background-image: none; padding-left: 10px;" onclick="showPhotographyDtls();">For more details...Click Here</a></li>
+                    <li id="RuleForTimeChage" style="color: red; font-weight: bold; display: none">The entry time for all core and buffer zones (Morning Safari Only) of Pench Tiger Reserve has been changed from 02 February 2025 to 08 February 2025.
+                       For more details about the updated timings, <a href="Images/Letter No. 231 Date  15.01.2025.pdf" target="_blank">Click here</a>.</li>
+                    <li style="color: red; font-weight: bold;">Dear Customer, Forest has proposed for rate increase if same get approved you will required to pay the difference amount at time of your safari at the park counter.</li>
+                    <li>For Permit booking,cancellation and add on Related Query please contact at MPOnline
+                        Customer Care: 0755 - 6720266 Email Id:forest@mponline.gov.in </li>
+                    
+                    <li>Every Day at 11:00 A.M. Safari Booking of 120th Day will be opened</li>
+                    
+                    
+                    <li>Dear Customer, Would like to inform you that the charges for Vehicle and Guide will
+                        be extra same will be collected during the time of your Excursion at the park, Amount
+                        of Vehicle and Guide is not included in your Online booked Permit. </li>
+                    
+                    <li>Booking can be cancel one day before from Safari date before 5:00 PM of Tiger Safari parks
+                        Cancellation amount will be calculated as per slab on department fees given in the Rule book
+                         plus Rs 100 will be charge as MPOnline cancellation fees for Full vehicle and Rs 20 per 
+                        person in Single seat. </li>
+                    <li>If Registered Vehicle is not available at the Pipariya gate for Safari than park
+                        management can allow private Vehicle also on normal buffer rates. </li>
+                    <li>Dear Tourist, Bookings made under Ratapani Sanctuary will not have option of Cancellation / Addon / Re-Scheduling of Permit,
+                        So you are requested to book the permits once you are sure for the visit to the park. </li>
+                    <li>Cancellation after reschedule will not be permitted w.e.f. 11th May 2023.</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="rgt-div">
+            <div id="Accordion1" style="display: none">
+                <!-------------------------- HOW TO.. ------------------------------------->
+                <h3>
+                    <a href="#">HOW TO </a>
+                </h3>
+                <div class="Accor_Content" id="Div1" style="top: 0; height: 180px; background-image: url(images/Back1.jpg)">
+                    <div class="srvc-details">
+                        <div class="sub-div">
+                            <ul>
+                                <li><a href="#">Duplicate Permit</a></li>
+                                <li><a href="#">Duplicate Reciept for Reschedule Permit</a></li>
+                                <li><a href="#">Duplicate Ticket for add on Permit</a></li>
+                                <li><a href="#">Contribute for Wildlife Conservation</a></li>
+                                <li><a href="#">Permit Status</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------- ANNOUCEMENT ------------------------------------->
+                <h3>
+                    <a href="#">ANNOUNCEMENT</a>
+                </h3>
+                <div class="Accor_Content" id="Div2" style="height: 175px; background-image: url(images/Back2.jpg)">
+                    <div class="srvc-details">
+                        <div class="sub-div">
+                            <ul>
+                                <li><a href="#">Vehicle capacity in the Park</a></li>
+                                <!--<li><a href="#">आनलाइन पर्यटन अनुज्ञा पत्रों से संबंघित बिन्दु</a></li>-->
+                                <li><a href="#">Duplicate Ticket for add on Permit</a></li>
+                                <li><a href="#">Fee Details</a></li>
+                                <li><a href="#">Entry Time and Exit Time</a></li>
+                                <li><a href="#">Portal Service Charge for Reservation and Add-On 50 Rs. and Cancellation
+                                    Portal Charge 100 Rs. is Applicable </a></li>
+                                <li><a href="#">Madhya Pradesh Tiger Reserves half day off on Wednesday</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------- FAQ'S ------------------------------------->
+                <h3>
+                    <a href="#">FAQ'S </a>
+                </h3>
+                <div class="Accor_Content" id="Div3" style="height: 180px; background-image: url(images/Back3.jpg)">
+                    <div class="srvc-details">
+                        <div class="sub-div">
+                            <ul>
+                                <li><a href="#">Kanha National Park</a></li>
+                                <li><a href="#">Bandhavgarh National Park</a></li>
+                                <li><a href="#">Duplicate Ticket for add on Permit</a></li>
+                                <li><a href="#">Panna National Park</a></li>
+                                <li><a href="#">Pench National Park</a></li>
+                                <li><a href="#">Satpura National Park</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------- RULE BOOK ------------------------------------->
+                <h3>
+                    <a href="#">RULE BOOK </a>
+                </h3>
+                <div class="Accor_Content" id="Div4" style="background-image: url(images/Back4.jpg)">
+                    <div class="srvc-details">
+                        <div class="sub-div">
+                            <ul>
+                                <li><a href="#">Rule Book</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearFix">
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        $(function () {
+            $("#Accordion1").accordion();
+
+        });
+
+        function showPhotographyDtls() {
+           /* debugger;*/
+
+            var features = "center:yes;resizable:yes;dialogHeight:550px;dialogWidth:850px;status:on;unadorned:on";
+            var pageURL = 'https://forest.mponline.gov.in/SingleDayPhotographyDtls.aspx';
+            //var pageURL = 'http://localhost:53007/SingleDayPhotographyDtls.aspx';
+            $.popupWindow(pageURL, { center: 'screen', resizable: false, height: 350, width: 800, status: true, location: false, scrollbars: true });
+
+        }
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        (function ($) {
+
+            $("#Div1").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+
+            $("#Div2").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+
+
+            $("#Div3").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+            $("#Div4").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+
+            $("#Div5").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+
+            $("#Div6").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+
+            $("#Div7").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+            $("#Div8").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+            $("#Div9").mCustomScrollbar({
+                scrollButtons: {
+                    enable: true
+                },
+                updateOnBrowserResize: true,
+                updateOnContentResize: true,
+                theme: "dark"
+            });
+            $(window).load(function () {
+
+
+            });
+        })(jQuery);
+
+        //document.addEventListener("DOMContentLoaded", function () {
+
+        //    // Select ALL dropdowns with this class (in case more than one exists)
+        //    var dropdowns = document.querySelectorAll(".wrapper-dropdown-5");
+
+        //    dropdowns.forEach(function (dd) {
+
+        //        dd.addEventListener("click", function (e) {
+        //            this.classList.toggle("active");
+        //            e.stopPropagation();
+        //        });
+
+        //    });
+
+        //    // Close if clicked outside
+        //    document.addEventListener("click", function () {
+        //        dropdowns.forEach(function (dd) {
+        //            dd.classList.remove("active");
+        //        });
+        //    });
+
+        //});
+
+
+    </script>
+
+    </div>
+    <div class="NP_footer" id="NP_footer" style="position: fixed; bottom: 0px;">
+        <div id="ctl00_myToolTip" class="myToolTip" style="float: left;">
+            <a href="#" class="myButton" style="height: 18px;">WANT TO LOGIN?</a> <span class="tooltip">
+                <span class="redButton" onclick="window.location='../LoginUserProfilePage.aspx?Flag=Login';">
+                    User Login</span> <span class="pinkButton" onclick="window.location='../G2G/Login.aspx';">
+                        Department Login</span></span>
+        </div>
+         <div style="margin-top: -36px;display: inline-block;">
+                
+             Powered by:<a href="https://mponline.gov.in/"><img src="https://mponline.gov.in/Quick Links/PortalImages/MPOHeaderFooterLogo/footerlogo.png" alt="" /></a>
+         </div>
+        <div id="divLoggedIN" style="float: right;">
+            <span id="ctl00_lblLoggedIn"></span>
+            <span id="ctl00_lblShoeServerName" style="float: left; margin-left: 5px;
+                color: white;">Served by: KSHIPRA Server</span>
+        </div>
+        
+    </div>
+    </form>
+    <script type="text/javascript">
+        //        $(window).resize(function () {
+        $(function () {
+            //alert(window.innerWidth);
+            var slideWidth = parseInt(window.innerHeight) - 38;
+            if (window.innerWidth < 767) {
+                $('.NP_header').css({ 'width': '116%' });
+                $('#MainMenu').css({ 'width': '116%' });
+                $('#nav').addClass('navMobile');
+                $('.eBrochure').css({ 'margin-left': '5px' });
+                $('#AlertTab').css({ 'left': '10px', 'top': '170px', 'width': '98%', 'height': '300px' });
+                $('#cbp-bislideshow').css({ 'height': slideWidth + 'px' });
+                $('#NP_footer').css({ 'bottom': '37px' });
+                $('#ctl00_lblShoeServerName').hide();
+
+            }
+            else {
+                $('.NP_header').css({ 'width': '100%' });
+                $('#MainMenu').css({ 'width': '100%' });
+                $('#nav').removeClass('navMobile');
+                $('.eBrochure').css({ 'margin-left': '-67px' });
+                $('#AlertTab').css({ 'left': '60px', 'top': '110px', 'width': '60%', 'height': '30%' });
+                $('#ctl00_lblShoeServerName').show();
+                $('#cbp-bislideshow').css({ 'height': '100%' });
+                $('#NP_footer').css({ 'bottom': '0px' });
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        //alert('hi');
+        //function DropDown(el) {
+        //    debugger;
+        //    this.dd = el;
+        //    this.initEvents();
+        //}
+        //DropDown.prototype = {
+        //    initEvents: function () {
+        //        var obj = this;
+
+        //        obj.dd.bind('click', function (event) {
+
+        //            $(this).toggleClass('active');
+        //            event.stopPropagation();
+        //        });
+        //    }
+        //}
+        //$(function () {
+
+        //    var dd = new DropDown($('#dd'));
+
+        //    $(document).click(function () {
+        //        // all dropdowns
+        //        $('.wrapper-dropdown-5').removeClass('active');
+        //    });
+
+        //});
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Select ALL dropdowns with this class (in case more than one exists)
+            var dropdowns = document.querySelectorAll(".wrapper-dropdown-5");
+
+            dropdowns.forEach(function (dd) {
+
+                dd.addEventListener("click", function (e) {
+                    this.classList.toggle("active");
+                    e.stopPropagation();
+                });
+
+            });
+
+            // Close if clicked outside
+            document.addEventListener("click", function () {
+                dropdowns.forEach(function (dd) {
+                    dd.classList.remove("active");
+                });
+            });
+
+        });
+    </script>
+    <script type="text/javascript"> 
+        document.addEventListener('keydown', function (event) {
+            // F12
+            if (event.key === "F12" || event.keyCode === 123) {
+                event.preventDefault();
+                return false;
+            }
+
+            // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            if ((event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) ||
+                (event.ctrlKey && event.key === 'U')) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        // Disable right click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Detect DevTools open
+        (function () {
+            let devtoolsOpen = false;
+            const threshold = 160;
+
+            function detectDevTools() {
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                return widthThreshold || heightThreshold;
+            }
+
+            function check() {
+                if (detectDevTools()) {
+                    if (!devtoolsOpen) {
+                        devtoolsOpen = true;
+                        alert('Developer tools are open!');
+                        window.location.href = "https://forest.mponline.gov.in/Index.aspx"; // Take action
+                    }
+                } else {
+                    devtoolsOpen = false;
+                }
+            }
+
+            setInterval(check, 1000); // check every second
+        })();
+
+    </script>
+</body>
+</html>
