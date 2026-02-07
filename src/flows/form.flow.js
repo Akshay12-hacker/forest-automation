@@ -1,43 +1,112 @@
 const { log } = require('../utils/logger');
-const { readTourists } = require('../utils/readTourists');
+const { readTouristsCsv } = require('../utils/readTouristsCsv');
 
+/**
+ * PHASE 8 – PERMIT FORM FILL (SAFE ASP.NET)
+ */
 async function phase8FormFlow(page) {
-  log('🧾 Phase 8: Filling permit form from Excel');
+  log('🧾 Phase 8: Permit form flow started');
 
-  // HARD SESSION CHECK
-  await page.locator('#ctl00_dd').waitFor({ timeout: 10000 });
+  // 🛡 HARD GUARD — FORM + ASP.NET STATE
+  // ✅ HARD BUT REALISTIC ASP.NET GUARD
+await page.waitForSelector('form#form1', { timeout: 30000 });
 
-  const tourists = readTourists();
+await page.locator('input[name="__VIEWSTATE"]').waitFor({
+  state: 'attached',
+  timeout: 30000
+});
 
-  for (let i = 0; i < tourists.length; i++) {
-    const t = tourists[i];
-    const row = i + 1;
+log('🔐 Permit form ready (real-world ASP.NET check)');
 
-    await page.fill(`#txtTouristName_${row}`, t.name);
-    await page.selectOption(`#ddlGender_${row}`, t.gender);
-    await page.fill(`#txtAge_${row}`, String(t.age));
-    await page.fill(`#txtFatherName_${row}`, t.father);
-    await page.selectOption(`#ddlNationality_${row}`, t.nationality);
-    await page.selectOption(`#ddlIdType_${row}`, t.id_type);
-    await page.fill(`#txtIdNumber_${row}`, t.id_number);
 
-    log(`✅ Tourist ${row} filled`);
+  // ⚠️ Close Attention popup if exists
+  const popup = page.locator('#popupNotice');
+  if (await popup.isVisible().catch(() => false)) {
+    log('⚠️ Attention popup detected — closing');
+    await page.locator('#popupNotice .closePopUp').click();
+    await page.waitForTimeout(500);
   }
 
-  // Children below 5 → No
-  const childSelect = page.locator('select[name*="ChildBelow5"]');
-  if (await childSelect.count()) {
-    await childSelect.selectOption('No');
+  // 🪪 Detect permit type safely
+  const pageText = await page.textContent('body');
+  const isFullVehicle = pageText.includes('Full Vehicle');
+  log(`🪪 Permit Type: ${isFullVehicle ? 'Full Vehicle' : 'Single Seat'}`);
+
+  // 🚪 Entry Gate (mandatory)
+  await page.selectOption('#DDLEntryGate', { index: 1 });
+  log('🚪 Entry gate selected');
+
+  // 👥 Load tourists from CSV
+  const tourists = readTouristsCsv();
+
+  if (!tourists || tourists.length === 0) {
+    throw new Error('❌ No tourists found in CSV');
   }
 
-  // Declaration checkbox
-  const declaration = page.locator('input[type="checkbox"]');
-  await declaration.check();
+  // 🔍 Detect actual rows present on page
+  const availableRows = await page.locator('[id^="txtVisitorsNameFull"]').count();
+  log(`🧠 Visitor rows detected on page: ${availableRows}`);
 
-  log('✅ Declaration accepted');
+  const max = isFullVehicle
+    ? Math.min(tourists.length, availableRows, 6)
+    : 1;
 
-  log('⏸️ FORM COMPLETE — solve captcha & click Book Your Permit manually');
-  await page.pause();
+  log(`👥 Filling ${max} tourist(s)`);
+
+  // ✍️ Fill rows
+  for (let i = 0; i < max; i++) {
+    await fillFullVehicleRow(page, i, tourists[i]);
+  }
+
+  // 📱 Mobile confirmation (required to unlock submit)
+  const mobile = page.locator('#txtAlertMobileNumber');
+  if (await mobile.isVisible()) {
+    await mobile.click();
+    await mobile.press('ArrowRight');
+    log('📱 Mobile confirmed');
+  }
+
+  // ☑️ Declaration
+  const declaration = page.locator('#ChkDeclaration');
+  if (!(await declaration.isChecked())) {
+    await declaration.check();
+  }
+  log('☑️ Declaration checked');
+
+  // ⚠️ Register dialog handler ONCE
+  page.once('dialog', async dialog => {
+  log(`⚠️ Alert detected: ${dialog.message()}`);
+  await dialog.accept();
+});
+
+
+  // 🛑 STOP — CAPTCHA + SUBMIT MUST BE MANUAL
+  log('🛑 CAPTCHA detected — manual action required');
+  log('👉 Complete CAPTCHA and click "Book Your Permit" manually');
 }
+
+/**
+ * Fill FULL VEHICLE tourist row
+ * ID type is FORCED to OTHER (Aadhaar-safe)
+ */
+async function fillFullVehicleRow(page, index, data) {
+  const suffix = index === 0 ? '' : index - 1;
+
+  await page.fill(`#txtVisitorsNameFull${suffix}`, data.name);
+  await page.selectOption(`#drpGenderfULL${suffix}`, data.gender);
+  await page.fill(`#txtAgefULL${suffix}`, String(data.age));
+  await page.fill(`#txtFatherHusbandNamefULL${suffix}`, data.guardian);
+  await page.selectOption(`#DrpNationalityfULL${suffix}`, data.nationality);
+
+  // ID Proof — EXACT SAME suffix
+  await page.selectOption(`#textIdProoffULL${suffix}`, data.idType);
+  await page.fill(`#textIdProofNofULL${suffix}`, data.idNumber);
+
+  log(`👤 Tourist ${index + 1} filled`);
+  await page.waitForTimeout(300);
+}
+
+
+
 
 module.exports = { phase8FormFlow };

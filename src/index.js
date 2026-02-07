@@ -6,9 +6,7 @@ const { dashboardFlow } = require('./flows/dashboard.flow');
 const { permitFlow } = require('./flows/permit.flow');
 const { bookingLoop } = require('./utils/bookingLoop');
 const { zoneFlow} = require('./flows/zone.flow');
-const { assertSessionAlive } = require('./utils/assertSessionAlive');
-const { phase8FormFlow } = require('./flows/form.flow');
-
+const {phase8FormFlow} = require('./flows/form.flow')
 
 const bookingFlow = async (page) => {
   const url = page.url();
@@ -19,7 +17,6 @@ const bookingFlow = async (page) => {
 
   await permitFlow(page);     // Phase 7
   await zoneFlow(page);
-  await assertSessionAlive(page);
   await phase8FormFlow(page);
 };
 
