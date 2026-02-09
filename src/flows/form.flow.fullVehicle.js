@@ -2,9 +2,9 @@ const { log } = require('../utils/logger');
 const { readTouristsCsv } = require('../utils/readTouristsCsv');
 
 /**
- * PHASE 8 – PERMIT FORM FILL (SAFE ASP.NET)
+ * PHASE 8 – FULL VEHICLE FORM FLOW
  */
-async function phase8FormFlow(page) {
+async function phase8FullVehicleFlow(page) {
   log('🧾 Phase 8: Permit form flow started');
 
   // 🛡 HARD GUARD — FORM + ASP.NET STATE
@@ -27,11 +27,6 @@ log('🔐 Permit form ready (real-world ASP.NET check)');
     await page.waitForTimeout(500);
   }
 
-  // 🪪 Detect permit type safely
-  const pageText = await page.textContent('body');
-  const isFullVehicle = pageText.includes('Full Vehicle');
-  log(`🪪 Permit Type: ${isFullVehicle ? 'Full Vehicle' : 'Single Seat'}`);
-
   // 🚪 Entry Gate (mandatory)
   await page.selectOption('#DDLEntryGate', { index: 1 });
   log('🚪 Entry gate selected');
@@ -47,9 +42,7 @@ log('🔐 Permit form ready (real-world ASP.NET check)');
   const availableRows = await page.locator('[id^="txtVisitorsNameFull"]').count();
   log(`🧠 Visitor rows detected on page: ${availableRows}`);
 
-  const max = isFullVehicle
-    ? Math.min(tourists.length, availableRows, 6)
-    : 1;
+  const max = Math.min(tourists.length, availableRows, 6);
 
   log(`👥 Filling ${max} tourist(s)`);
 
@@ -109,4 +102,4 @@ async function fillFullVehicleRow(page, index, data) {
 
 
 
-module.exports = { phase8FormFlow };
+module.exports = { phase8FullVehicleFlow };

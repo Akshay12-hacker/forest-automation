@@ -6,7 +6,8 @@ const { dashboardFlow } = require('./flows/dashboard.flow');
 const { permitFlow } = require('./flows/permit.flow');
 const { bookingLoop } = require('./utils/bookingLoop');
 const { zoneFlow} = require('./flows/zone.flow');
-const {phase8FormFlow} = require('./flows/form.flow')
+const {phase8FullVehicleFlow} = require('./flows/form.flow.fullVehicle')
+const {phase8SingleSeatFlow} = require('./flows/form.flow.singleSeat')
 
 const bookingFlow = async (page) => {
   const url = page.url();
@@ -15,9 +16,44 @@ const bookingFlow = async (page) => {
     await dashboardFlow(page);
   }
 
-  await permitFlow(page);     // Phase 7
-  await zoneFlow(page);
-  await phase8FormFlow(page);
+  await permitFlow(page);              // Phase 6
+  const slotSelected = await zoneFlow(page); // Phase 7
+  if (!slotSelected) return;
+
+  let nextUrl = page.url();
+
+  // 🔄 Handle intermediate profile page
+  if (nextUrl.includes('LoginUserProfilePage.aspx')) {
+    log('🔄 Profile transition page detected');
+
+    // 🔑 ROUTE USING URL PARAM
+    if (nextUrl.includes('TicketType=S')) {
+      log('🎫 TicketType=S → Single Seat Phase 8');
+      await phase8SingleSeatFlow(page);
+      return;
+    }
+
+    if (nextUrl.includes('TicketType=N')) {
+      log('🚙 TicketType=N → Full Vehicle Phase 8');
+      await phase8FullVehicleFlow(page);
+      return;
+    }
+
+    throw new Error(`❌ Unknown TicketType in URL: ${nextUrl}`);
+  }
+
+  // 🧯 Fallback (should rarely hit)
+  if (nextUrl.includes('SingleSeat')) {
+    await phase8SingleSeatFlow(page);
+    return;
+  }
+
+  if (nextUrl.includes('Booking') || nextUrl.includes('ProcessToPayment')) {
+    await phase8FullVehicleFlow(page);
+    return;
+  }
+
+  throw new Error(`❌ Unknown Phase 8 page: ${nextUrl}`);
 };
 
 

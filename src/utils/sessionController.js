@@ -17,7 +17,7 @@ async function ensureLoggedIn(page) {
   await page.locator('span.redButton:has-text("User Login")').click();
 
   // Wait for login page
-  await page.waitForURL(/LoginUserProfilePage\.aspx/, { timeout: 30000 });
+  await page.waitForURL(/LoginUserProfilePage\.aspx/, { timeout: 90000 });
   log('🧑‍💻 Login page opened — please login manually (captcha)');
 
 
