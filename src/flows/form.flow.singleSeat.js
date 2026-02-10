@@ -13,10 +13,18 @@ async function phase8SingleSeatFlow(page) {
     await page.waitForTimeout(500);
   }
 
+  // Entry Gate (mandatory)
+  await page.selectOption('#DDLEntryGate', { index: 1 });
+  log('Entry gate selected')
+
+
+  // Load tourists from CSV
   const tourists = readSingleTouristsCsv();
-  if (!tourists.length) {
+  if (!tourists || tourists.length === 0) {
     throw new Error('❌ No tourists in singleTourist.csv');
   }
+
+  // Seat Selector through jeep img 
 
   const seats = page.locator('.jeep_divd img[onclick], .jeep_divd div[onclick]');
   let seatIndex = 0;
