@@ -1,32 +1,44 @@
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget,
-    QVBoxLayout, QPushButton, QLabel, QTextEdit
+    QVBoxLayout, QHBoxLayout,
+    QPushButton, QLabel, QTextEdit, QTabWidget
 )
 import sys
+
 from ui.automation_controller import (
     start_automation,
     stop_automation,
     pause_automation,
     resume_automation
 )
-from PySide6.QtWidgets import QComboBox
+from ui.csv_editor import CsvEditor
+from ui.config_editor import ConfigEditor
+
 
 class Dashboard(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.phase_select = QComboBox()
-        self.phase_select.addItems([
-        "ZONE_SELECT",
-        "PHASE_8_FULL",
-        "PHASE_8_SINGLE",
-        "OTP",
-        "PAYMENT"
-        ])
-        self.setWindowTitle("Forest Automation - Officer Dashboard")
-        self.setGeometry(300, 100, 900, 600)
 
-        central = QWidget()
-        layout = QVBoxLayout()
+        self.setWindowTitle("Forest Automation - Officer Dashboard")
+        self.setGeometry(300, 100, 1100, 650)
+
+        # ✅ ONE central widget
+        central_widget = QWidget(self)
+        self.setCentralWidget(central_widget)
+
+        # ✅ ROOT layout (horizontal)
+        main_layout = QHBoxLayout()
+        central_widget.setLayout(main_layout)
+
+        # ================= LEFT PANEL =================
+        left_panel = QLabel("Flows\n(Coming Soon)")
+        left_panel.setFixedWidth(150)
+        left_panel.setStyleSheet("background:#2b2b2b; padding:10px;")
+
+        # ================= CENTER PANEL =================
+        center_panel = QWidget()
+        center_layout = QVBoxLayout()
+        center_panel.setLayout(center_layout)
 
         self.status = QLabel("Status: Idle")
         self.logs = QTextEdit()
@@ -42,21 +54,29 @@ class Dashboard(QMainWindow):
         btn_resume.clicked.connect(self.resume_flow)
         btn_stop.clicked.connect(self.stop_flow)
 
-        layout.addWidget(self.status)
-        layout.addWidget(btn_start)
-        layout.addWidget(btn_pause)
-        layout.addWidget(QLabel("Resume From Phase:"))
-        layout.addWidget(self.phase_select)
-        layout.addWidget(btn_stop)
-        layout.addWidget(self.logs)
+        center_layout.addWidget(self.status)
+        center_layout.addWidget(btn_start)
+        center_layout.addWidget(btn_pause)
+        center_layout.addWidget(btn_resume)
+        center_layout.addWidget(btn_stop)
+        center_layout.addWidget(self.logs)
 
-        central.setLayout(layout)
-        self.setCentralWidget(central)
+        # ================= RIGHT PANEL =================
+        right_panel = QTabWidget()
+        right_panel.addTab(CsvEditor(), "Tourist CSV")
+        right_panel.addTab(ConfigEditor(), "Config")
 
+        # ================= ASSEMBLE =================
+        main_layout.addWidget(left_panel)
+        main_layout.addWidget(center_panel, 2)
+        main_layout.addWidget(right_panel, 2)
+
+    # ================= LOGGING =================
     def log(self, message):
         self.logs.append(message)
         self.logs.ensureCursorVisible()
 
+    # ================= CONTROL =================
     def start_flow(self):
         self.status.setText("Status: Running")
         self.log("▶ Automation started")
@@ -76,6 +96,7 @@ class Dashboard(QMainWindow):
         self.status.setText("Status: Stopped")
         self.log("⏹ Automation stopped")
         stop_automation(self.log)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
