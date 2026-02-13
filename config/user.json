@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "username": "officer1",
+      "password_hash": "$2b$12$....",
+      "role": "operator",
+      "active": true
+    },
+    {
+      "username": "admin",
+      "password_hash": "$2b$12$....",
+      "role": "admin",
+      "active": true
+    }
+  ]
+}
+

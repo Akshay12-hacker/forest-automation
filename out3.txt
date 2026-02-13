@@ -1,0 +1,2894 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache,no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache,no-cache
+Content-Type: text/html; charset=utf-8
+Expires: -1,-1
+X-Frame-Options: DENY
+Set-Cookie: Forest_ProfileName=Fk/zi6Kf3PMBvstenj3nJQWlKxxq/ZsdFgM63R4EH5s=; path=/; secure; HttpOnly; SameSite=Strict
+Content-Security-Policy: default-src 'self';                     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ajax.googleapis.com;                     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;                     img-src 'self' data: https:;                     font-src 'self' https://fonts.gstatic.com;                     connect-src 'self' https://api.yourdomain.com;                     frame-ancestors 'self';                     object-src 'none';                     base-uri 'self';
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Permissions-Policy: camera=(); microphone=(); geolocation=(); fullscreen=(self)
+Cross-Origin-Resource-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: same-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Date: Wed, 04 Feb 2026 09:56:35 GMT
+Vary: Accept-Encoding
+Connection: Keep-alive
+Via: 1.1 ID-0016035575612347 uproxy-2
+Content-Length: 170368
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NBN7BZ7V');</script>
+<!-- End Google Tag Manager -->
+
+
+    <title>
+
+</title><link href="css/Style.css" rel="stylesheet" type="text/css" /><link href="css/Table_style.css" rel="stylesheet" type="text/css" /><link href="css/NewStyle.css" rel="stylesheet" type="text/css" /><link href="css/Login.css" rel="stylesheet" type="text/css" /><link href="css/StyleSheet.css" rel="stylesheet" type="text/css" /><link href="css/font-awesome.css" rel="stylesheet" /><link href="css/DashBoard.css" rel="stylesheet" /><link href="css/style_inner.css" rel="stylesheet" type="text/css" /><link href="css/Style2.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery-A.AA.A.min.js" type="text/javascript"></script>
+
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBN7BZ7V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <form name="form1" method="post" action="./SeatSelectSingle.aspx?langid=en-US&amp;TimeSlot=Evening&amp;Zone=Magadhi&amp;zone_id=2&amp;Tourist_Place_id=1&amp;Date=30+Mar+2026&amp;TicketType=N" id="form1" autocomplete="off" autofill="off">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="//==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="209D8598" />
+</div>
+         <div class="NP_header">
+            <div class="NP_header_in">
+                <a href="/index.aspx">
+                    <img src="/images/Logos/nationalpark_logo.png" class="srvc_logo" alt="" style="height:64px;"/>
+                </a>
+                <a href="http://mfp.mpforest.org/tiger/About_Us.aspx">
+                    <img src="/images/Logos/mpfoundation_logo.png" class="save_logo" alt="" style="height:62px;" /></a>
+            </div>
+        </div>
+        <div>
+            <div style="width: 85%; min-width: 980px; margin: 0px auto 0 auto;min-width:150px;">
+                <div id="dd" class="wrapper-dropdown-5" tabindex="1" style="min-width:150px;top: 0px; padding: 10px 40px 0px 10px; height: 30px; text-align: left; margin-right: -8px;min-width:150px;">
+                    <img src="/images/docs-icon.png" height="11" style="padding-right:4px;" />
+                    <span id="lblProfileName">Ticket Collector</span>
+                    <ul class="dropdown" style="border-bottom-left-radius: 0.6em;">
+                        <li style="margin-right:9px;">
+                            <a href="/DashBoardHome.aspx">
+                                <i class="icon-cog" style="height: 30px; padding-top: 13px;"></i>DashBoard
+                            </a>
+                        </li>
+                         <li style="margin-right:9px;" >
+                            <a id="BookPermitId">
+                                <i class="icon-cog" style="height: 30px; padding-top: 13px;"></i>Book Now
+                            </a>
+                        </li>
+                        <li style="margin-right:9px;">
+                            <a href="/Index.aspx?action=logout">
+                                <i class="icon-remove" style="height: 30px; padding-top: 13px;"></i>Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    //alert('hi');
+                    function DropDown(el) {
+
+                        this.dd = el;
+                        this.initEvents();
+                    }
+                    DropDown.prototype = {
+                        initEvents: function () {
+                            var obj = this;
+                          
+                            obj.dd.on('click', function (event) {
+                                 
+                                $(this).toggleClass('active');
+                                event.stopPropagation();
+                            });
+                        }
+                    }
+                    $(function () {
+                      
+                        var dd = new DropDown($('#dd'));
+
+                        $(document).click(function () {
+                            // all dropdowns
+                            $('.wrapper-dropdown-5').removeClass('active');
+                        });
+
+                    });
+                </script>
+              <script type="text/javascript">
+
+
+                    document.addEventListener('keydown', function (event) {
+                        // F12
+                        if (event.key === "F12" || event.keyCode === 123) {
+                            event.preventDefault();
+                            return false;
+                        }
+
+                        // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+                        if ((event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) ||
+                            (event.ctrlKey && event.key === 'U')) {
+                            event.preventDefault();
+                            return false;
+                        }
+                    });
+
+                    // Disable right click
+                    document.addEventListener('contextmenu', function (e) {
+                        e.preventDefault();
+                    });
+
+                    // Detect DevTools open
+                    (function () {
+                        let devtoolsOpen = false;
+                        const threshold = 160;
+
+                        function detectDevTools() {
+                            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                            return widthThreshold || heightThreshold;
+                        }
+
+                        function check() {
+                            if (detectDevTools()) {
+                                if (!devtoolsOpen) {
+                                    devtoolsOpen = true;
+                                    alert('Developer tools are open!');
+                                    window.location.href = "https://forest.mponline.gov.in/Index.aspx"; // Take action
+                                }
+                            } else {
+                                devtoolsOpen = false;
+                            }
+                        }
+
+                        setInterval(check, 1000); // check every second
+                    })();
+
+                </script>
+            </div>
+            
+    <link href="css/Style2.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.ui.theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+    <script src="js/newPortal_Validations.js" type="text/javascript"></script>
+    <script src="js/portal_validations.js" type="text/javascript"></script>
+    <script src="js/Validations.js" type="text/javascript"></script>
+
+    <script src="js/SingleSeat.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = window.history.forward(0);
+    </script>
+    <script type="text/javascript">
+
+        $(function () {
+            //alert($('#hidTicketType').val());
+            if ($('#hidzoneid').val() == '91') {
+                $('#popupNoticeZone').show();
+            }
+            if ($('#hidTicketType').val() == 'S') {
+                $('#popupNotice').show();
+            }
+            $("#drpChild").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+                // alert(selectedValue);
+                if (selectedValue == 'Y') {
+
+                    $('#DivChildMsgPopup').show();
+                    //$('#divVisitorDtlsChild').show();
+                    //$('#VisitorTableChild').show();
+                }
+                else {
+                    $('#DivChildMsgPopup').hide();
+                    //$('#divVisitorDtlsChild').hide();
+                    //$('#VisitorTableChild').hide();
+                }
+            });
+
+
+
+            $("#DrpNationalityfULL").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+                if (selectedValue == 'in' || selectedValue == 'np') {
+                    $("#textIdProoffULL").val("PAN Card");
+                    $("#textIdProoffULL").prop("disabled", false);
+
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+                    $("#textIdProoffULL").val("Passport");
+                    $("#textIdProoffULL").prop("disabled", true);
+                }
+            });
+
+            $("#DrpNationalityfULL0").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+                    $("#textIdProoffULL0").val("PAN Card");
+                    $("#textIdProoffULL0").prop("disabled", false);
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+                    $("#textIdProoffULL0").val("Passport");
+                    $("#textIdProoffULL0").prop("disabled", true);
+                }
+            });
+
+            $("#DrpNationalityfULL1").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+                    $("#textIdProoffULL1").val("PAN Card");
+                    $("#textIdProoffULL1").prop("disabled", false);
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+                    $("#textIdProoffULL1").val("Passport");
+                    $("#textIdProoffULL1").prop("disabled", true);
+                }
+            });
+
+            $("#DrpNationalityfULL2").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+                if (selectedValue == 'in' || selectedValue == 'np') {
+                    $("#textIdProoffULL2").val("PAN Card");
+                    $("#textIdProoffULL2").prop("disabled", false);
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+                    $("#textIdProoffULL2").val("Passport");
+                    $("#textIdProoffULL2").prop("disabled", true);
+                }
+            });
+
+            $("#DrpNationalityfULL3").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+                    $("#textIdProoffULL3").val("PAN Card");
+                    $("#textIdProoffULL3").prop("disabled", false);
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+                    $("#textIdProoffULL3").val("Passport");
+                    $("#textIdProoffULL3").prop("disabled", true);
+                }
+            });
+
+            $("#DrpNationalityfULL4").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+                    $("#textIdProoffULL4").val("PAN Card");
+                    $("#textIdProoffULL4").prop("disabled", false);
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+                    $("#textIdProoffULL4").val("Passport");
+                    $("#textIdProoffULL4").prop("disabled", true);
+                }
+            });
+
+            $("#DrpNationalitychild").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+
+                    $("#textIdProofchild").val("PAN Card");
+                    $("#textIdProoffULL").attr("readonly", false);
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+
+                    $("#textIdProofchild").val("Passport");
+                }
+            });
+
+            $("#DrpNationalitychild0").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+
+                    $("#textIdProofchild0").val("PAN Card");
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+
+                    $("#textIdProofchild0").val("Passport");
+                }
+            });
+
+
+            $("#DrpNationalitychild1").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+
+                    $("#textIdProofchild1").val("PAN Card");
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+
+                    $("#textIdProofchild1").val("Passport");
+                }
+            });
+
+            $("#DrpNationalitychild2").change(function () {
+                var selectedText = $(this).find("option:selected").text();
+                var selectedValue = $(this).val();
+
+                if (selectedValue == 'in' || selectedValue == 'np') {
+
+                    $("#textIdProofchild2").val("PAN Card");
+                }
+                else if (selectedValue != 'in' && selectedValue != 'np') {
+
+                    $("#textIdProofchild2").val("Passport");
+                }
+            });
+
+        });
+    </script>
+   
+    <style>
+        /* POP UP CLASS*/
+        .overlay
+        {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms; /*visibility: hidden;*/ /*opacity: 0;*/
+            z-index: 999;
+        }
+        
+        .overlay:target
+        {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .popup
+        {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+        
+        .popup h2
+        {
+            margin-top: 0;
+            color: #008000;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+        
+        .popup .closePopUp
+        {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .popup .closePopUp:hover
+        {
+            color: #06D85F;
+        }
+        
+        .popup .contentPopup
+        {
+            min-height: 30%;
+            overflow: auto;
+            font-family: cursive;
+            color: #e24545;
+        }
+        
+         .blink_me {
+            animation: blinker 2s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0.4;
+            }
+        }
+    </style>
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$IndianAdultFee_Normal" id="IndianAdultFee_Normal" />
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$IndianAdultFee_Premium" id="IndianAdultFee_Premium" /> 
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$ForeignerAdultFee_Normal" id="ForeignerAdultFee_Normal" /> 
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$ForeignerAdultFee_Premium" id="ForeignerAdultFee_Premium" />
+
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$IndianMinorFee_Normal" id="IndianMinorFee_Normal" />
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$IndianMinorFee_Premium" id="IndianMinorFee_Premium" /> 
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$ForeignerMinorFee_Normal" id="ForeignerMinorFee_Normal" /> 
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$ForeignerMinorFee_Premium" id="ForeignerMinorFee_Premium" />
+
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$IsPremiumTicket" id="IsPremiumTicket" />
+
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$HidAdultFee" id="HidAdultFee" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$HidMinorFee" id="HidMinorFee" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$HidToddlerFee" id="HidToddlerFee" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnPublicIP" id="HdnPublicIP" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnLANIP" id="HdnLANIP" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnPermitType" id="HdnPermitType" value="N" />
+    <input name="ctl00$ContentPlaceHolder1$hdnvisitorDtls" type="hidden" id="hdnvisitorDtls" />
+    <div class="forest_container">
+        <div id="popupNotice" class="overlay" style="display: none; z-index: 999;">
+            <div class="popup">
+                <h2>
+                    Attention</h2>
+                <a class="closePopUp" href="#" onclick="$('#popupNotice').hide('slow');">&times;</a>
+                <div class="contentPopup">
+                    Single permit: Single seat permit holder tourist shall, in addition to the permit
+                    fee, have to pay for the vehicle and the guide, at the time of entry inside the
+                    park. The total hire charges for the guide and Safari vehicle will be distributed
+                    equally among the tourists present in the vehicle and payable at the time of entry.
+                </div>
+            </div>
+        </div>
+        <div id="popupNoticeZone" class="overlay" style="display: none; z-index: 999;">
+            <div class="popup">
+                <h2>
+                    Attention</h2>
+                <a class="closePopUp" href="#" onclick="$('#popupNoticeZone').hide('slow');">&times;</a>
+                <div class="contentPopup">
+                    Park management shall not guarantee the vehicles for safari. Limited number of safari vehicles are available at Churna zone. 
+                    if needed private vehicles may be allowed based on the suitability of the vehicles for safari.
+                </div>
+            </div>
+        </div>
+         <div id="AddOnInitialAlert" class="overlay" style="display: none; z-index: 999;">
+            <div class="popup">
+                <h2>
+                    Attention</h2>
+                <a class="closePopUp" href="#" onclick="$('#AddOnInitialAlert').hide('slow');">&times;</a>
+                <div class="contentPopup">
+                    Add On facility will not be available on this Permit....!
+                </div>
+            </div>
+        </div>
+        <div id="DivZoneid" style="display:none">
+         <span id="lblparkid"></span>
+          <span id="lblzoneid"></span>
+           <span id="lbltimeslotch"></span>
+        </div>
+        <div id="ParkHeading" class="forest_head"><img src='https://forest.mponline.gov.in/Images/Logos/BandhvgarhReciept.png' alt='Bandhavgarh Tiger Reserve' /></div>
+        <div id="idMain" style="width: 100%;">
+            <div class="BlockTitle">
+                Booking Details
+            </div>
+            <table id="Table2" class="Foresttable">
+                <tr>
+                    <td align="left" style="width: 25%;" class="BlockHeading">
+                        Permit Date:
+                    </td>
+                    <td align="left" style="width: 25%;" class="BlockContent">
+                        <span id="lblPermitDate">30 Mar 2026</span>
+                    </td>
+                    <td align="left" style="width: 25%;" class="BlockHeading">
+                        Permit Type:
+                    </td>
+                    <td align="left" style="width: 25%;" class="BlockContent">
+                        <span id="lblTicketType">Full Vehicle</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" class="BlockHeading">
+                        Zone:
+                    </td>
+                    <td align="left" class="BlockContent">
+                        <span id="lblZone">Magadhi</span>
+                    </td>
+                    <td align="left" class="BlockHeading">
+                        Booked By:
+                    </td>
+                    <td align="left" class="BlockContent">
+                        <span id="lblBookedBy">Ticket Collector</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="width: 25%;" class="BlockHeading">
+                        Time Slot:
+                    </td>
+                    <td align="left" style="width: 25%;" class="BlockContent">
+                        <span id="lblTimeSlot">Evening</span>
+                    </td>
+                    <td align="left" class="BlockHeading">
+                        Identity Card/No:
+                    </td>
+                    <td align="left" class="BlockContent">
+                        <span id="lblIdName">Driving Licence</span>
+                        :
+                        <span id="lblIDValue">XXXXXXXXXX</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" class="BlockHeading">
+                        Contact No:
+                    </td>
+                    <td align="left" class="BlockContent">
+                        <span id="lblContNo">8788349253</span>
+                        &nbsp;
+                    </td>
+                    <td align="left" class="BlockHeading">
+                        Email ID:
+                    </td>
+                    <td align="left" class="BlockContent">
+                        <span id="lbleMailiD">zyrusneon39@gmail.com</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" class="BlockHeading">
+                        Emergency Contact No:
+                    </td>
+                    <td align="left" class="BlockContent" >
+                        <span id="lblEmeNo"></span>
+                        &nbsp;
+                    </td> <td align="left" class="BlockHeading blink_me" style="background-color:red;">
+                        Please Select Entry Gate:
+                    </td>
+                    <td align="left" class="BlockContent blink_me" style="background-color:red;">
+                        <select name="ctl00$ContentPlaceHolder1$DDLEntryGate" id="DDLEntryGate" class="txtCss2">
+	<option value="0">---Select---</option>
+	<option selected="selected" value="Magadhi">Magadhi</option>
+
+</select>
+                    </td>
+                </tr>
+            </table>
+            <div id="DivSingle" style="display:none;">
+                <div id="divtblcardesign" class="BlockTitle" style="display:none;">
+                    Seat Selection
+                </div>
+                <select name="ctl00$ContentPlaceHolder1$drpGender2" id="drpGender2" style="display: none;">
+	<option selected="selected" value="00">Select</option>
+	<option value="F">Female</option>
+	<option value="M">Male</option>
+
+</select>
+                <select name="ctl00$ContentPlaceHolder1$DrpNationality2" id="DrpNationality2" class="txtCss2" style="display: none;">
+
+</select>
+                <table id="tblcardesign" class="Foresttable" style="display:none;">
+	<tr>
+		<td align="left" class="BlockHeading" style="width: 76%">
+                            <div style="width: 100%; margin: 00px auto 0 auto; padding: 0 0; background-color: #fafafa;">
+                                <input type="hidden" name="hdnV0" id="hdnV0" value="KM," />
+                                <input type="hidden" name="hdnV1" id="hdnV1" value="V1" />
+                                <input type="hidden" name="hdnV2" id="hdnV2" value="V2" />
+                                <input type="hidden" name="hdnV3" id="hdnV3" value="V3" />
+                                <input type="hidden" name="hdnV4" id="hdnV4" value="V4" />
+                                <input type="hidden" name="hdnV5" id="hdnV5" value="V5" />
+                                <input type="hidden" name="hdnV6" id="hdnV6" value="V6" />
+                                <span id="lblTicketStatus"></span>
+                                <div class="jeep_divd">
+                                    <div class="gate_dv" style="margin-top: -4px;">
+                                        <img src="Images/gateforest2.png" alt="" />
+                                    </div>
+                                    
+                                    
+                                    
+
+                                    
+
+                                </div>
+                                <div class="descrip">
+                                    <style>
+                                        .boxHeader
+                                        {
+                                            vertical-align: middle;
+                                            text-align: center;
+                                            padding-left: 3px;
+                                            padding-right: 3px;
+                                            background-color: #D9534F;
+                                            background-image: url(Images/green_header.png);
+                                            color: #ffffff;
+                                            font-weight: bold;
+                                            width: 164px;
+                                            padding-top: 4px;
+                                            height: 22px;
+                                            border-top: 1px solid #cdcdcd;
+                                            border-left: 1px solid #cdcdcd;
+                                            border-right: 1px solid #cdcdcd;
+                                            border-bottom: 0px none transparent;
+                                            font-size: 14px;
+                                        }
+                                    </style>
+                                    <div class="boxHeader" style="width: 100px">
+                                        <span style="padding-top: 5px;">Fare Details</span></div>
+                                    
+                                    <div style="width: 90%; border: 2px solid #cdcdcd; padding: 11px 5px; background-color: #ffffff;
+                                        text-align: left; display: block; font-size: 12px; font-weight: normal; font-family: cursive;">
+                                        <label for="SpnNoOfSeats">
+                                            <span style="color: Red; font-weight: bold; padding-left: 15px;"><span style="color: Red;
+                                                font-weight: bold;" id="SpnNoOfSeats">0</span></span> <span style="padding-left: 19px;">
+                                                    : Selected Seat(s)</span>
+                                        </label>
+                                        <div>
+                                            <span class="INR"></span><span style="color: Red; font-weight: bold;" id="SpnTotalFare">
+                                                0.00</span> : Permit Fee
+                                        </div>
+                                    </div>
+                                    <div style="width: 90%; border: 2px solid #cdcdcd; padding: 11px 5px; background-color: #ffffff;
+                                        text-align: left; display: block; font-size: 12px; font-weight: normal; font-family: cursive;margin-top: 4px;
+    color: red;">
+                                        <sup>*</sup>As per nationality and age of tourist(s) rates may differ...!
+                                        </div>
+
+                                    
+                                    
+                                </div>
+                                <div class="sign">
+                                    <img src="images//Legends.png" />
+                                    <img src="images//SeatLegends.png" />
+                                </div>
+                            </div>
+                        </td>
+	</tr>
+</table>
+
+                <div id="divVisitorDtls" style="display: none;" class="BlockTitle">
+                    Tourist Details
+                </div>
+                <table id="VisitorTable" class="Foresttable">
+	<tr id="Visitorrowheader" style="display: none;">
+		<td align="left" style="width: 5%;" class="BlockHeading tableHeaderRow">
+                            Vehicle Type
+                        </td>
+		<td align="left" style="width: 21%;" class="BlockHeading tableHeaderRow">
+                            Tourist Name
+                        </td>
+		<td align="left" style="width: 7%;" class="BlockHeading tableHeaderRow">
+                            Gender
+                        </td>
+		<td align="left" style="width: 7%;" class="BlockHeading tableHeaderRow">
+                            Age
+                        </td>
+		<td align="left" style="width: 21%;" class="BlockHeading tableHeaderRow">
+                            Father's/Husband's Name
+                        </td>
+		<td align="left" style="width: 15%;" class="BlockHeading tableHeaderRow">
+                            Nationality
+                        </td>
+		<td align="left" style="width: 12%;" class="BlockHeading tableHeaderRow">
+                            ID Proof
+                        </td>
+		<td align="left" style="width: 12%;" class="BlockHeading tableHeaderRow">
+                            ID Proof No.
+                        </td>
+	</tr>
+	<tr id="Visitorrow1" style="display: none;">
+		<td id="DirectorRow1" align="center" class="BlockContent Propercase">
+                            SAMPLEV1:FR
+                        </td>
+		<td>
+                            <input type="text" maxlength="100" id="txtVisitorsName" class="txtCss" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGender" id="drpGender" class="txtCss2">
+			<option selected="selected" value="00">Select</option>
+			<option value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAge" type="text" maxlength="3" id="txtAge" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandName" type="text" maxlength="50" id="txtFatherHusbandName" class="txtCss" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationality" id="DrpNationality" class="txtCss2">
+
+		</select>
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$textIdProof" id="textIdProof" class="txtCss2">
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNo" type="text" maxlength="20" id="textIdProofNo" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" />
+                        </td>
+	</tr>
+</table>
+
+            </div>
+            <div id="DivFullVehicle" style="display:;">
+                <div id="divVisitorDtlsFull" style="display:block;" class="BlockTitle">
+                    Tourist Full Vehicle Fill Details
+                </div>
+                <table id="VisitorTableFull" class="Foresttable" style="display:block;">
+	<tr>
+		<td align="left" style="width: 21%;" class="BlockHeading tableHeaderRow">
+                            Tourist Name
+                        </td>
+		<td align="left" style="width: 7%;" class="BlockHeading tableHeaderRow">
+                            Gender
+                        </td>
+		<td align="left" style="width: 7%;" class="BlockHeading tableHeaderRow">
+                            Age
+                        </td>
+		<td align="left" style="width: 21%;" class="BlockHeading tableHeaderRow">
+                            Father's/Husband's Name
+                        </td>
+		<td align="left" style="width: 15%;" class="BlockHeading tableHeaderRow">
+                            Nationality
+                        </td>
+		<td align="left" style="width: 12%;" class="BlockHeading tableHeaderRow">
+                            ID Proof
+                        </td>
+		<td align="left" style="width: 12%;" class="BlockHeading tableHeaderRow">
+                            ID Proof No.
+                        </td>
+		<td align="left" style="width: 3%;" class="BlockHeading tableHeaderRow">
+                        </td>
+	</tr>
+	<tr id="TrVisitors1">
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNameFull" type="text" value="AABAVAANAN" maxlength="100" id="txtVisitorsNameFull" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderfULL" id="drpGenderfULL" class="txtCss2">
+			<option value="00">Select</option>
+			<option value="F">Female</option>
+			<option selected="selected" value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgefULL" type="text" value="21" maxlength="3" id="txtAgefULL" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamefULL" type="text" value="GIAN PAPA" maxlength="50" id="txtFatherHusbandNamefULL" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalityfULL" id="DrpNationalityfULL" class="txtCss2">
+			<option value="0">Select</option>
+			<option value="af">Afghanistan</option>
+			<option value="ax">Aland Islands</option>
+			<option value="al">Albania</option>
+			<option value="dz">Algeria</option>
+			<option value="as">American Samoa</option>
+			<option value="ad">Andorra</option>
+			<option value="ao">Angola</option>
+			<option value="ai">Anguilla</option>
+			<option value="aq">Antarctica</option>
+			<option value="ag">Antigua and Barbuda</option>
+			<option value="ar">Argentina</option>
+			<option value="am">Armenia</option>
+			<option value="aw">Aruba</option>
+			<option value="au">Australia</option>
+			<option value="at">Austria</option>
+			<option value="az">Azerbaijan</option>
+			<option value="bs">Bahamas</option>
+			<option value="bh">Bahrain</option>
+			<option value="bd">Bangladesh</option>
+			<option value="bb">Barbados</option>
+			<option value="by">Belarus</option>
+			<option value="be">Belgium</option>
+			<option value="bz">Belize</option>
+			<option value="bj">Benin</option>
+			<option value="bm">Bermuda</option>
+			<option value="bt">Bhutan</option>
+			<option value="bo">Bolivia</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="bw">Botswana</option>
+			<option value="bv">Bouvet Island</option>
+			<option value="br">Brazil</option>
+			<option value="io">British Indian Ocean Territory</option>
+			<option value="vg">British Virgin Islands</option>
+			<option value="bn">Brunei</option>
+			<option value="bg">Bulgaria</option>
+			<option value="bf">Burkina Faso</option>
+			<option value="bi">Burundi</option>
+			<option value="kh">Cambodia</option>
+			<option value="cm">Cameroon</option>
+			<option value="ca">Canada</option>
+			<option value="cv">Cape Verde</option>
+			<option value="ky">Cayman Islands</option>
+			<option value="cf">Central African Republic</option>
+			<option value="td">Chad</option>
+			<option value="cl">Chile</option>
+			<option value="cn">China</option>
+			<option value="cx">Christmas Island</option>
+			<option value="cc">Cocos (Keeling) Islands</option>
+			<option value="co">Colombia</option>
+			<option value="km">Comoros</option>
+			<option value="cg">Congo</option>
+			<option value="ck">Cook Islands</option>
+			<option value="cr">Costa Rica</option>
+			<option value="hr">Croatia</option>
+			<option value="cy">Cyprus</option>
+			<option value="cz">Czech Republic</option>
+			<option value="cd">Democratic Republic of Congo</option>
+			<option value="dk">Denmark</option>
+			<option value="xx">Disputed Territory</option>
+			<option value="dj">Djibouti</option>
+			<option value="dm">Dominica</option>
+			<option value="do">Dominican Republic</option>
+			<option value="tl">East Timor</option>
+			<option value="ec">Ecuador</option>
+			<option value="eg">Egypt</option>
+			<option value="sv">El Salvador</option>
+			<option value="gq">Equatorial Guinea</option>
+			<option value="er">Eritrea</option>
+			<option value="ee">Estonia</option>
+			<option value="et">Ethiopia</option>
+			<option value="fk">Falkland Islands</option>
+			<option value="fo">Faroe Islands</option>
+			<option value="fm">Federated States of Micronesia</option>
+			<option value="fj">Fiji</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="gf">French Guyana</option>
+			<option value="pf">French Polynesia</option>
+			<option value="tf">French Southern Territories</option>
+			<option value="ga">Gabon</option>
+			<option value="gm">Gambia</option>
+			<option value="ge">Georgia</option>
+			<option value="de">Germany</option>
+			<option value="gh">Ghana</option>
+			<option value="gi">Gibraltar</option>
+			<option value="gr">Greece</option>
+			<option value="gl">Greenland</option>
+			<option value="gd">Grenada</option>
+			<option value="gp">Guadeloupe</option>
+			<option value="gu">Guam</option>
+			<option value="gt">Guatemala</option>
+			<option value="gn">Guinea</option>
+			<option value="gw">Guinea-Bissau</option>
+			<option value="gy">Guyana</option>
+			<option value="ht">Haiti</option>
+			<option value="hm">Heard Island and Mcdonald Islands</option>
+			<option value="hn">Honduras</option>
+			<option value="hk">Hong Kong</option>
+			<option value="hu">Hungary</option>
+			<option value="is">Iceland</option>
+			<option selected="selected" value="in">India</option>
+			<option value="id">Indonesia</option>
+			<option value="ir">Iran</option>
+			<option value="iq">Iraq</option>
+			<option value="xe">Iraq-Saudi Arabia Neutral Zone</option>
+			<option value="ie">Ireland</option>
+			<option value="il">Israel</option>
+			<option value="it">Italy</option>
+			<option value="ci">Ivory Coast</option>
+			<option value="jm">Jamaica</option>
+			<option value="jp">Japan</option>
+			<option value="jo">Jordan</option>
+			<option value="kz">Kazakhstan</option>
+			<option value="ke">Kenya</option>
+			<option value="ki">Kiribati</option>
+			<option value="kw">Kuwait</option>
+			<option value="kg">Kyrgyzstan</option>
+			<option value="la">Laos</option>
+			<option value="lv">Latvia</option>
+			<option value="lb">Lebanon</option>
+			<option value="ls">Lesotho</option>
+			<option value="lr">Liberia</option>
+			<option value="ly">Libya</option>
+			<option value="li">Liechtenstein</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mo">Macau</option>
+			<option value="mk">Macedonia</option>
+			<option value="mg">Madagascar</option>
+			<option value="mw">Malawi</option>
+			<option value="my">Malaysia</option>
+			<option value="mv">Maldives</option>
+			<option value="ml">Mali</option>
+			<option value="mt">Malta</option>
+			<option value="mh">Marshall Islands</option>
+			<option value="mq">Martinique</option>
+			<option value="mr">Mauritania</option>
+			<option value="mu">Mauritius</option>
+			<option value="yt">Mayotte</option>
+			<option value="mx">Mexico</option>
+			<option value="md">Moldova</option>
+			<option value="mc">Monaco</option>
+			<option value="mn">Mongolia</option>
+			<option value="ms">Montserrat</option>
+			<option value="ma">Morocco</option>
+			<option value="mz">Mozambique</option>
+			<option value="mm">Myanmar</option>
+			<option value="na">Namibia</option>
+			<option value="nr">Nauru</option>
+			<option value="np">Nepal</option>
+			<option value="nl">Netherlands</option>
+			<option value="an">Netherlands Antilles</option>
+			<option value="nc">New Caledonia</option>
+			<option value="nz">New Zealand</option>
+			<option value="ni">Nicaragua</option>
+			<option value="ne">Niger</option>
+			<option value="ng">Nigeria</option>
+			<option value="nu">Niue</option>
+			<option value="nf">Norfolk Island</option>
+			<option value="kp">North Korea</option>
+			<option value="mp">Northern Mariana Islands</option>
+			<option value="no">Norway</option>
+			<option value="om">Oman</option>
+			<option value="pk">Pakistan</option>
+			<option value="pw">Palau</option>
+			<option value="ps">Palestinian Occupied Territories</option>
+			<option value="pa">Panama</option>
+			<option value="pg">Papua New Guinea</option>
+			<option value="py">Paraguay</option>
+			<option value="pe">Peru</option>
+			<option value="ph">Philippines</option>
+			<option value="pn">Pitcairn Islands</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="pr">Puerto Rico</option>
+			<option value="qa">Qatar</option>
+			<option value="re">Reunion</option>
+			<option value="ro">Romania</option>
+			<option value="ru">Russia</option>
+			<option value="rw">Rwanda</option>
+			<option value="sh">Saint Helena and Dependencies</option>
+			<option value="kn">Saint Kitts and Nevis</option>
+			<option value="lc">Saint Lucia</option>
+			<option value="pm">Saint Pierre and Miquelon</option>
+			<option value="vc">Saint Vincent and the Grenadines</option>
+			<option value="ws">Samoa</option>
+			<option value="sm">San Marino</option>
+			<option value="st">Sao Tome and Principe</option>
+			<option value="sa">Saudi Arabia</option>
+			<option value="sn">Senegal</option>
+			<option value="cs">Serbia and Montenegro</option>
+			<option value="sc">Seychelles</option>
+			<option value="sl">Sierra Leone</option>
+			<option value="sg">Singapore</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="sb">Solomon Islands</option>
+			<option value="so">Somalia</option>
+			<option value="za">South Africa</option>
+			<option value="gs">South Georgia and South Sandwich Islands</option>
+			<option value="kr">South Korea</option>
+			<option value="es">Spain</option>
+			<option value="pi">Spratly Islands</option>
+			<option value="lk">Sri Lanka</option>
+			<option value="sr">Suriname</option>
+			<option value="sj">Svalbard and Jan Mayen</option>
+			<option value="sz">Swaziland</option>
+			<option value="se">Sweden</option>
+			<option value="ch">Switzerland</option>
+			<option value="sy">Syria</option>
+			<option value="tw">Taiwan</option>
+			<option value="tj">Tajikistan</option>
+			<option value="tz">Tanzania</option>
+			<option value="th">Thailand</option>
+			<option value="tg">Togo</option>
+			<option value="tk">Tokelau</option>
+			<option value="to">Tonga</option>
+			<option value="tt">Trinidad and Tobago</option>
+			<option value="tn">Tunisia</option>
+			<option value="tr">Turkey</option>
+			<option value="tm">Turkmenistan</option>
+			<option value="tc">Turks And Caicos Islands</option>
+			<option value="tv">Tuvalu</option>
+			<option value="ug">Uganda</option>
+			<option value="ua">Ukraine</option>
+			<option value="ae">United Arab Emirates</option>
+			<option value="gb">United Kingdom</option>
+			<option value="xd">United Nations Neutral Zone</option>
+			<option value="us">United States</option>
+			<option value="um">United States Minor Outlying Islands</option>
+			<option value="uy">Uruguay</option>
+			<option value="vi">US Virgin Islands</option>
+			<option value="uz">Uzbekistan</option>
+			<option value="vu">Vanuatu</option>
+			<option value="va">Vatican City</option>
+			<option value="ve">Venezuela</option>
+			<option value="vn">Vietnam</option>
+			<option value="wf">Wallis and Futuna</option>
+			<option value="eh">Western Sahara</option>
+			<option value="ye">Yemen</option>
+			<option value="zm">Zambia</option>
+			<option value="zw">Zimbabwe</option>
+
+		</select>
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$textIdProoffULL" id="textIdProoffULL" class="txtCss2">
+			<option value="0">---Select---</option>
+			<option value="Driving Licence">Driving Licence</option>
+			<option value="PAN Card">PAN Card</option>
+			<option value="VoterID Card">VoterID Card</option>
+			<option value="Ration Card">Ration Card</option>
+			<option value="Passport">Passport</option>
+			<option selected="selected" value="Others">Others</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNofULL" type="text" value="2525564654" maxlength="20" id="textIdProofNofULL" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" />
+                        </td>
+		<td style="align-content: center;">
+                            <input type="image" name="ctl00$ContentPlaceHolder1$imglint1" id="imglint1" src="Images/Reset.png" onclick="return clearimage1();" style="border-width:0px;height: 27px; width: 30px;" />
+                        </td>
+	</tr>
+	<tr id="TrVisitors2">
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNameFull0" type="text" value="AABHAS" maxlength="100" id="txtVisitorsNameFull0" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderfULL0" id="drpGenderfULL0" class="txtCss2">
+			<option value="00">Select</option>
+			<option value="F">Female</option>
+			<option selected="selected" value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgefULL0" type="text" value="22" maxlength="3" id="txtAgefULL0" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamefULL0" type="text" value="NOBITA PAPA" maxlength="50" id="txtFatherHusbandNamefULL0" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalityfULL0" id="DrpNationalityfULL0" class="txtCss2">
+			<option value="0">Select</option>
+			<option value="af">Afghanistan</option>
+			<option value="ax">Aland Islands</option>
+			<option value="al">Albania</option>
+			<option value="dz">Algeria</option>
+			<option value="as">American Samoa</option>
+			<option value="ad">Andorra</option>
+			<option value="ao">Angola</option>
+			<option value="ai">Anguilla</option>
+			<option value="aq">Antarctica</option>
+			<option value="ag">Antigua and Barbuda</option>
+			<option value="ar">Argentina</option>
+			<option value="am">Armenia</option>
+			<option value="aw">Aruba</option>
+			<option value="au">Australia</option>
+			<option value="at">Austria</option>
+			<option value="az">Azerbaijan</option>
+			<option value="bs">Bahamas</option>
+			<option value="bh">Bahrain</option>
+			<option value="bd">Bangladesh</option>
+			<option value="bb">Barbados</option>
+			<option value="by">Belarus</option>
+			<option value="be">Belgium</option>
+			<option value="bz">Belize</option>
+			<option value="bj">Benin</option>
+			<option value="bm">Bermuda</option>
+			<option value="bt">Bhutan</option>
+			<option value="bo">Bolivia</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="bw">Botswana</option>
+			<option value="bv">Bouvet Island</option>
+			<option value="br">Brazil</option>
+			<option value="io">British Indian Ocean Territory</option>
+			<option value="vg">British Virgin Islands</option>
+			<option value="bn">Brunei</option>
+			<option value="bg">Bulgaria</option>
+			<option value="bf">Burkina Faso</option>
+			<option value="bi">Burundi</option>
+			<option value="kh">Cambodia</option>
+			<option value="cm">Cameroon</option>
+			<option value="ca">Canada</option>
+			<option value="cv">Cape Verde</option>
+			<option value="ky">Cayman Islands</option>
+			<option value="cf">Central African Republic</option>
+			<option value="td">Chad</option>
+			<option value="cl">Chile</option>
+			<option value="cn">China</option>
+			<option value="cx">Christmas Island</option>
+			<option value="cc">Cocos (Keeling) Islands</option>
+			<option value="co">Colombia</option>
+			<option value="km">Comoros</option>
+			<option value="cg">Congo</option>
+			<option value="ck">Cook Islands</option>
+			<option value="cr">Costa Rica</option>
+			<option value="hr">Croatia</option>
+			<option value="cy">Cyprus</option>
+			<option value="cz">Czech Republic</option>
+			<option value="cd">Democratic Republic of Congo</option>
+			<option value="dk">Denmark</option>
+			<option value="xx">Disputed Territory</option>
+			<option value="dj">Djibouti</option>
+			<option value="dm">Dominica</option>
+			<option value="do">Dominican Republic</option>
+			<option value="tl">East Timor</option>
+			<option value="ec">Ecuador</option>
+			<option value="eg">Egypt</option>
+			<option value="sv">El Salvador</option>
+			<option value="gq">Equatorial Guinea</option>
+			<option value="er">Eritrea</option>
+			<option value="ee">Estonia</option>
+			<option value="et">Ethiopia</option>
+			<option value="fk">Falkland Islands</option>
+			<option value="fo">Faroe Islands</option>
+			<option value="fm">Federated States of Micronesia</option>
+			<option value="fj">Fiji</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="gf">French Guyana</option>
+			<option value="pf">French Polynesia</option>
+			<option value="tf">French Southern Territories</option>
+			<option value="ga">Gabon</option>
+			<option value="gm">Gambia</option>
+			<option value="ge">Georgia</option>
+			<option value="de">Germany</option>
+			<option value="gh">Ghana</option>
+			<option value="gi">Gibraltar</option>
+			<option value="gr">Greece</option>
+			<option value="gl">Greenland</option>
+			<option value="gd">Grenada</option>
+			<option value="gp">Guadeloupe</option>
+			<option value="gu">Guam</option>
+			<option value="gt">Guatemala</option>
+			<option value="gn">Guinea</option>
+			<option value="gw">Guinea-Bissau</option>
+			<option value="gy">Guyana</option>
+			<option value="ht">Haiti</option>
+			<option value="hm">Heard Island and Mcdonald Islands</option>
+			<option value="hn">Honduras</option>
+			<option value="hk">Hong Kong</option>
+			<option value="hu">Hungary</option>
+			<option value="is">Iceland</option>
+			<option selected="selected" value="in">India</option>
+			<option value="id">Indonesia</option>
+			<option value="ir">Iran</option>
+			<option value="iq">Iraq</option>
+			<option value="xe">Iraq-Saudi Arabia Neutral Zone</option>
+			<option value="ie">Ireland</option>
+			<option value="il">Israel</option>
+			<option value="it">Italy</option>
+			<option value="ci">Ivory Coast</option>
+			<option value="jm">Jamaica</option>
+			<option value="jp">Japan</option>
+			<option value="jo">Jordan</option>
+			<option value="kz">Kazakhstan</option>
+			<option value="ke">Kenya</option>
+			<option value="ki">Kiribati</option>
+			<option value="kw">Kuwait</option>
+			<option value="kg">Kyrgyzstan</option>
+			<option value="la">Laos</option>
+			<option value="lv">Latvia</option>
+			<option value="lb">Lebanon</option>
+			<option value="ls">Lesotho</option>
+			<option value="lr">Liberia</option>
+			<option value="ly">Libya</option>
+			<option value="li">Liechtenstein</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mo">Macau</option>
+			<option value="mk">Macedonia</option>
+			<option value="mg">Madagascar</option>
+			<option value="mw">Malawi</option>
+			<option value="my">Malaysia</option>
+			<option value="mv">Maldives</option>
+			<option value="ml">Mali</option>
+			<option value="mt">Malta</option>
+			<option value="mh">Marshall Islands</option>
+			<option value="mq">Martinique</option>
+			<option value="mr">Mauritania</option>
+			<option value="mu">Mauritius</option>
+			<option value="yt">Mayotte</option>
+			<option value="mx">Mexico</option>
+			<option value="md">Moldova</option>
+			<option value="mc">Monaco</option>
+			<option value="mn">Mongolia</option>
+			<option value="ms">Montserrat</option>
+			<option value="ma">Morocco</option>
+			<option value="mz">Mozambique</option>
+			<option value="mm">Myanmar</option>
+			<option value="na">Namibia</option>
+			<option value="nr">Nauru</option>
+			<option value="np">Nepal</option>
+			<option value="nl">Netherlands</option>
+			<option value="an">Netherlands Antilles</option>
+			<option value="nc">New Caledonia</option>
+			<option value="nz">New Zealand</option>
+			<option value="ni">Nicaragua</option>
+			<option value="ne">Niger</option>
+			<option value="ng">Nigeria</option>
+			<option value="nu">Niue</option>
+			<option value="nf">Norfolk Island</option>
+			<option value="kp">North Korea</option>
+			<option value="mp">Northern Mariana Islands</option>
+			<option value="no">Norway</option>
+			<option value="om">Oman</option>
+			<option value="pk">Pakistan</option>
+			<option value="pw">Palau</option>
+			<option value="ps">Palestinian Occupied Territories</option>
+			<option value="pa">Panama</option>
+			<option value="pg">Papua New Guinea</option>
+			<option value="py">Paraguay</option>
+			<option value="pe">Peru</option>
+			<option value="ph">Philippines</option>
+			<option value="pn">Pitcairn Islands</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="pr">Puerto Rico</option>
+			<option value="qa">Qatar</option>
+			<option value="re">Reunion</option>
+			<option value="ro">Romania</option>
+			<option value="ru">Russia</option>
+			<option value="rw">Rwanda</option>
+			<option value="sh">Saint Helena and Dependencies</option>
+			<option value="kn">Saint Kitts and Nevis</option>
+			<option value="lc">Saint Lucia</option>
+			<option value="pm">Saint Pierre and Miquelon</option>
+			<option value="vc">Saint Vincent and the Grenadines</option>
+			<option value="ws">Samoa</option>
+			<option value="sm">San Marino</option>
+			<option value="st">Sao Tome and Principe</option>
+			<option value="sa">Saudi Arabia</option>
+			<option value="sn">Senegal</option>
+			<option value="cs">Serbia and Montenegro</option>
+			<option value="sc">Seychelles</option>
+			<option value="sl">Sierra Leone</option>
+			<option value="sg">Singapore</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="sb">Solomon Islands</option>
+			<option value="so">Somalia</option>
+			<option value="za">South Africa</option>
+			<option value="gs">South Georgia and South Sandwich Islands</option>
+			<option value="kr">South Korea</option>
+			<option value="es">Spain</option>
+			<option value="pi">Spratly Islands</option>
+			<option value="lk">Sri Lanka</option>
+			<option value="sr">Suriname</option>
+			<option value="sj">Svalbard and Jan Mayen</option>
+			<option value="sz">Swaziland</option>
+			<option value="se">Sweden</option>
+			<option value="ch">Switzerland</option>
+			<option value="sy">Syria</option>
+			<option value="tw">Taiwan</option>
+			<option value="tj">Tajikistan</option>
+			<option value="tz">Tanzania</option>
+			<option value="th">Thailand</option>
+			<option value="tg">Togo</option>
+			<option value="tk">Tokelau</option>
+			<option value="to">Tonga</option>
+			<option value="tt">Trinidad and Tobago</option>
+			<option value="tn">Tunisia</option>
+			<option value="tr">Turkey</option>
+			<option value="tm">Turkmenistan</option>
+			<option value="tc">Turks And Caicos Islands</option>
+			<option value="tv">Tuvalu</option>
+			<option value="ug">Uganda</option>
+			<option value="ua">Ukraine</option>
+			<option value="ae">United Arab Emirates</option>
+			<option value="gb">United Kingdom</option>
+			<option value="xd">United Nations Neutral Zone</option>
+			<option value="us">United States</option>
+			<option value="um">United States Minor Outlying Islands</option>
+			<option value="uy">Uruguay</option>
+			<option value="vi">US Virgin Islands</option>
+			<option value="uz">Uzbekistan</option>
+			<option value="vu">Vanuatu</option>
+			<option value="va">Vatican City</option>
+			<option value="ve">Venezuela</option>
+			<option value="vn">Vietnam</option>
+			<option value="wf">Wallis and Futuna</option>
+			<option value="eh">Western Sahara</option>
+			<option value="ye">Yemen</option>
+			<option value="zm">Zambia</option>
+			<option value="zw">Zimbabwe</option>
+
+		</select>
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$textIdProoffULL0" id="textIdProoffULL0" class="txtCss2">
+			<option value="0">---Select---</option>
+			<option value="Driving Licence">Driving Licence</option>
+			<option value="PAN Card">PAN Card</option>
+			<option value="VoterID Card">VoterID Card</option>
+			<option value="Ration Card">Ration Card</option>
+			<option value="Passport">Passport</option>
+			<option selected="selected" value="Others">Others</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNofULL0" type="text" value="454545454" maxlength="20" id="textIdProofNofULL0" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" />
+                        </td>
+		<td style="height: 5px; width: 8px;">
+                            <input type="image" name="ctl00$ContentPlaceHolder1$imglint2" id="imglint2" src="Images/Reset.png" onclick="return clearimage2();" style="border-width:0px;height: 27px; width: 30px;" />
+                        </td>
+	</tr>
+	<tr id="TrVisitors3">
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNameFull1" type="text" value="BADRI PRASAD" maxlength="100" id="txtVisitorsNameFull1" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderfULL1" id="drpGenderfULL1" class="txtCss2">
+			<option value="00">Select</option>
+			<option value="F">Female</option>
+			<option selected="selected" value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgefULL1" type="text" value="23" maxlength="3" id="txtAgefULL1" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamefULL1" type="text" value="YELLI PAPA" maxlength="50" id="txtFatherHusbandNamefULL1" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalityfULL1" id="DrpNationalityfULL1" class="txtCss2">
+			<option value="0">Select</option>
+			<option value="af">Afghanistan</option>
+			<option value="ax">Aland Islands</option>
+			<option value="al">Albania</option>
+			<option value="dz">Algeria</option>
+			<option value="as">American Samoa</option>
+			<option value="ad">Andorra</option>
+			<option value="ao">Angola</option>
+			<option value="ai">Anguilla</option>
+			<option value="aq">Antarctica</option>
+			<option value="ag">Antigua and Barbuda</option>
+			<option value="ar">Argentina</option>
+			<option value="am">Armenia</option>
+			<option value="aw">Aruba</option>
+			<option value="au">Australia</option>
+			<option value="at">Austria</option>
+			<option value="az">Azerbaijan</option>
+			<option value="bs">Bahamas</option>
+			<option value="bh">Bahrain</option>
+			<option value="bd">Bangladesh</option>
+			<option value="bb">Barbados</option>
+			<option value="by">Belarus</option>
+			<option value="be">Belgium</option>
+			<option value="bz">Belize</option>
+			<option value="bj">Benin</option>
+			<option value="bm">Bermuda</option>
+			<option value="bt">Bhutan</option>
+			<option value="bo">Bolivia</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="bw">Botswana</option>
+			<option value="bv">Bouvet Island</option>
+			<option value="br">Brazil</option>
+			<option value="io">British Indian Ocean Territory</option>
+			<option value="vg">British Virgin Islands</option>
+			<option value="bn">Brunei</option>
+			<option value="bg">Bulgaria</option>
+			<option value="bf">Burkina Faso</option>
+			<option value="bi">Burundi</option>
+			<option value="kh">Cambodia</option>
+			<option value="cm">Cameroon</option>
+			<option value="ca">Canada</option>
+			<option value="cv">Cape Verde</option>
+			<option value="ky">Cayman Islands</option>
+			<option value="cf">Central African Republic</option>
+			<option value="td">Chad</option>
+			<option value="cl">Chile</option>
+			<option value="cn">China</option>
+			<option value="cx">Christmas Island</option>
+			<option value="cc">Cocos (Keeling) Islands</option>
+			<option value="co">Colombia</option>
+			<option value="km">Comoros</option>
+			<option value="cg">Congo</option>
+			<option value="ck">Cook Islands</option>
+			<option value="cr">Costa Rica</option>
+			<option value="hr">Croatia</option>
+			<option value="cy">Cyprus</option>
+			<option value="cz">Czech Republic</option>
+			<option value="cd">Democratic Republic of Congo</option>
+			<option value="dk">Denmark</option>
+			<option value="xx">Disputed Territory</option>
+			<option value="dj">Djibouti</option>
+			<option value="dm">Dominica</option>
+			<option value="do">Dominican Republic</option>
+			<option value="tl">East Timor</option>
+			<option value="ec">Ecuador</option>
+			<option value="eg">Egypt</option>
+			<option value="sv">El Salvador</option>
+			<option value="gq">Equatorial Guinea</option>
+			<option value="er">Eritrea</option>
+			<option value="ee">Estonia</option>
+			<option value="et">Ethiopia</option>
+			<option value="fk">Falkland Islands</option>
+			<option value="fo">Faroe Islands</option>
+			<option value="fm">Federated States of Micronesia</option>
+			<option value="fj">Fiji</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="gf">French Guyana</option>
+			<option value="pf">French Polynesia</option>
+			<option value="tf">French Southern Territories</option>
+			<option value="ga">Gabon</option>
+			<option value="gm">Gambia</option>
+			<option value="ge">Georgia</option>
+			<option value="de">Germany</option>
+			<option value="gh">Ghana</option>
+			<option value="gi">Gibraltar</option>
+			<option value="gr">Greece</option>
+			<option value="gl">Greenland</option>
+			<option value="gd">Grenada</option>
+			<option value="gp">Guadeloupe</option>
+			<option value="gu">Guam</option>
+			<option value="gt">Guatemala</option>
+			<option value="gn">Guinea</option>
+			<option value="gw">Guinea-Bissau</option>
+			<option value="gy">Guyana</option>
+			<option value="ht">Haiti</option>
+			<option value="hm">Heard Island and Mcdonald Islands</option>
+			<option value="hn">Honduras</option>
+			<option value="hk">Hong Kong</option>
+			<option value="hu">Hungary</option>
+			<option value="is">Iceland</option>
+			<option selected="selected" value="in">India</option>
+			<option value="id">Indonesia</option>
+			<option value="ir">Iran</option>
+			<option value="iq">Iraq</option>
+			<option value="xe">Iraq-Saudi Arabia Neutral Zone</option>
+			<option value="ie">Ireland</option>
+			<option value="il">Israel</option>
+			<option value="it">Italy</option>
+			<option value="ci">Ivory Coast</option>
+			<option value="jm">Jamaica</option>
+			<option value="jp">Japan</option>
+			<option value="jo">Jordan</option>
+			<option value="kz">Kazakhstan</option>
+			<option value="ke">Kenya</option>
+			<option value="ki">Kiribati</option>
+			<option value="kw">Kuwait</option>
+			<option value="kg">Kyrgyzstan</option>
+			<option value="la">Laos</option>
+			<option value="lv">Latvia</option>
+			<option value="lb">Lebanon</option>
+			<option value="ls">Lesotho</option>
+			<option value="lr">Liberia</option>
+			<option value="ly">Libya</option>
+			<option value="li">Liechtenstein</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mo">Macau</option>
+			<option value="mk">Macedonia</option>
+			<option value="mg">Madagascar</option>
+			<option value="mw">Malawi</option>
+			<option value="my">Malaysia</option>
+			<option value="mv">Maldives</option>
+			<option value="ml">Mali</option>
+			<option value="mt">Malta</option>
+			<option value="mh">Marshall Islands</option>
+			<option value="mq">Martinique</option>
+			<option value="mr">Mauritania</option>
+			<option value="mu">Mauritius</option>
+			<option value="yt">Mayotte</option>
+			<option value="mx">Mexico</option>
+			<option value="md">Moldova</option>
+			<option value="mc">Monaco</option>
+			<option value="mn">Mongolia</option>
+			<option value="ms">Montserrat</option>
+			<option value="ma">Morocco</option>
+			<option value="mz">Mozambique</option>
+			<option value="mm">Myanmar</option>
+			<option value="na">Namibia</option>
+			<option value="nr">Nauru</option>
+			<option value="np">Nepal</option>
+			<option value="nl">Netherlands</option>
+			<option value="an">Netherlands Antilles</option>
+			<option value="nc">New Caledonia</option>
+			<option value="nz">New Zealand</option>
+			<option value="ni">Nicaragua</option>
+			<option value="ne">Niger</option>
+			<option value="ng">Nigeria</option>
+			<option value="nu">Niue</option>
+			<option value="nf">Norfolk Island</option>
+			<option value="kp">North Korea</option>
+			<option value="mp">Northern Mariana Islands</option>
+			<option value="no">Norway</option>
+			<option value="om">Oman</option>
+			<option value="pk">Pakistan</option>
+			<option value="pw">Palau</option>
+			<option value="ps">Palestinian Occupied Territories</option>
+			<option value="pa">Panama</option>
+			<option value="pg">Papua New Guinea</option>
+			<option value="py">Paraguay</option>
+			<option value="pe">Peru</option>
+			<option value="ph">Philippines</option>
+			<option value="pn">Pitcairn Islands</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="pr">Puerto Rico</option>
+			<option value="qa">Qatar</option>
+			<option value="re">Reunion</option>
+			<option value="ro">Romania</option>
+			<option value="ru">Russia</option>
+			<option value="rw">Rwanda</option>
+			<option value="sh">Saint Helena and Dependencies</option>
+			<option value="kn">Saint Kitts and Nevis</option>
+			<option value="lc">Saint Lucia</option>
+			<option value="pm">Saint Pierre and Miquelon</option>
+			<option value="vc">Saint Vincent and the Grenadines</option>
+			<option value="ws">Samoa</option>
+			<option value="sm">San Marino</option>
+			<option value="st">Sao Tome and Principe</option>
+			<option value="sa">Saudi Arabia</option>
+			<option value="sn">Senegal</option>
+			<option value="cs">Serbia and Montenegro</option>
+			<option value="sc">Seychelles</option>
+			<option value="sl">Sierra Leone</option>
+			<option value="sg">Singapore</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="sb">Solomon Islands</option>
+			<option value="so">Somalia</option>
+			<option value="za">South Africa</option>
+			<option value="gs">South Georgia and South Sandwich Islands</option>
+			<option value="kr">South Korea</option>
+			<option value="es">Spain</option>
+			<option value="pi">Spratly Islands</option>
+			<option value="lk">Sri Lanka</option>
+			<option value="sr">Suriname</option>
+			<option value="sj">Svalbard and Jan Mayen</option>
+			<option value="sz">Swaziland</option>
+			<option value="se">Sweden</option>
+			<option value="ch">Switzerland</option>
+			<option value="sy">Syria</option>
+			<option value="tw">Taiwan</option>
+			<option value="tj">Tajikistan</option>
+			<option value="tz">Tanzania</option>
+			<option value="th">Thailand</option>
+			<option value="tg">Togo</option>
+			<option value="tk">Tokelau</option>
+			<option value="to">Tonga</option>
+			<option value="tt">Trinidad and Tobago</option>
+			<option value="tn">Tunisia</option>
+			<option value="tr">Turkey</option>
+			<option value="tm">Turkmenistan</option>
+			<option value="tc">Turks And Caicos Islands</option>
+			<option value="tv">Tuvalu</option>
+			<option value="ug">Uganda</option>
+			<option value="ua">Ukraine</option>
+			<option value="ae">United Arab Emirates</option>
+			<option value="gb">United Kingdom</option>
+			<option value="xd">United Nations Neutral Zone</option>
+			<option value="us">United States</option>
+			<option value="um">United States Minor Outlying Islands</option>
+			<option value="uy">Uruguay</option>
+			<option value="vi">US Virgin Islands</option>
+			<option value="uz">Uzbekistan</option>
+			<option value="vu">Vanuatu</option>
+			<option value="va">Vatican City</option>
+			<option value="ve">Venezuela</option>
+			<option value="vn">Vietnam</option>
+			<option value="wf">Wallis and Futuna</option>
+			<option value="eh">Western Sahara</option>
+			<option value="ye">Yemen</option>
+			<option value="zm">Zambia</option>
+			<option value="zw">Zimbabwe</option>
+
+		</select>
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$textIdProoffULL1" id="textIdProoffULL1" class="txtCss2">
+			<option value="0">---Select---</option>
+			<option value="Driving Licence">Driving Licence</option>
+			<option value="PAN Card">PAN Card</option>
+			<option value="VoterID Card">VoterID Card</option>
+			<option value="Ration Card">Ration Card</option>
+			<option value="Passport">Passport</option>
+			<option selected="selected" value="Others">Others</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNofULL1" type="text" value="1548945415" maxlength="20" id="textIdProofNofULL1" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" />
+                        </td>
+		<td style="height: 5px; width: 8px;">
+                            <input type="image" name="ctl00$ContentPlaceHolder1$imglink3" id="imglink3" src="Images/Reset.png" onclick="return clearimage3();" style="border-width:0px;height: 27px; width: 30px;" />
+                        </td>
+	</tr>
+	<tr id="TrVisitors4">
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNameFull2" type="text" value="SECNE" maxlength="100" id="txtVisitorsNameFull2" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderfULL2" id="drpGenderfULL2" class="txtCss2">
+			<option value="00">Select</option>
+			<option selected="selected" value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgefULL2" type="text" value="24" maxlength="3" id="txtAgefULL2" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamefULL2" type="text" value="KYU RE PAPA" maxlength="50" id="txtFatherHusbandNamefULL2" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalityfULL2" id="DrpNationalityfULL2" class="txtCss2">
+			<option value="0">Select</option>
+			<option value="af">Afghanistan</option>
+			<option value="ax">Aland Islands</option>
+			<option value="al">Albania</option>
+			<option value="dz">Algeria</option>
+			<option value="as">American Samoa</option>
+			<option value="ad">Andorra</option>
+			<option value="ao">Angola</option>
+			<option value="ai">Anguilla</option>
+			<option value="aq">Antarctica</option>
+			<option value="ag">Antigua and Barbuda</option>
+			<option value="ar">Argentina</option>
+			<option value="am">Armenia</option>
+			<option value="aw">Aruba</option>
+			<option value="au">Australia</option>
+			<option value="at">Austria</option>
+			<option value="az">Azerbaijan</option>
+			<option value="bs">Bahamas</option>
+			<option value="bh">Bahrain</option>
+			<option value="bd">Bangladesh</option>
+			<option value="bb">Barbados</option>
+			<option value="by">Belarus</option>
+			<option value="be">Belgium</option>
+			<option value="bz">Belize</option>
+			<option value="bj">Benin</option>
+			<option value="bm">Bermuda</option>
+			<option value="bt">Bhutan</option>
+			<option value="bo">Bolivia</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="bw">Botswana</option>
+			<option value="bv">Bouvet Island</option>
+			<option value="br">Brazil</option>
+			<option value="io">British Indian Ocean Territory</option>
+			<option value="vg">British Virgin Islands</option>
+			<option value="bn">Brunei</option>
+			<option value="bg">Bulgaria</option>
+			<option value="bf">Burkina Faso</option>
+			<option value="bi">Burundi</option>
+			<option value="kh">Cambodia</option>
+			<option value="cm">Cameroon</option>
+			<option value="ca">Canada</option>
+			<option value="cv">Cape Verde</option>
+			<option value="ky">Cayman Islands</option>
+			<option value="cf">Central African Republic</option>
+			<option value="td">Chad</option>
+			<option value="cl">Chile</option>
+			<option value="cn">China</option>
+			<option value="cx">Christmas Island</option>
+			<option value="cc">Cocos (Keeling) Islands</option>
+			<option value="co">Colombia</option>
+			<option value="km">Comoros</option>
+			<option value="cg">Congo</option>
+			<option value="ck">Cook Islands</option>
+			<option value="cr">Costa Rica</option>
+			<option value="hr">Croatia</option>
+			<option value="cy">Cyprus</option>
+			<option value="cz">Czech Republic</option>
+			<option value="cd">Democratic Republic of Congo</option>
+			<option value="dk">Denmark</option>
+			<option value="xx">Disputed Territory</option>
+			<option value="dj">Djibouti</option>
+			<option value="dm">Dominica</option>
+			<option value="do">Dominican Republic</option>
+			<option value="tl">East Timor</option>
+			<option value="ec">Ecuador</option>
+			<option value="eg">Egypt</option>
+			<option value="sv">El Salvador</option>
+			<option value="gq">Equatorial Guinea</option>
+			<option value="er">Eritrea</option>
+			<option value="ee">Estonia</option>
+			<option value="et">Ethiopia</option>
+			<option value="fk">Falkland Islands</option>
+			<option value="fo">Faroe Islands</option>
+			<option value="fm">Federated States of Micronesia</option>
+			<option value="fj">Fiji</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="gf">French Guyana</option>
+			<option value="pf">French Polynesia</option>
+			<option value="tf">French Southern Territories</option>
+			<option value="ga">Gabon</option>
+			<option value="gm">Gambia</option>
+			<option value="ge">Georgia</option>
+			<option value="de">Germany</option>
+			<option value="gh">Ghana</option>
+			<option value="gi">Gibraltar</option>
+			<option value="gr">Greece</option>
+			<option value="gl">Greenland</option>
+			<option value="gd">Grenada</option>
+			<option value="gp">Guadeloupe</option>
+			<option value="gu">Guam</option>
+			<option value="gt">Guatemala</option>
+			<option value="gn">Guinea</option>
+			<option value="gw">Guinea-Bissau</option>
+			<option value="gy">Guyana</option>
+			<option value="ht">Haiti</option>
+			<option value="hm">Heard Island and Mcdonald Islands</option>
+			<option value="hn">Honduras</option>
+			<option value="hk">Hong Kong</option>
+			<option value="hu">Hungary</option>
+			<option value="is">Iceland</option>
+			<option selected="selected" value="in">India</option>
+			<option value="id">Indonesia</option>
+			<option value="ir">Iran</option>
+			<option value="iq">Iraq</option>
+			<option value="xe">Iraq-Saudi Arabia Neutral Zone</option>
+			<option value="ie">Ireland</option>
+			<option value="il">Israel</option>
+			<option value="it">Italy</option>
+			<option value="ci">Ivory Coast</option>
+			<option value="jm">Jamaica</option>
+			<option value="jp">Japan</option>
+			<option value="jo">Jordan</option>
+			<option value="kz">Kazakhstan</option>
+			<option value="ke">Kenya</option>
+			<option value="ki">Kiribati</option>
+			<option value="kw">Kuwait</option>
+			<option value="kg">Kyrgyzstan</option>
+			<option value="la">Laos</option>
+			<option value="lv">Latvia</option>
+			<option value="lb">Lebanon</option>
+			<option value="ls">Lesotho</option>
+			<option value="lr">Liberia</option>
+			<option value="ly">Libya</option>
+			<option value="li">Liechtenstein</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mo">Macau</option>
+			<option value="mk">Macedonia</option>
+			<option value="mg">Madagascar</option>
+			<option value="mw">Malawi</option>
+			<option value="my">Malaysia</option>
+			<option value="mv">Maldives</option>
+			<option value="ml">Mali</option>
+			<option value="mt">Malta</option>
+			<option value="mh">Marshall Islands</option>
+			<option value="mq">Martinique</option>
+			<option value="mr">Mauritania</option>
+			<option value="mu">Mauritius</option>
+			<option value="yt">Mayotte</option>
+			<option value="mx">Mexico</option>
+			<option value="md">Moldova</option>
+			<option value="mc">Monaco</option>
+			<option value="mn">Mongolia</option>
+			<option value="ms">Montserrat</option>
+			<option value="ma">Morocco</option>
+			<option value="mz">Mozambique</option>
+			<option value="mm">Myanmar</option>
+			<option value="na">Namibia</option>
+			<option value="nr">Nauru</option>
+			<option value="np">Nepal</option>
+			<option value="nl">Netherlands</option>
+			<option value="an">Netherlands Antilles</option>
+			<option value="nc">New Caledonia</option>
+			<option value="nz">New Zealand</option>
+			<option value="ni">Nicaragua</option>
+			<option value="ne">Niger</option>
+			<option value="ng">Nigeria</option>
+			<option value="nu">Niue</option>
+			<option value="nf">Norfolk Island</option>
+			<option value="kp">North Korea</option>
+			<option value="mp">Northern Mariana Islands</option>
+			<option value="no">Norway</option>
+			<option value="om">Oman</option>
+			<option value="pk">Pakistan</option>
+			<option value="pw">Palau</option>
+			<option value="ps">Palestinian Occupied Territories</option>
+			<option value="pa">Panama</option>
+			<option value="pg">Papua New Guinea</option>
+			<option value="py">Paraguay</option>
+			<option value="pe">Peru</option>
+			<option value="ph">Philippines</option>
+			<option value="pn">Pitcairn Islands</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="pr">Puerto Rico</option>
+			<option value="qa">Qatar</option>
+			<option value="re">Reunion</option>
+			<option value="ro">Romania</option>
+			<option value="ru">Russia</option>
+			<option value="rw">Rwanda</option>
+			<option value="sh">Saint Helena and Dependencies</option>
+			<option value="kn">Saint Kitts and Nevis</option>
+			<option value="lc">Saint Lucia</option>
+			<option value="pm">Saint Pierre and Miquelon</option>
+			<option value="vc">Saint Vincent and the Grenadines</option>
+			<option value="ws">Samoa</option>
+			<option value="sm">San Marino</option>
+			<option value="st">Sao Tome and Principe</option>
+			<option value="sa">Saudi Arabia</option>
+			<option value="sn">Senegal</option>
+			<option value="cs">Serbia and Montenegro</option>
+			<option value="sc">Seychelles</option>
+			<option value="sl">Sierra Leone</option>
+			<option value="sg">Singapore</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="sb">Solomon Islands</option>
+			<option value="so">Somalia</option>
+			<option value="za">South Africa</option>
+			<option value="gs">South Georgia and South Sandwich Islands</option>
+			<option value="kr">South Korea</option>
+			<option value="es">Spain</option>
+			<option value="pi">Spratly Islands</option>
+			<option value="lk">Sri Lanka</option>
+			<option value="sr">Suriname</option>
+			<option value="sj">Svalbard and Jan Mayen</option>
+			<option value="sz">Swaziland</option>
+			<option value="se">Sweden</option>
+			<option value="ch">Switzerland</option>
+			<option value="sy">Syria</option>
+			<option value="tw">Taiwan</option>
+			<option value="tj">Tajikistan</option>
+			<option value="tz">Tanzania</option>
+			<option value="th">Thailand</option>
+			<option value="tg">Togo</option>
+			<option value="tk">Tokelau</option>
+			<option value="to">Tonga</option>
+			<option value="tt">Trinidad and Tobago</option>
+			<option value="tn">Tunisia</option>
+			<option value="tr">Turkey</option>
+			<option value="tm">Turkmenistan</option>
+			<option value="tc">Turks And Caicos Islands</option>
+			<option value="tv">Tuvalu</option>
+			<option value="ug">Uganda</option>
+			<option value="ua">Ukraine</option>
+			<option value="ae">United Arab Emirates</option>
+			<option value="gb">United Kingdom</option>
+			<option value="xd">United Nations Neutral Zone</option>
+			<option value="us">United States</option>
+			<option value="um">United States Minor Outlying Islands</option>
+			<option value="uy">Uruguay</option>
+			<option value="vi">US Virgin Islands</option>
+			<option value="uz">Uzbekistan</option>
+			<option value="vu">Vanuatu</option>
+			<option value="va">Vatican City</option>
+			<option value="ve">Venezuela</option>
+			<option value="vn">Vietnam</option>
+			<option value="wf">Wallis and Futuna</option>
+			<option value="eh">Western Sahara</option>
+			<option value="ye">Yemen</option>
+			<option value="zm">Zambia</option>
+			<option value="zw">Zimbabwe</option>
+
+		</select>
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$textIdProoffULL2" id="textIdProoffULL2" class="txtCss2">
+			<option value="0">---Select---</option>
+			<option value="Driving Licence">Driving Licence</option>
+			<option value="PAN Card">PAN Card</option>
+			<option value="VoterID Card">VoterID Card</option>
+			<option value="Ration Card">Ration Card</option>
+			<option value="Passport">Passport</option>
+			<option selected="selected" value="Others">Others</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNofULL2" type="text" value="5454845455" maxlength="20" id="textIdProofNofULL2" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" />
+                        </td>
+		<td style="height: 5px; width: 8px;">
+                            <input type="image" name="ctl00$ContentPlaceHolder1$imgline4" id="imgline4" src="Images/Reset.png" onclick="return clearimage4();" style="border-width:0px;height: 27px; width: 30px;" />
+                        </td>
+	</tr>
+	<tr id="TrVisitors5">
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNameFull3" type="text" value="YOLLY" maxlength="100" id="txtVisitorsNameFull3" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderfULL3" id="drpGenderfULL3" class="txtCss2">
+			<option value="00">Select</option>
+			<option selected="selected" value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgefULL3" type="text" value="25" maxlength="3" id="txtAgefULL3" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamefULL3" type="text" value="YOLLY PAPA" maxlength="50" id="txtFatherHusbandNamefULL3" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalityfULL3" id="DrpNationalityfULL3" class="txtCss2">
+			<option value="0">Select</option>
+			<option value="af">Afghanistan</option>
+			<option value="ax">Aland Islands</option>
+			<option value="al">Albania</option>
+			<option value="dz">Algeria</option>
+			<option value="as">American Samoa</option>
+			<option value="ad">Andorra</option>
+			<option value="ao">Angola</option>
+			<option value="ai">Anguilla</option>
+			<option value="aq">Antarctica</option>
+			<option value="ag">Antigua and Barbuda</option>
+			<option value="ar">Argentina</option>
+			<option value="am">Armenia</option>
+			<option value="aw">Aruba</option>
+			<option value="au">Australia</option>
+			<option value="at">Austria</option>
+			<option value="az">Azerbaijan</option>
+			<option value="bs">Bahamas</option>
+			<option value="bh">Bahrain</option>
+			<option value="bd">Bangladesh</option>
+			<option value="bb">Barbados</option>
+			<option value="by">Belarus</option>
+			<option value="be">Belgium</option>
+			<option value="bz">Belize</option>
+			<option value="bj">Benin</option>
+			<option value="bm">Bermuda</option>
+			<option value="bt">Bhutan</option>
+			<option value="bo">Bolivia</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="bw">Botswana</option>
+			<option value="bv">Bouvet Island</option>
+			<option value="br">Brazil</option>
+			<option value="io">British Indian Ocean Territory</option>
+			<option value="vg">British Virgin Islands</option>
+			<option value="bn">Brunei</option>
+			<option value="bg">Bulgaria</option>
+			<option value="bf">Burkina Faso</option>
+			<option value="bi">Burundi</option>
+			<option value="kh">Cambodia</option>
+			<option value="cm">Cameroon</option>
+			<option value="ca">Canada</option>
+			<option value="cv">Cape Verde</option>
+			<option value="ky">Cayman Islands</option>
+			<option value="cf">Central African Republic</option>
+			<option value="td">Chad</option>
+			<option value="cl">Chile</option>
+			<option value="cn">China</option>
+			<option value="cx">Christmas Island</option>
+			<option value="cc">Cocos (Keeling) Islands</option>
+			<option value="co">Colombia</option>
+			<option value="km">Comoros</option>
+			<option value="cg">Congo</option>
+			<option value="ck">Cook Islands</option>
+			<option value="cr">Costa Rica</option>
+			<option value="hr">Croatia</option>
+			<option value="cy">Cyprus</option>
+			<option value="cz">Czech Republic</option>
+			<option value="cd">Democratic Republic of Congo</option>
+			<option value="dk">Denmark</option>
+			<option value="xx">Disputed Territory</option>
+			<option value="dj">Djibouti</option>
+			<option value="dm">Dominica</option>
+			<option value="do">Dominican Republic</option>
+			<option value="tl">East Timor</option>
+			<option value="ec">Ecuador</option>
+			<option value="eg">Egypt</option>
+			<option value="sv">El Salvador</option>
+			<option value="gq">Equatorial Guinea</option>
+			<option value="er">Eritrea</option>
+			<option value="ee">Estonia</option>
+			<option value="et">Ethiopia</option>
+			<option value="fk">Falkland Islands</option>
+			<option value="fo">Faroe Islands</option>
+			<option value="fm">Federated States of Micronesia</option>
+			<option value="fj">Fiji</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="gf">French Guyana</option>
+			<option value="pf">French Polynesia</option>
+			<option value="tf">French Southern Territories</option>
+			<option value="ga">Gabon</option>
+			<option value="gm">Gambia</option>
+			<option value="ge">Georgia</option>
+			<option value="de">Germany</option>
+			<option value="gh">Ghana</option>
+			<option value="gi">Gibraltar</option>
+			<option value="gr">Greece</option>
+			<option value="gl">Greenland</option>
+			<option value="gd">Grenada</option>
+			<option value="gp">Guadeloupe</option>
+			<option value="gu">Guam</option>
+			<option value="gt">Guatemala</option>
+			<option value="gn">Guinea</option>
+			<option value="gw">Guinea-Bissau</option>
+			<option value="gy">Guyana</option>
+			<option value="ht">Haiti</option>
+			<option value="hm">Heard Island and Mcdonald Islands</option>
+			<option value="hn">Honduras</option>
+			<option value="hk">Hong Kong</option>
+			<option value="hu">Hungary</option>
+			<option value="is">Iceland</option>
+			<option selected="selected" value="in">India</option>
+			<option value="id">Indonesia</option>
+			<option value="ir">Iran</option>
+			<option value="iq">Iraq</option>
+			<option value="xe">Iraq-Saudi Arabia Neutral Zone</option>
+			<option value="ie">Ireland</option>
+			<option value="il">Israel</option>
+			<option value="it">Italy</option>
+			<option value="ci">Ivory Coast</option>
+			<option value="jm">Jamaica</option>
+			<option value="jp">Japan</option>
+			<option value="jo">Jordan</option>
+			<option value="kz">Kazakhstan</option>
+			<option value="ke">Kenya</option>
+			<option value="ki">Kiribati</option>
+			<option value="kw">Kuwait</option>
+			<option value="kg">Kyrgyzstan</option>
+			<option value="la">Laos</option>
+			<option value="lv">Latvia</option>
+			<option value="lb">Lebanon</option>
+			<option value="ls">Lesotho</option>
+			<option value="lr">Liberia</option>
+			<option value="ly">Libya</option>
+			<option value="li">Liechtenstein</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mo">Macau</option>
+			<option value="mk">Macedonia</option>
+			<option value="mg">Madagascar</option>
+			<option value="mw">Malawi</option>
+			<option value="my">Malaysia</option>
+			<option value="mv">Maldives</option>
+			<option value="ml">Mali</option>
+			<option value="mt">Malta</option>
+			<option value="mh">Marshall Islands</option>
+			<option value="mq">Martinique</option>
+			<option value="mr">Mauritania</option>
+			<option value="mu">Mauritius</option>
+			<option value="yt">Mayotte</option>
+			<option value="mx">Mexico</option>
+			<option value="md">Moldova</option>
+			<option value="mc">Monaco</option>
+			<option value="mn">Mongolia</option>
+			<option value="ms">Montserrat</option>
+			<option value="ma">Morocco</option>
+			<option value="mz">Mozambique</option>
+			<option value="mm">Myanmar</option>
+			<option value="na">Namibia</option>
+			<option value="nr">Nauru</option>
+			<option value="np">Nepal</option>
+			<option value="nl">Netherlands</option>
+			<option value="an">Netherlands Antilles</option>
+			<option value="nc">New Caledonia</option>
+			<option value="nz">New Zealand</option>
+			<option value="ni">Nicaragua</option>
+			<option value="ne">Niger</option>
+			<option value="ng">Nigeria</option>
+			<option value="nu">Niue</option>
+			<option value="nf">Norfolk Island</option>
+			<option value="kp">North Korea</option>
+			<option value="mp">Northern Mariana Islands</option>
+			<option value="no">Norway</option>
+			<option value="om">Oman</option>
+			<option value="pk">Pakistan</option>
+			<option value="pw">Palau</option>
+			<option value="ps">Palestinian Occupied Territories</option>
+			<option value="pa">Panama</option>
+			<option value="pg">Papua New Guinea</option>
+			<option value="py">Paraguay</option>
+			<option value="pe">Peru</option>
+			<option value="ph">Philippines</option>
+			<option value="pn">Pitcairn Islands</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="pr">Puerto Rico</option>
+			<option value="qa">Qatar</option>
+			<option value="re">Reunion</option>
+			<option value="ro">Romania</option>
+			<option value="ru">Russia</option>
+			<option value="rw">Rwanda</option>
+			<option value="sh">Saint Helena and Dependencies</option>
+			<option value="kn">Saint Kitts and Nevis</option>
+			<option value="lc">Saint Lucia</option>
+			<option value="pm">Saint Pierre and Miquelon</option>
+			<option value="vc">Saint Vincent and the Grenadines</option>
+			<option value="ws">Samoa</option>
+			<option value="sm">San Marino</option>
+			<option value="st">Sao Tome and Principe</option>
+			<option value="sa">Saudi Arabia</option>
+			<option value="sn">Senegal</option>
+			<option value="cs">Serbia and Montenegro</option>
+			<option value="sc">Seychelles</option>
+			<option value="sl">Sierra Leone</option>
+			<option value="sg">Singapore</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="sb">Solomon Islands</option>
+			<option value="so">Somalia</option>
+			<option value="za">South Africa</option>
+			<option value="gs">South Georgia and South Sandwich Islands</option>
+			<option value="kr">South Korea</option>
+			<option value="es">Spain</option>
+			<option value="pi">Spratly Islands</option>
+			<option value="lk">Sri Lanka</option>
+			<option value="sr">Suriname</option>
+			<option value="sj">Svalbard and Jan Mayen</option>
+			<option value="sz">Swaziland</option>
+			<option value="se">Sweden</option>
+			<option value="ch">Switzerland</option>
+			<option value="sy">Syria</option>
+			<option value="tw">Taiwan</option>
+			<option value="tj">Tajikistan</option>
+			<option value="tz">Tanzania</option>
+			<option value="th">Thailand</option>
+			<option value="tg">Togo</option>
+			<option value="tk">Tokelau</option>
+			<option value="to">Tonga</option>
+			<option value="tt">Trinidad and Tobago</option>
+			<option value="tn">Tunisia</option>
+			<option value="tr">Turkey</option>
+			<option value="tm">Turkmenistan</option>
+			<option value="tc">Turks And Caicos Islands</option>
+			<option value="tv">Tuvalu</option>
+			<option value="ug">Uganda</option>
+			<option value="ua">Ukraine</option>
+			<option value="ae">United Arab Emirates</option>
+			<option value="gb">United Kingdom</option>
+			<option value="xd">United Nations Neutral Zone</option>
+			<option value="us">United States</option>
+			<option value="um">United States Minor Outlying Islands</option>
+			<option value="uy">Uruguay</option>
+			<option value="vi">US Virgin Islands</option>
+			<option value="uz">Uzbekistan</option>
+			<option value="vu">Vanuatu</option>
+			<option value="va">Vatican City</option>
+			<option value="ve">Venezuela</option>
+			<option value="vn">Vietnam</option>
+			<option value="wf">Wallis and Futuna</option>
+			<option value="eh">Western Sahara</option>
+			<option value="ye">Yemen</option>
+			<option value="zm">Zambia</option>
+			<option value="zw">Zimbabwe</option>
+
+		</select>
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$textIdProoffULL3" id="textIdProoffULL3" class="txtCss2">
+			<option value="0">---Select---</option>
+			<option value="Driving Licence">Driving Licence</option>
+			<option value="PAN Card">PAN Card</option>
+			<option value="VoterID Card">VoterID Card</option>
+			<option value="Ration Card">Ration Card</option>
+			<option value="Passport">Passport</option>
+			<option selected="selected" value="Others">Others</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNofULL3" type="text" value="154848454" maxlength="20" id="textIdProofNofULL3" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" />
+                        </td>
+		<td style="height: 5px; width: 8px;">
+                            <input type="image" name="ctl00$ContentPlaceHolder1$imgline5" id="imgline5" src="Images/Reset.png" onclick="return clearimage5();" style="border-width:0px;height: 27px; width: 30px;" />
+                        </td>
+	</tr>
+	<tr id="TrVisitors6">
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNameFull4" type="text" value="RIYA" maxlength="100" id="txtVisitorsNameFull4" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderfULL4" id="drpGenderfULL4" class="txtCss2">
+			<option value="00">Select</option>
+			<option selected="selected" value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgefULL4" type="text" value="19" maxlength="3" id="txtAgefULL4" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamefULL4" type="text" value="RAJVENDAR GOYAL" maxlength="50" id="txtFatherHusbandNamefULL4" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalityfULL4" id="DrpNationalityfULL4" class="txtCss2">
+			<option value="0">Select</option>
+			<option value="af">Afghanistan</option>
+			<option value="ax">Aland Islands</option>
+			<option value="al">Albania</option>
+			<option value="dz">Algeria</option>
+			<option value="as">American Samoa</option>
+			<option value="ad">Andorra</option>
+			<option value="ao">Angola</option>
+			<option value="ai">Anguilla</option>
+			<option value="aq">Antarctica</option>
+			<option value="ag">Antigua and Barbuda</option>
+			<option value="ar">Argentina</option>
+			<option value="am">Armenia</option>
+			<option value="aw">Aruba</option>
+			<option value="au">Australia</option>
+			<option value="at">Austria</option>
+			<option value="az">Azerbaijan</option>
+			<option value="bs">Bahamas</option>
+			<option value="bh">Bahrain</option>
+			<option value="bd">Bangladesh</option>
+			<option value="bb">Barbados</option>
+			<option value="by">Belarus</option>
+			<option value="be">Belgium</option>
+			<option value="bz">Belize</option>
+			<option value="bj">Benin</option>
+			<option value="bm">Bermuda</option>
+			<option value="bt">Bhutan</option>
+			<option value="bo">Bolivia</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="bw">Botswana</option>
+			<option value="bv">Bouvet Island</option>
+			<option value="br">Brazil</option>
+			<option value="io">British Indian Ocean Territory</option>
+			<option value="vg">British Virgin Islands</option>
+			<option value="bn">Brunei</option>
+			<option value="bg">Bulgaria</option>
+			<option value="bf">Burkina Faso</option>
+			<option value="bi">Burundi</option>
+			<option value="kh">Cambodia</option>
+			<option value="cm">Cameroon</option>
+			<option value="ca">Canada</option>
+			<option value="cv">Cape Verde</option>
+			<option value="ky">Cayman Islands</option>
+			<option value="cf">Central African Republic</option>
+			<option value="td">Chad</option>
+			<option value="cl">Chile</option>
+			<option value="cn">China</option>
+			<option value="cx">Christmas Island</option>
+			<option value="cc">Cocos (Keeling) Islands</option>
+			<option value="co">Colombia</option>
+			<option value="km">Comoros</option>
+			<option value="cg">Congo</option>
+			<option value="ck">Cook Islands</option>
+			<option value="cr">Costa Rica</option>
+			<option value="hr">Croatia</option>
+			<option value="cy">Cyprus</option>
+			<option value="cz">Czech Republic</option>
+			<option value="cd">Democratic Republic of Congo</option>
+			<option value="dk">Denmark</option>
+			<option value="xx">Disputed Territory</option>
+			<option value="dj">Djibouti</option>
+			<option value="dm">Dominica</option>
+			<option value="do">Dominican Republic</option>
+			<option value="tl">East Timor</option>
+			<option value="ec">Ecuador</option>
+			<option value="eg">Egypt</option>
+			<option value="sv">El Salvador</option>
+			<option value="gq">Equatorial Guinea</option>
+			<option value="er">Eritrea</option>
+			<option value="ee">Estonia</option>
+			<option value="et">Ethiopia</option>
+			<option value="fk">Falkland Islands</option>
+			<option value="fo">Faroe Islands</option>
+			<option value="fm">Federated States of Micronesia</option>
+			<option value="fj">Fiji</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="gf">French Guyana</option>
+			<option value="pf">French Polynesia</option>
+			<option value="tf">French Southern Territories</option>
+			<option value="ga">Gabon</option>
+			<option value="gm">Gambia</option>
+			<option value="ge">Georgia</option>
+			<option value="de">Germany</option>
+			<option value="gh">Ghana</option>
+			<option value="gi">Gibraltar</option>
+			<option value="gr">Greece</option>
+			<option value="gl">Greenland</option>
+			<option value="gd">Grenada</option>
+			<option value="gp">Guadeloupe</option>
+			<option value="gu">Guam</option>
+			<option value="gt">Guatemala</option>
+			<option value="gn">Guinea</option>
+			<option value="gw">Guinea-Bissau</option>
+			<option value="gy">Guyana</option>
+			<option value="ht">Haiti</option>
+			<option value="hm">Heard Island and Mcdonald Islands</option>
+			<option value="hn">Honduras</option>
+			<option value="hk">Hong Kong</option>
+			<option value="hu">Hungary</option>
+			<option value="is">Iceland</option>
+			<option selected="selected" value="in">India</option>
+			<option value="id">Indonesia</option>
+			<option value="ir">Iran</option>
+			<option value="iq">Iraq</option>
+			<option value="xe">Iraq-Saudi Arabia Neutral Zone</option>
+			<option value="ie">Ireland</option>
+			<option value="il">Israel</option>
+			<option value="it">Italy</option>
+			<option value="ci">Ivory Coast</option>
+			<option value="jm">Jamaica</option>
+			<option value="jp">Japan</option>
+			<option value="jo">Jordan</option>
+			<option value="kz">Kazakhstan</option>
+			<option value="ke">Kenya</option>
+			<option value="ki">Kiribati</option>
+			<option value="kw">Kuwait</option>
+			<option value="kg">Kyrgyzstan</option>
+			<option value="la">Laos</option>
+			<option value="lv">Latvia</option>
+			<option value="lb">Lebanon</option>
+			<option value="ls">Lesotho</option>
+			<option value="lr">Liberia</option>
+			<option value="ly">Libya</option>
+			<option value="li">Liechtenstein</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mo">Macau</option>
+			<option value="mk">Macedonia</option>
+			<option value="mg">Madagascar</option>
+			<option value="mw">Malawi</option>
+			<option value="my">Malaysia</option>
+			<option value="mv">Maldives</option>
+			<option value="ml">Mali</option>
+			<option value="mt">Malta</option>
+			<option value="mh">Marshall Islands</option>
+			<option value="mq">Martinique</option>
+			<option value="mr">Mauritania</option>
+			<option value="mu">Mauritius</option>
+			<option value="yt">Mayotte</option>
+			<option value="mx">Mexico</option>
+			<option value="md">Moldova</option>
+			<option value="mc">Monaco</option>
+			<option value="mn">Mongolia</option>
+			<option value="ms">Montserrat</option>
+			<option value="ma">Morocco</option>
+			<option value="mz">Mozambique</option>
+			<option value="mm">Myanmar</option>
+			<option value="na">Namibia</option>
+			<option value="nr">Nauru</option>
+			<option value="np">Nepal</option>
+			<option value="nl">Netherlands</option>
+			<option value="an">Netherlands Antilles</option>
+			<option value="nc">New Caledonia</option>
+			<option value="nz">New Zealand</option>
+			<option value="ni">Nicaragua</option>
+			<option value="ne">Niger</option>
+			<option value="ng">Nigeria</option>
+			<option value="nu">Niue</option>
+			<option value="nf">Norfolk Island</option>
+			<option value="kp">North Korea</option>
+			<option value="mp">Northern Mariana Islands</option>
+			<option value="no">Norway</option>
+			<option value="om">Oman</option>
+			<option value="pk">Pakistan</option>
+			<option value="pw">Palau</option>
+			<option value="ps">Palestinian Occupied Territories</option>
+			<option value="pa">Panama</option>
+			<option value="pg">Papua New Guinea</option>
+			<option value="py">Paraguay</option>
+			<option value="pe">Peru</option>
+			<option value="ph">Philippines</option>
+			<option value="pn">Pitcairn Islands</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="pr">Puerto Rico</option>
+			<option value="qa">Qatar</option>
+			<option value="re">Reunion</option>
+			<option value="ro">Romania</option>
+			<option value="ru">Russia</option>
+			<option value="rw">Rwanda</option>
+			<option value="sh">Saint Helena and Dependencies</option>
+			<option value="kn">Saint Kitts and Nevis</option>
+			<option value="lc">Saint Lucia</option>
+			<option value="pm">Saint Pierre and Miquelon</option>
+			<option value="vc">Saint Vincent and the Grenadines</option>
+			<option value="ws">Samoa</option>
+			<option value="sm">San Marino</option>
+			<option value="st">Sao Tome and Principe</option>
+			<option value="sa">Saudi Arabia</option>
+			<option value="sn">Senegal</option>
+			<option value="cs">Serbia and Montenegro</option>
+			<option value="sc">Seychelles</option>
+			<option value="sl">Sierra Leone</option>
+			<option value="sg">Singapore</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="sb">Solomon Islands</option>
+			<option value="so">Somalia</option>
+			<option value="za">South Africa</option>
+			<option value="gs">South Georgia and South Sandwich Islands</option>
+			<option value="kr">South Korea</option>
+			<option value="es">Spain</option>
+			<option value="pi">Spratly Islands</option>
+			<option value="lk">Sri Lanka</option>
+			<option value="sr">Suriname</option>
+			<option value="sj">Svalbard and Jan Mayen</option>
+			<option value="sz">Swaziland</option>
+			<option value="se">Sweden</option>
+			<option value="ch">Switzerland</option>
+			<option value="sy">Syria</option>
+			<option value="tw">Taiwan</option>
+			<option value="tj">Tajikistan</option>
+			<option value="tz">Tanzania</option>
+			<option value="th">Thailand</option>
+			<option value="tg">Togo</option>
+			<option value="tk">Tokelau</option>
+			<option value="to">Tonga</option>
+			<option value="tt">Trinidad and Tobago</option>
+			<option value="tn">Tunisia</option>
+			<option value="tr">Turkey</option>
+			<option value="tm">Turkmenistan</option>
+			<option value="tc">Turks And Caicos Islands</option>
+			<option value="tv">Tuvalu</option>
+			<option value="ug">Uganda</option>
+			<option value="ua">Ukraine</option>
+			<option value="ae">United Arab Emirates</option>
+			<option value="gb">United Kingdom</option>
+			<option value="xd">United Nations Neutral Zone</option>
+			<option value="us">United States</option>
+			<option value="um">United States Minor Outlying Islands</option>
+			<option value="uy">Uruguay</option>
+			<option value="vi">US Virgin Islands</option>
+			<option value="uz">Uzbekistan</option>
+			<option value="vu">Vanuatu</option>
+			<option value="va">Vatican City</option>
+			<option value="ve">Venezuela</option>
+			<option value="vn">Vietnam</option>
+			<option value="wf">Wallis and Futuna</option>
+			<option value="eh">Western Sahara</option>
+			<option value="ye">Yemen</option>
+			<option value="zm">Zambia</option>
+			<option value="zw">Zimbabwe</option>
+
+		</select>
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$textIdProoffULL4" id="textIdProoffULL4" class="txtCss2">
+			<option value="0">---Select---</option>
+			<option value="Driving Licence">Driving Licence</option>
+			<option value="PAN Card">PAN Card</option>
+			<option value="VoterID Card">VoterID Card</option>
+			<option value="Ration Card">Ration Card</option>
+			<option value="Passport">Passport</option>
+			<option selected="selected" value="Others">Others</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNofULL4" type="text" value="5154548545" maxlength="20" id="textIdProofNofULL4" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" />
+                        </td>
+		<td style="height: 5px; width: 8px;">
+                            <input type="image" name="ctl00$ContentPlaceHolder1$imgline6" id="imgline6" src="Images/Reset.png" onclick="return clearimage6();" style="border-width:0px;height: 27px; width: 30px;" />
+                        </td>
+	</tr>
+</table>
+
+                <div style="text-align: center;">
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow1" id="hidrow1" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow2" id="hidrow2" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow3" id="hidrow3" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow4" id="hidrow4" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow5" id="hidrow5" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow6" id="hidrow6" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow7" id="hidrow7" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidrow8" id="hidrow8" />
+                </div>
+                <div id="divVisitorDtlsChild" class="BlockTitle" style="display:none;">
+                    Tourist Child Details
+                </div>
+                <table id="VisitorTableChild" class="Foresttable" style="display:none;">
+	<tr>
+		<td align="left" style="width: 5%;" class="BlockHeading tableHeaderRow">
+                            Seat
+                        </td>
+		<td align="left" style="width: 21%;" class="BlockHeading tableHeaderRow">
+                            Tourist Name
+                        </td>
+		<td align="left" style="width: 7%;" class="BlockHeading tableHeaderRow">
+                            Gender
+                        </td>
+		<td align="left" style="width: 7%;" class="BlockHeading tableHeaderRow">
+                            Age
+                        </td>
+		<td align="left" style="width: 21%;" class="BlockHeading tableHeaderRow">
+                            Father's/Husband's Name
+                        </td>
+		<td align="left" style="width: 15%;" class="BlockHeading tableHeaderRow">
+                            Nationality
+                        </td>
+		<td align="left" style="width: 12%;" class="BlockHeading tableHeaderRow">
+                            ID Proof
+                        </td>
+		<td align="left" style="width: 12%;" class="BlockHeading tableHeaderRow">
+                            ID Proof No.
+                        </td>
+	</tr>
+	<tr>
+		<td align="center" class="BlockContent Propercase">
+                            1.
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNamechild" type="text" maxlength="100" id="txtVisitorsNamechild" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderchild" id="drpGenderchild" class="txtCss2">
+			<option selected="selected" value="00">Select</option>
+			<option value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgechild" type="text" maxlength="1" id="txtAgechild" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamechild" type="text" maxlength="50" id="txtFatherHusbandNamechild" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalitychild" id="DrpNationalitychild" class="txtCss2">
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofchild" type="text" maxlength="50" id="textIdProofchild" disabled="disabled" class="txtCss" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNochild" type="text" maxlength="20" id="textIdProofNochild" class="txtCss" />
+                        </td>
+	</tr>
+	<tr>
+		<td align="center" class="BlockContent Propercase">
+                            2.
+                        </td>
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNamechild0" type="text" maxlength="100" id="txtVisitorsNamechild0" class="txtCss" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderchild0" id="drpGenderchild0" class="txtCss2">
+			<option selected="selected" value="00">Select</option>
+			<option value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgechild0" type="text" maxlength="1" id="txtAgechild0" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamechild0" type="text" maxlength="50" id="txtFatherHusbandNamechild0" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalitychild0" id="DrpNationalitychild0" class="txtCss2">
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofchild0" type="text" maxlength="50" id="textIdProofchild0" disabled="disabled" class="txtCss" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNochild0" type="text" maxlength="20" id="textIdProofNochild0" class="txtCss" />
+                        </td>
+	</tr>
+	<tr>
+		<td align="center" class="BlockContent Propercase">
+                            3.
+                        </td>
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNamechild1" type="text" maxlength="100" id="txtVisitorsNamechild1" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderchild1" id="drpGenderchild1" class="txtCss2">
+			<option selected="selected" value="00">Select</option>
+			<option value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgechild1" type="text" maxlength="1" id="txtAgechild1" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamechild1" type="text" maxlength="50" id="txtFatherHusbandNamechild1" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalitychild1" id="DrpNationalitychild1" class="txtCss2">
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofchild1" type="text" maxlength="50" id="textIdProofchild1" disabled="disabled" class="txtCss" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNochild1" type="text" maxlength="20" id="textIdProofNochild1" class="txtCss" />
+                        </td>
+	</tr>
+	<tr>
+		<td align="center" class="BlockContent Propercase">
+                            4.
+                        </td>
+		<td align="center" class="BlockContent Propercase">
+                            <input name="ctl00$ContentPlaceHolder1$txtVisitorsNamechild2" type="text" maxlength="100" id="txtVisitorsNamechild2" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$drpGenderchild2" id="drpGenderchild2" class="txtCss2">
+			<option selected="selected" value="00">Select</option>
+			<option value="F">Female</option>
+			<option value="M">Male</option>
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtAgechild2" type="text" maxlength="1" id="txtAgechild2" class="txtCss" onkeypress="return CreateNumericAge(this,event,false)" style="width: 60px" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtFatherHusbandNamechild2" type="text" maxlength="50" id="txtFatherHusbandNamechild2" class="txtCss" onfocusout="uppercase(this);" onkeypress="return CreateCAPSStringTextBox(this,event)" />
+                        </td>
+		<td>
+                            <select name="ctl00$ContentPlaceHolder1$DrpNationalitychild2" id="DrpNationalitychild2" class="txtCss2">
+
+		</select>
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofchild2" type="text" maxlength="50" id="textIdProofchild2" disabled="disabled" class="txtCss" />
+                        </td>
+		<td>
+                            <input name="ctl00$ContentPlaceHolder1$textIdProofNochild2" type="text" maxlength="20" id="textIdProofNochild2" class="txtCss" />
+                        </td>
+	</tr>
+</table>
+
+            </div>
+            <table id="tblchild" style="display:block;">
+	<tr>
+		<td colspan="3">
+                        Are you planning trip with children below 5 years?
+                    </td>
+		<td colspan="5">
+                        <select name="ctl00$ContentPlaceHolder1$drpChild" id="drpChild" class="txtCss2">
+			<option selected="selected" value="N">No</option>
+			<option value="Y">Yes</option>
+
+		</select>
+                    </td>
+	</tr>
+</table>
+
+            <div id="DivChildMsgPopup" style="display: none; margin-left: 0px;
+                height: 20px; width: 98%; text-align: center; cursor: pointer; background-color: #b33760;" class="input-login-btn">
+                Children below 5 years will sit with family member, i.e., no separate seat will
+                be provide for children below 5 years.
+            </div>
+            
+           
+            <div class="BlockTitle">
+                Bank Account Details (In case of refund)</div>
+            <div class="boxBody">
+                <table id="TblAccountDtls" class="Foresttable" style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+	<tr>
+		<td style="width: 25%;" align="left">
+                            Bank Account Number
+                        </td>
+		<td style="width: 25%;" align="left">
+                            <input name="ctl00$ContentPlaceHolder1$lblBankAccountNumber" type="text" value="42808299760" maxlength="19" id="lblBankAccountNumber" disabled="disabled" class="txtCss" onkeypress="return CreateNumericTextBox(this,event,true)" style="background-color:rgba(205, 205, 205, 0.16);" />
+                        </td>
+		<td style="width: 25%;" align="left">
+                            Name of Account Holder
+                        </td>
+		<td style="width: 25%;" align="left">
+                            <input name="ctl00$ContentPlaceHolder1$lblBankAccountName" type="text" value="Akshay Ramkishor Rahangdale" maxlength="100" id="lblBankAccountName" disabled="disabled" class="txtCss" onkeypress="return CreateStringTextBox(this,event,true)" style="background-color:rgba(205, 205, 205, 0.16);" />
+                        </td>
+	</tr>
+	<tr>
+		<td style="width: 25%;" align="left">
+                            Enter Bank Name
+                        </td>
+		<td style="width: 25%;" align="left">
+                            <input name="ctl00$ContentPlaceHolder1$lblBankName" type="text" value="State Bank of India" maxlength="100" id="lblBankName" disabled="disabled" class="txtCss" onkeypress="return CreateStringTextBox(this,event,true)" style="background-color:rgba(205, 205, 205, 0.16);" />
+                        </td>
+		<td style="width: 25%;" align="left">
+                            Branch IFSC Code
+                        </td>
+		<td style="width: 25%;" align="left">
+                            <input name="ctl00$ContentPlaceHolder1$lblBankIFSC" type="text" value="SBIN0018096" maxlength="20" id="lblBankIFSC" disabled="disabled" class="txtCss" onkeypress="return CreateAlphaNumericTextBox(this,event,true)" style="background-color:rgba(205, 205, 205, 0.16);" />
+                        </td>
+	</tr>
+</table>
+
+            </div>
+             <table class="Foresttable" style="width: 100%; margin-top: 10px;" cellpadding="3"
+                cellspacing="0" border="0">
+                <tbody>
+                    <tr style="background-color: #cdcdcdd;">
+                        <td style="width: 25%; background-color: #ddebf7;">
+                            Mobile Number<span style="color:Red;">*</span>
+                        </td>
+                        <td colspan="1" style="width: 25%; background-color: #ddebf7;">
+                            <input name="ctl00$ContentPlaceHolder1$txtAlertMobileNumber" type="text" value="8788349253" maxlength="10" id="txtAlertMobileNumber" class="txtCss" />
+                        </td>
+                        <td colspan="2" style="width: 50%; color: red; background-color: #ddebf7;">
+                            <div style="font-size: 0.8em; font-weight: bold;">
+                                This number will be used for booking confirmation and alerts for tourist...!!!<div>
+                                    <div>
+                                        Please change this mobile number accordingly.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="BlockTitle">
+                Declaration
+            </div>
+            <div>
+                <table id="Table1" class="Foresttable" style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+	<tr>
+		<td style="width: 25%;" align="left">
+                            
+                            <input id="ChkDeclaration" type="checkbox" name="ctl00$ContentPlaceHolder1$ChkDeclaration" checked="checked" /><label for="ChkDeclaration">I Authorize Forest Department, Madhya Pradesh for using Mobile Number, Identity Proof & Email  mentioned in this permit for intimation and verification purposes.
+                                Dear Customer, Forest has proposed for rate increase if same get approved you will required to pay the difference amount at time of your safari at the park counter.</label>
+                        </td>
+	</tr>
+</table>
+
+            </div>
+            <center>
+                <div style="margin-top: 0px;">
+                    &nbsp;</div>
+                <div style="padding-left: 10px; background-color: #e8eff3; margin: 0px 10px 0px 14px;
+                    width: 400px; text-align: center;">
+                    <div style="display: inline-block">
+                        
+<script type="text/javascript">
+    function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
+</script>
+<style>
+    .txtCss {
+    
+    width: 95%;
+    margin-left: 3px;
+    border: 0px none transparent;
+    border-bottom: 1px solid #055681;
+    height: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color:transparent;
+    padding-left: 5px;
+}
+.txtCss:focus {
+    outline: none;
+    border-bottom: 1px solid red;
+    transition: all 1000ms ease;
+}
+</style>
+<div>
+    <table>
+        <tr><td colspan="2"><h4 style="padding-left: 4px;    margin-top: 5px;padding-bottom:0px;font-size: 13px;color:#055781;">Verify! You are human</h4></td></tr>
+        <tr>
+            <td style="vertical-align: top;">
+                <img id="imgCaptcha" src="/Captcha/frmCaptcha.aspx" style="border-width:0px;" /></td>
+            <td style="vertical-align: top;">
+                <input name="ctl00$ContentPlaceHolder1$LoginCaptcha$txtCaptchatext" type="text" maxlength="3" id="txtCaptchatext" class="txtCss" placeholder="Answer" AutoComplete="off" onkeypress="return isNumber(event)" style="color:Gray;width:60px;color:Gray;" /></td>
+        </tr>
+    </table>
+</div>
+
+                    </div>
+                    <div style="display: inline-block; padding-left: 30px; border-left: 1px dashed #055681;
+                        margin-left: 60px;">
+                        <img src="../Captcha/Images/CaptchaLogi.png" />
+                    </div>
+                </div>
+                <div style="text-align: center; padding-top: 6px;">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnsubmit" value="Book Your Permit" onclick="return getTableData();" id="btnsubmit" class="input-login-btn" style="cursor: pointer;" />
+                </div>
+            </center>
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hidTicketType" id="hidTicketType" value="N" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hidparkid" id="hidparkid" value="1" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hidtimesloat" id="hidtimesloat" value="E" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hidzoneid" id="hidzoneid" value="2" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hidzonename" id="hidzonename" value="Magadhi" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$Hdnprofileid" id="Hdnprofileid" value="542943" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnFlag" id="HdnFlag" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnTicketType" id="HdnTicketType" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnDate" id="HdnDate" value="30 Mar 2026" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnVNo" id="HdnVNo" />
+             <input type="hidden" name="ctl00$ContentPlaceHolder1$Hdnmsg" id="Hdnmsg" />
+              <input type="hidden" name="ctl00$ContentPlaceHolder1$Hdnmsg1" id="Hdnmsg1" />
+            
+            <div id="dvErr" class="error" style="display:block;">You have entered Invalid Captcha !!!</div>
+            <div class="clearFix" style="height: 30px;">
+                &nbsp;</div>
+        </div>
+        
+        
+    </div> <script type="text/javascript">
+        var publicIP;
+        var privateIP;function getUserIP(onNewIP) {
+        var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+        var pc = new myPeerConnection({
+        iceServers: []
+        }),
+        noop = function () { },
+        localIPs = {},
+        ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(a-f0-9]{1,4}){7})/g,
+        key;function iterateIP(ip) {
+        if (!localIPs[ip]) onNewIP(ip);
+        localIPs[ip] = true;
+        }//create a bogus data channel
+        pc.createDataChannel("");// create offer and set local description
+        pc.createOffer().then(function (sdp) {
+        sdp.sdp.split('\n').forEach(function (line) {
+        if (line.indexOf('candidate') < 0) return;
+        line.match(ipRegex).forEach(iterateIP);
+        });pc.setLocalDescription(sdp, noop, noop);
+        }).catch(function (reason) {
+        // An error occurred, so handle the failure to connect
+        });//listen for candidate events
+        pc.onicecandidate = function (ice) {
+        if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
+        ice.candidate.candidate.match(ipRegex).forEach(iterateIP);
+        };
+        }getUserIP(function (ip) {
+        privateIP = ip;
+        $.getJSON('https://api.ipify.org?format=json', function (data) {publicIP = data.ip;
+        $('#HdnPublicIP').val(publicIP);
+        $('#HdnLANIP').val(privateIP);});});
+    </script>
+
+
+        </div>
+
+        <div class="forest_footer" style="position:fixed;bottom:0px;font-size: 13px;">
+          <div id="divLoggedIN" style="float:left;">
+                <span id="lblLoggedIn"></span>
+                <span id="lblShoeServerName" style="float:left;margin-left:5px;color:white;">Served by: BHAGAT SINGH Server</span>
+            </div>
+
+            
+             Powered by:<a href="https://mponline.gov.in/"><img src="https://mponline.gov.in/Quick Links/PortalImages/MPOHeaderFooterLogo/footerlogo.png" alt="" /></a>
+
+        </div>
+    </form>
+    <script type="text/javascript">
+
+        function showDashBoardMenu(menuType) {
+            if (menuType == 'mainmenu') { $('#divDashBar').removeClass('blurBack').fadeIn('slow'); $('#divcontactUs').hide(); $('#divRePrint').hide(); $('#divRefund').hide(); }
+            else if (menuType == 'addon') { }
+            else if (menuType == 'reschedule') { }
+            else if (menuType == 'cancel') { }
+            else if (menuType == 'print') { $('#divDashBar').hide(); $('#divcontactUs').hide(); $('#divRePrint').removeClass('blurBack').fadeIn('slow'); $('#divRefund').hide(); }
+            else if (menuType == 'refund') { $('#divDashBar').hide(); $('#divcontactUs').hide(); $('#divRePrint').hide(); $('#divRefund').removeClass('blurBack').fadeIn('slow'); }
+            else if (menuType == 'gallery') { }
+            else if (menuType == 'contactus') {
+                $('#divDashBar').addClass('blurBack');
+                $('#divRePrint').addClass('blurBack');
+                $('#divRefund').addClass('blurBack');
+                $('#divcontactUs').fadeIn('slow');
+            }
+        }
+    </script>
+
+</body>
+</html>

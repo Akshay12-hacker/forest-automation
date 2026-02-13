@@ -1,0 +1,20 @@
+Login Window
+   ↓
+Dashboard Window
+   ├── Left Panel (Flows)
+   │     ├ Full Vehicle
+   │     ├ Single Seat
+   │     ├ Zone Selection
+   │
+   ├── Center Panel
+   │     ├ Start
+   │     ├ Stop
+   │     ├ Resume
+   │
+   ├── Right Panel
+   │     ├ Tourist CSV Editor
+   │     ├ Config Editor
+   │
+   └── Bottom Panel
+         ├ Live Logs
+         ├ Status Bar

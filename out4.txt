@@ -1,0 +1,709 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache,no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache,no-cache
+Content-Type: text/html; charset=utf-8
+Expires: -1,-1
+X-Frame-Options: DENY
+Set-Cookie: Forest_ProfileName=Fk/zi6Kf3PMBvstenj3nJQWlKxxq/ZsdFgM63R4EH5s=; path=/; secure; HttpOnly; SameSite=Strict
+Content-Security-Policy: default-src 'self';                     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ajax.googleapis.com;                     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;                     img-src 'self' data: https:;                     font-src 'self' https://fonts.gstatic.com;                     connect-src 'self' https://api.yourdomain.com;                     frame-ancestors 'self';                     object-src 'none';                     base-uri 'self';
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Permissions-Policy: camera=(); microphone=(); geolocation=(); fullscreen=(self)
+Cross-Origin-Resource-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: same-origin
+Referrer-Policy: strict-origin-when-cross-origin
+Date: Sat, 07 Feb 2026 09:42:33 GMT
+Vary: Accept-Encoding
+Connection: Keep-alive
+Via: 1.1 ID-0016035575612347 uproxy-20
+Content-Length: 30791
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NBN7BZ7V');</script>
+<!-- End Google Tag Manager -->
+
+
+    <title>
+
+</title><link href="css/Style.css" rel="stylesheet" type="text/css" /><link href="css/Table_style.css" rel="stylesheet" type="text/css" /><link href="css/NewStyle.css" rel="stylesheet" type="text/css" /><link href="css/Login.css" rel="stylesheet" type="text/css" /><link href="css/StyleSheet.css" rel="stylesheet" type="text/css" /><link href="css/font-awesome.css" rel="stylesheet" /><link href="css/DashBoard.css" rel="stylesheet" /><link href="css/style_inner.css" rel="stylesheet" type="text/css" /><link href="css/Style2.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery-A.AA.A.min.js" type="text/javascript"></script>
+
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBN7BZ7V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <form name="form1" method="post" action="./ProcessToPayment.aspx" id="form1" autocomplete="off" autofill="off">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjg2MzQ3MDIwD2QWAmYPZBYCAgMPZBYGAgEPZBYCAgEPDxYCHgRUZXh0BRBUaWNrZXQgQ29sbGVjdG9yZGQCAw9kFggCBw8WAh4JaW5uZXJodG1sBW88aW1nIHNyYz0naHR0cHM6Ly9mb3Jlc3QubXBvbmxpbmUuZ292LmluL0ltYWdlcy9Mb2dvcy9CYW5kaHZnYXJoUmVjaWVwdC5wbmcnIGFsdD0nQmFuZGhhdmdhcmggVGlnZXIgUmVzZXJ2ZScgLz5kAgkPZBYCAgEPFgIeBXN0eWxlBR5hbGlnbi1jb250ZW50OmNlbnRlcjtkaXNwbGF5OjsWOgIBDw8WAh8ABQwxMkUyNjE3MzIwNTBkZAIDDw8WAh8ABQsxMiBGZWIgMjAyNmRkAgUPDxYCHwAFAi0tZGQCCQ8PFgIfAAUBNmRkAgsPDxYCHwAFF1swIEZvcmVpZ24gTmF0aW9uYWxzICsgZGQCDQ8PFgIfAAUKNiBJbmRpYW5zXWRkAg8PDxYCHwAFDUZ1bGwgVmVoaWNsZSBkZAIRDw8WAh8ABTJNYWdhZGhpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRkAhMPDxYCHwAFB0V2ZW5pbmdkZAIVDw8WAh8ABQczLjAwIFBNZGQCFw8PFgIfAAUHNi4xNSBQTWRkAhkPDxYCHwAFB01hZ2FkaGlkZAIbDw8WAh8ABQZUYXRrYWxkZAIdDw8WAh8ABQJOb2RkAh8PDxYCHwAFFDA3IEZlYiAyMDI2IDAzOjAwIFBNZGQCIQ8PFgIfAAUPTm90IFBhaWQgUGVybWl0ZGQCIw8PFgIfAAUQVGlja2V0IENvbGxlY3RvcmRkAiUPDxYCHwAFAy0tLWRkAicPDxYCHwAFEkRyaXZpbmcgTGljZW5jZSA6IGRkAigPDxYCHwAFClhYWFhYWFhYWFhkZAIqDw8WAh8ABQQzMzAwZGQCLA8PFgIfAAUVenlydXNuZW9uMzlAZ21haWwuY29tZGQCLg8PFgIfAAUFNTAuMDBkZAIwDw8WAh8ABQo4Nzg4MzQ5MjUzZGQCMg8PFgIfAAUXVG90YWwgQW1vdW50IHRvIGJlIFBhaWRkZAI0Dw8WAh8ABQczMzUwLjAwZGQCNg8PFgIfAGVkZAI4DxYCHgtfIUl0ZW1Db3VudAIGFgwCAQ9kFgxmDxUBATFkAgEPDxYCHwAFA0xNVmRkAgMPDxYCHwAFHUFLU0hBWSBSQUhBTkdEQUxFIChNYWxlKSAoMjApZGQCBQ8PFgIfAAUUUkFNS0lTSE9SIFJBSEFOR0RBTEVkZAIHDw8WAh8ABQVJbmRpYWRkAgkPDxYCHwAFE090aGVycyA6IDEyMzQ1Njc4OTlkZAICD2QWDGYPFQEBMmQCAQ8PFgIfAAUDTE1WZGQCAw8PFgIfAAURUEFORFUgKE1hbGUpICgyMSlkZAIFDw8WAh8ABQxQQU5EVSBLIFBBUEFkZAIHDw8WAh8ABQVJbmRpYWRkAgkPDxYCHwAFEk90aGVycyA6IDk4NzQ1NjMyMWRkAgMPZBYMZg8VAQEzZAIBDw8WAh8ABQNMTVZkZAIDDw8WAh8ABRBBTkRVIChNYWxlKSAoMjIpZGQCBQ8PFgIfAAULQU5EVSBLIFBBUEFkZAIHDw8WAh8ABQVJbmRpYWRkAgkPDxYCHwAFEk90aGVycyA6IDk2MzI1ODc0MWRkAgQPZBYMZg8VAQE0ZAIBDw8WAh8ABQNMTVZkZAIDDw8WAh8ABRJKSEFORFUgKE1hbGUpICgxOClkZAIFDw8WAh8ABQ1KSEFORFUgSyBQQVBBZGQCBw8PFgIfAAUFSW5kaWFkZAIJDw8WAh8ABRJPdGhlcnMgOiAxNDc4NTIzNjlkZAIFD2QWDGYPFQEBNWQCAQ8PFgIfAAUDTE1WZGQCAw8PFgIfAAURTkFORFUgKE1hbGUpICgxOSlkZAIFDw8WAh8ABQxOQU5EVSBLIFBBUEFkZAIHDw8WAh8ABQVJbmRpYWRkAgkPDxYCHwAFEk90aGVycyA6IDY1NDc4OTMyMWRkAgYPZBYMZg8VAQE2ZAIBDw8WAh8ABQNMTVZkZAIDDw8WAh8ABRVNQUhBTkRVIChGZW1hbGUpICgyNSlkZAIFDw8WAh8ABQ5NQUhBTkRVIEsgUEFQQWRkAgcPDxYCHwAFBUluZGlhZGQCCQ8PFgIfAAUST3RoZXJzIDogNzg5MzIxNDU2ZGQCUA9kFgICAQ8WAh4FVmFsdWUFAU5kAgsPZBYEAgEPFgIfAgUNZGlzcGxheTpub25lOxYCAgEPZBYCAgEPDxYCHwAFCjg3ODgzNDkyNTNkZAIDDxYCHwIFCWRpc3BsYXk6O2QCDQ8WBh4FY2xhc3MFB3N1Y2Nlc3MfAgUYZGlzcGxheTpibG9jazt3aWR0aDo5NCU7HwEFT0FuIE9UUCBwYXNzd29yZCBoYXMgYmVlbiBzZW50IHRvIHlvdXIgcmVnaXN0ZXJlZCBNb2JpbGUgbnVtYmVyIGFuZCBFbWFpbCBJRCAhISFkAgcPDxYCHwAFHlNlcnZlZCBieTogQkhBR0FUIFNJTkdIIFNlcnZlcmRkZPx699qDRVIH1qvsCrizP2hV04JX" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="143497DA" />
+</div>
+         <div class="NP_header">
+            <div class="NP_header_in">
+                <a href="/index.aspx">
+                    <img src="/images/Logos/nationalpark_logo.png" class="srvc_logo" alt="" style="height:64px;"/>
+                </a>
+                <a href="http://mfp.mpforest.org/tiger/About_Us.aspx">
+                    <img src="/images/Logos/mpfoundation_logo.png" class="save_logo" alt="" style="height:62px;" /></a>
+            </div>
+        </div>
+        <div>
+            <div style="width: 85%; min-width: 980px; margin: 0px auto 0 auto;min-width:150px;">
+                <div id="dd" class="wrapper-dropdown-5" tabindex="1" style="min-width:150px;top: 0px; padding: 10px 40px 0px 10px; height: 30px; text-align: left; margin-right: -8px;min-width:150px;">
+                    <img src="/images/docs-icon.png" height="11" style="padding-right:4px;" />
+                    <span id="lblProfileName">Ticket Collector</span>
+                    <ul class="dropdown" style="border-bottom-left-radius: 0.6em;">
+                        <li style="margin-right:9px;">
+                            <a href="/DashBoardHome.aspx">
+                                <i class="icon-cog" style="height: 30px; padding-top: 13px;"></i>DashBoard
+                            </a>
+                        </li>
+                         <li style="margin-right:9px;" >
+                            <a id="BookPermitId">
+                                <i class="icon-cog" style="height: 30px; padding-top: 13px;"></i>Book Now
+                            </a>
+                        </li>
+                        <li style="margin-right:9px;">
+                            <a href="/Index.aspx?action=logout">
+                                <i class="icon-remove" style="height: 30px; padding-top: 13px;"></i>Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    //alert('hi');
+                    function DropDown(el) {
+
+                        this.dd = el;
+                        this.initEvents();
+                    }
+                    DropDown.prototype = {
+                        initEvents: function () {
+                            var obj = this;
+                          
+                            obj.dd.on('click', function (event) {
+                                 
+                                $(this).toggleClass('active');
+                                event.stopPropagation();
+                            });
+                        }
+                    }
+                    $(function () {
+                      
+                        var dd = new DropDown($('#dd'));
+
+                        $(document).click(function () {
+                            // all dropdowns
+                            $('.wrapper-dropdown-5').removeClass('active');
+                        });
+
+                    });
+                </script>
+              <script type="text/javascript">
+
+
+                    document.addEventListener('keydown', function (event) {
+                        // F12
+                        if (event.key === "F12" || event.keyCode === 123) {
+                            event.preventDefault();
+                            return false;
+                        }
+
+                        // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+                        if ((event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) ||
+                            (event.ctrlKey && event.key === 'U')) {
+                            event.preventDefault();
+                            return false;
+                        }
+                    });
+
+                    // Disable right click
+                    document.addEventListener('contextmenu', function (e) {
+                        e.preventDefault();
+                    });
+
+                    // Detect DevTools open
+                    (function () {
+                        let devtoolsOpen = false;
+                        const threshold = 160;
+
+                        function detectDevTools() {
+                            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                            return widthThreshold || heightThreshold;
+                        }
+
+                        function check() {
+                            if (detectDevTools()) {
+                                if (!devtoolsOpen) {
+                                    devtoolsOpen = true;
+                                    alert('Developer tools are open!');
+                                    window.location.href = "https://forest.mponline.gov.in/Index.aspx"; // Take action
+                                }
+                            } else {
+                                devtoolsOpen = false;
+                            }
+                        }
+
+                        setInterval(check, 1000); // check every second
+                    })();
+
+                </script>
+            </div>
+            
+    <link href="css/Style2.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        window.onload = window.history.forward(0);
+    </script>
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidtotalfee" id="hidtotalfee" />
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidbooby" id="hidbooby" />
+
+    <input name="ctl00$ContentPlaceHolder1$hidticketid" type="hidden" id="hidticketid" value="12E261732050" />
+
+    <div class="forest_container">
+        <div id="ParkHeading" class="forest_head"><img src='https://forest.mponline.gov.in/Images/Logos/BandhvgarhReciept.png' alt='Bandhavgarh Tiger Reserve' /></div>
+        
+<link href="https://forest.mponline.gov.in/css/Style.css" rel="stylesheet" type="text/css" />
+<link href="https://forest.mponline.gov.in/css/jquery.ui.accordion.min.css" rel="stylesheet" type="text/css" />
+<link href="https://forest.mponline.gov.in/css/jquery.ui.theme.min.css" rel="stylesheet" type="text/css" />
+<link href="https://forest.mponline.gov.in/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="https://forest.mponline.gov.in/css/Table_style.css" />
+<link rel="stylesheet" href="https://forest.mponline.gov.in/css/NewStyle.css" type="text/css" />
+<link href="https://forest.mponline.gov.in/css/Login.css" rel="stylesheet" type="text/css" />
+<link href="https://forest.mponline.gov.in/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+<div id="divTicketDtls" style="align-content:center;display:;">
+    <div class="BlockTitle">Permit Details </div>
+    <table id="Table1" class="Foresttable">
+        <tbody>
+            <tr>
+                <td align="left" style="width: 20%;" class="BlockHeading">Permit ID & Date: </td>
+                <td align="left" style="width: 35%;" class="BlockContentBold"><span>
+                    <span id="lblTicketID">12E261732050</span>
+       </span><span class="BlockContent" style="font-weight: normal; font-size: 12px;">
+                    <span style="font-weight: bold;">& &nbsp;</span>
+                    <span id="lblDate" style="font-weight: 700">12 Feb 2026</span></span></td>
+                <td align="left" style="width: 20%;" class="BlockHeading">Permit Status: </td>
+                <td align="left" style="width: 20%;" class="BlockContent">
+                    <span id="lblPermitStatus">--</span>
+                </td>
+                
+            </tr>
+            <tr>
+                <td align="left" class="BlockHeading">Total No. of Tourist(S): </td>
+                <td align="left" class="BlockContent">
+                    <span id="lbltotalforind">6</span>&nbsp;
+                <span id="lblforgien">[0 Foreign Nationals + </span>
+                    <span id="lblindian">6 Indians]</span>
+                </td>
+                <td align="left" class="BlockHeading">Permit Type:</td>
+                <td align="left" class="BlockContent">
+                    <span id="lblPermitType">Full Vehicle </span></td>
+            </tr>
+            <tr>
+                <td align="left" style="width: 20%;" class="BlockHeading">Safari Zone: </td>
+                <td align="left" style="width: 35%;" class="BlockContent">
+                    <span>
+                        <span id="LblSufariZone">Magadhi                                           </span>
+                    </span>
+                </td>
+                <td align="left" class="BlockHeading">Time Slot:</td>
+                <td align="left" class="BlockContent">
+                    <span>
+                        <span id="LblTimeSlot">Evening</span>
+                    </span>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td align="left" style="width: 20%;" class="BlockHeading">Safari Starts: </td>
+                <td align="left" style="width: 35%;" class="BlockContent">
+                    <span>
+                        <span id="LblSuffariStarts">3.00 PM</span>
+                        
+                    </span>
+                </td>
+                <td align="left" class="BlockHeading">Safari Ends:</td>
+                <td align="left" class="BlockContent">
+                    <span>
+                        <span id="LblSuffartsEnd">6.15 PM</span>
+                    </span>
+
+                </td>
+            </tr>
+             <tr>
+                <td align="left" class="BlockHeading">Entry Gate: </td>
+                <td align="left" class="BlockContent"  >
+                    <span id="lblEnrtyGate">Magadhi</span> 
+                </td>
+                <td align="left" class="BlockHeading">Permit Category: </td>
+                <td align="left" class="BlockContent"  >
+                    <span id="lblPermitCategory">Tatkal</span> 
+                </td>
+            </tr>
+            <tr>
+                <td align="left" class="BlockContentNew" colspan="4">Are you planning trip with children below 5 years?
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="lblchildDT">No</span>
+                </td>
+
+            </tr>
+            <tr>
+                <td align="left" class="BlockContent" colspan="4">
+
+                    
+
+                    <div class="remarkContent">*Due to some local conditions the officer in-charge of the protected area may change the entry/exit timings for a day/duration, Please enquire about any such changes at Entry Gate.</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="BlockTitle">Booking Details </div>
+    <table id="Table2" class="Foresttable">
+        <tr>
+            <td align="left" style="width: 25%;" class="BlockHeading">Booking Date: </td>
+            <td align="left" style="width: 25%;" colspan="3" class="BlockContent">
+                <span id="lblbookingdate">07 Feb 2026 03:00 PM</span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" class="BlockHeading">Payment Status: </td>
+            <td align="left" class="BlockContent">
+                <span id="lblpaidticket">Not Paid Permit</span>
+            </td>
+            <td align="left" class="BlockHeading">Booked By: </td>
+            <td align="left" class="BlockContent">
+                <span id="lblbookedby">Ticket Collector</span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 25%;" class="BlockHeading">Transaction ID: </td>
+            <td align="left" style="width: 25%;" class="BlockContent">
+                <span id="lbltransid">---</span></td>
+            <td align="left" class="BlockHeading">Identity Card/No: </td>
+            <td align="left" class="BlockContent">
+                <span id="lblidcardtype">Driving Licence : </span><span id="lblidcardno">XXXXXXXXXX</span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 25%;" class="BlockHeading">Reservation Fee: </td>
+            <td align="left" style="width: 25%;" class="BlockContent"><span class="INR"></span>
+                <span id="lblticketfee">3300</span>
+            </td>
+            <td align="left" class="BlockHeading">Email ID: </td>
+            <td align="left" class="BlockContent"><span typeof="email">
+                <span id="lblemailid">zyrusneon39@gmail.com</span></span></td>
+        </tr>
+        <tr>
+            <td align="left" class="BlockHeading">Service Fee: <span class="remarkContent">(Inclusive of GST)</span> </td>
+            <td align="left" class="BlockContent"><span class="INR"></span>
+                <span id="lblportalfee">50.00</span></td>
+            <td align="left" class="BlockHeading">Contact No: </td>
+            <td align="left" class="BlockContent">
+                <span id="lblcontactno">8788349253</span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" class="BlockHeading">
+                <span id="lblPaidAmt">Total Amount to be Paid</span></td>
+            <td align="left" class="BlockContentBold"><span class="INR"></span>
+                <span id="lbltotalamount">3350.00</span></td>
+            <td align="left" class="BlockHeading">Emergency Contact No: </td>
+            <td align="left" class="BlockContent">
+                <span id="lblemergencyno"></span></td>
+        </tr>
+        <tr>
+            <td align="left" class="BlockHeading" colspan="4" style="display:none;">
+                <div class="remarkContent">*The Permit/Reservation fee shown is due for approval and Gazette notification by government of Madhya Pradesh .In case of any changes in notified fee the difference will be payable/refundable at the park gate on the excursion day.</div>
+            </td>
+        </tr>
+    </table>
+    <div class="BlockTitle">Tourist's Details </div>
+
+    
+            <table class="Foresttable">
+                <tr>
+                    <td align="left" style="width: 3%;" class="BlockHeading tableHeaderRow">S No.</td>
+                    <td align="left" style="width: 5%;" class="BlockHeading tableHeaderRow">Seat</td>
+                    <td align="left" style="width: 27%;" class="BlockHeading tableHeaderRow">Tourist Name (Gender)(Age) </td>
+                    <td align="left" style="width: 25%;" class="BlockHeading tableHeaderRow">Father's/Husband's Name </td>
+                    <td align="left" style="width: 15%;" class="BlockHeading tableHeaderRow">Nationality </td>
+                    <td align="left" style="width: 25%;" class="BlockHeading tableHeaderRow">ID Proof </td>
+
+                </tr>
+        
+            <tr class="alttd">
+                <td>
+
+                    1.
+
+                </td>
+                <td>
+                    <span id="lblSeat_Ticket_no">LMV</span>
+
+                </td>
+                <td>
+                    <span id="Label1">AKSHAY RAHANGDALE (Male) (20)</span>
+
+                </td>
+                <td>
+                    <span id="lblFathers_name">RAMKISHOR RAHANGDALE</span>
+
+                </td>
+                <td>
+                    <span id="lblCountry_Name">India</span>
+
+                </td>
+
+                <td>
+                    <span id="lblPassport_no">Others : 1234567899</span>
+
+                </td>
+
+            </tr>
+        
+            <tr class="alttd">
+                <td>
+
+                    2.
+
+                </td>
+                <td>
+                    <span id="lblSeat_Ticket_no">LMV</span>
+
+                </td>
+                <td>
+                    <span id="Label1">PANDU (Male) (21)</span>
+
+                </td>
+                <td>
+                    <span id="lblFathers_name">PANDU K PAPA</span>
+
+                </td>
+                <td>
+                    <span id="lblCountry_Name">India</span>
+
+                </td>
+
+                <td>
+                    <span id="lblPassport_no">Others : 987456321</span>
+
+                </td>
+
+            </tr>
+        
+            <tr class="alttd">
+                <td>
+
+                    3.
+
+                </td>
+                <td>
+                    <span id="lblSeat_Ticket_no">LMV</span>
+
+                </td>
+                <td>
+                    <span id="Label1">ANDU (Male) (22)</span>
+
+                </td>
+                <td>
+                    <span id="lblFathers_name">ANDU K PAPA</span>
+
+                </td>
+                <td>
+                    <span id="lblCountry_Name">India</span>
+
+                </td>
+
+                <td>
+                    <span id="lblPassport_no">Others : 963258741</span>
+
+                </td>
+
+            </tr>
+        
+            <tr class="alttd">
+                <td>
+
+                    4.
+
+                </td>
+                <td>
+                    <span id="lblSeat_Ticket_no">LMV</span>
+
+                </td>
+                <td>
+                    <span id="Label1">JHANDU (Male) (18)</span>
+
+                </td>
+                <td>
+                    <span id="lblFathers_name">JHANDU K PAPA</span>
+
+                </td>
+                <td>
+                    <span id="lblCountry_Name">India</span>
+
+                </td>
+
+                <td>
+                    <span id="lblPassport_no">Others : 147852369</span>
+
+                </td>
+
+            </tr>
+        
+            <tr class="alttd">
+                <td>
+
+                    5.
+
+                </td>
+                <td>
+                    <span id="lblSeat_Ticket_no">LMV</span>
+
+                </td>
+                <td>
+                    <span id="Label1">NANDU (Male) (19)</span>
+
+                </td>
+                <td>
+                    <span id="lblFathers_name">NANDU K PAPA</span>
+
+                </td>
+                <td>
+                    <span id="lblCountry_Name">India</span>
+
+                </td>
+
+                <td>
+                    <span id="lblPassport_no">Others : 654789321</span>
+
+                </td>
+
+            </tr>
+        
+            <tr class="alttd">
+                <td>
+
+                    6.
+
+                </td>
+                <td>
+                    <span id="lblSeat_Ticket_no">LMV</span>
+
+                </td>
+                <td>
+                    <span id="Label1">MAHANDU (Female) (25)</span>
+
+                </td>
+                <td>
+                    <span id="lblFathers_name">MAHANDU K PAPA</span>
+
+                </td>
+                <td>
+                    <span id="lblCountry_Name">India</span>
+
+                </td>
+
+                <td>
+                    <span id="lblPassport_no">Others : 789321456</span>
+
+                </td>
+
+            </tr>
+        
+            </table>
+        
+
+    
+    
+    <br />
+
+
+    
+
+
+    
+    
+    <div id="divaddondetail">
+
+        
+
+        
+
+    </div>
+
+    
+    
+    
+     <div class="BlockTitle">
+        Declaration
+    </div>
+    <div>
+        <table id="Table3" class="Foresttable" style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+	<tr>
+		<td style="width: 25%;" align="left"> 
+                    <span id="LblDeclaration">I Authorized Forest Department, Madhya Pradesh for using Mobile Number, Identity Proof & Email  mentioned in this permit for intimation and verification purposes.Dear Customer, Forest has proposed for rate increase if same get approved you will required to pay the difference amount at time of your safari at the park counter.</span>
+                </td>
+	</tr>
+</table>
+
+    </div>
+    <br />
+
+    
+
+    
+    <div>
+        
+        
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$hidtickettype" id="hidtickettype" value="N" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$hiddate" id="hiddate" value="12 Feb 2026" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$hidplaceid" id="hidplaceid" value="1" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$hidtimesloat" id="hidtimesloat" value="E" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$hidzoneid" id="hidzoneid" value="2" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$hidnooftourist" id="hidnooftourist" value="6" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$HdnTotalRefund" id="HdnTotalRefund" />
+         <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$HdnMobile" id="HdnMobile" value="AOT9qvVH4grKr3SXEMsNaA==" />
+    </div>
+</div>
+<div id="diverror" class="error" style="display: none; width: 94%;">
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$UCReceipt$hdnPermitType" id="hdnPermitType" value="Full Vehicle " />
+    
+</div>
+
+
+        <div id="divSenOTP" style="text-align: center; width: 100%;">
+
+            <table width="100%" class="Foresttable">
+                <tbody>
+                    <tr id="TrMobile" style="display:none;">
+	<td style="width: 25%; text-align: right;">Registered Mobile Number :
+                        </td>
+	<td style="width: 25%;">
+                            <span id="txtMobile" type="text">8788349253</span>
+                            <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnMobile" id="HdnMobile" value="8788349253" />
+                            <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnTicketID" id="HdnTicketID" value="12E261732050" />
+                            <input type="hidden" name="ctl00$ContentPlaceHolder1$HdnEmailID" id="HdnEmailID" value="zyrusneon39@gmail.com" />
+                              <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnFlag" id="hdnFlag" />
+                        </td>
+	<td style="width: 35%;">
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnOTPServer" value="Send OTP" id="btnOTPServer" class="input-login-btn" />
+                        </td>
+</tr>
+
+                    <tr id="TrOTP" style="display:;">
+	<td style="width: 25%; text-align: right;">Please Enter OTP :
+                        </td>
+	<td>
+                            <input name="ctl00$ContentPlaceHolder1$txtOTP" type="password" maxlength="6" id="txtOTP" class="txtCss" />
+                        </td>
+	<td>
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnVerifyServer" value="Verify OTP" id="btnVerifyServer" class="input-login-btn" />
+
+                            <a id="btnlinkresend" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnlinkresend&#39;,&#39;&#39;)">Resend OTP</a>
+                        </td>
+</tr>
+
+                    <tr id="divMobActivated" style="display: none">
+	<td colspan="3">
+                            <div id="Div1" class="error">
+                            </div>
+                        </td>
+</tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div id="diverror" class="success" style="display:block;width:94%;">An OTP password has been sent to your registered Mobile number and Email ID !!!</div>
+        <div id="DivSubmit" style="text-align: center; width: 100%; display: none;">
+
+            <div style="text-align: center; width: 100%;">
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    <div style="height: 5px;">
+        &nbsp;
+    </div>
+
+
+        </div>
+
+        <div class="forest_footer" style="position:fixed;bottom:0px;font-size: 13px;">
+          <div id="divLoggedIN" style="float:left;">
+                <span id="lblLoggedIn"></span>
+                <span id="lblShoeServerName" style="float:left;margin-left:5px;color:white;">Served by: BHAGAT SINGH Server</span>
+            </div>
+
+            
+             Powered by:<a href="https://mponline.gov.in/"><img src="https://mponline.gov.in/Quick Links/PortalImages/MPOHeaderFooterLogo/footerlogo.png" alt="" /></a>
+
+        </div>
+    </form>
+    <script type="text/javascript">
+
+        function showDashBoardMenu(menuType) {
+            if (menuType == 'mainmenu') { $('#divDashBar').removeClass('blurBack').fadeIn('slow'); $('#divcontactUs').hide(); $('#divRePrint').hide(); $('#divRefund').hide(); }
+            else if (menuType == 'addon') { }
+            else if (menuType == 'reschedule') { }
+            else if (menuType == 'cancel') { }
+            else if (menuType == 'print') { $('#divDashBar').hide(); $('#divcontactUs').hide(); $('#divRePrint').removeClass('blurBack').fadeIn('slow'); $('#divRefund').hide(); }
+            else if (menuType == 'refund') { $('#divDashBar').hide(); $('#divcontactUs').hide(); $('#divRePrint').hide(); $('#divRefund').removeClass('blurBack').fadeIn('slow'); }
+            else if (menuType == 'gallery') { }
+            else if (menuType == 'contactus') {
+                $('#divDashBar').addClass('blurBack');
+                $('#divRePrint').addClass('blurBack');
+                $('#divRefund').addClass('blurBack');
+                $('#divcontactUs').fadeIn('slow');
+            }
+        }
+    </script>
+
+</body>
+</html>
