@@ -1,6 +1,6 @@
 const readline = require('readline');
 const { log } = require('../utils/logger');
-const { waitIfPaused } = require('./control');
+const { waitIfPaused } = require('../control/control');
 
 function ask(question) {
   return new Promise(resolve => {
@@ -19,8 +19,8 @@ async function bookingLoop(page, bookingFlow) {
   let count = 1;
 
   while (true) {
-    await waitIfPaused(log);
     log(`🚀 Starting booking #${count}`);
+    await waitIfPaused();
 
     await bookingFlow(page); // traveller → captcha → otp → payment
 

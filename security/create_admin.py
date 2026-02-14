@@ -1,4 +1,4 @@
 from security.auth import create_user
 
-create_user("admin", "StrongPassword@123")
+create_user("abhi", "Abhi@123")
 print("User created")
