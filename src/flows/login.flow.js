@@ -6,7 +6,7 @@ async function loginFlow(page) {
 
   // Ensure correct page
   await page.waitForURL(/LoginUserProfilePage\.aspx/, {
-    timeout: 30000
+    timeout: 0,
   });
 
   log('Login page detected');

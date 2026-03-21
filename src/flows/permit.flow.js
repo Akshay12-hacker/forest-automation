@@ -29,7 +29,7 @@ async function permitFlow(page) {
       u.includes('searchNew.aspx')
     );
   },
-  { timeout: 120000 }
+  { timeout: 0 }
 );
 
 

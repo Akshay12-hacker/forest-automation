@@ -5,7 +5,7 @@ async function homeFlow(page) {
 
   await page.goto('https://forest.mponline.gov.in/', {
     waitUntil: 'domcontentloaded',
-    timeout: 60000
+    timeout: 0,
   });
 
   log('Homepage DOM loaded');

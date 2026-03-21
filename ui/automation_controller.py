@@ -1,13 +1,19 @@
 import subprocess
 import threading
 import os
+import sys
 from ui.state_helper import set_state
 
-PROJECT_ROOT = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..")
-)
+# Detect root folder (works for EXE and dev)
+if getattr(sys, "frozen", False):
+    PROJECT_ROOT = os.path.dirname(sys.executable)
+else:
+    PROJECT_ROOT = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..")
+    )
 
 node_process = None
+
 
 def start_automation(log):
     global node_process
@@ -18,39 +24,85 @@ def start_automation(log):
         log("⚠ Automation already running")
         return
 
-    node_process = subprocess.Popen(
-        ["node", "src/index.js"],
-        cwd=PROJECT_ROOT,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True
+    # Use bundled node
+    node_path = os.path.join(PROJECT_ROOT, "node", "node.exe")
+
+    if not os.path.exists(node_path):
+        log("❌ Node runtime not found")
+        return
+
+    env = os.environ.copy()
+
+    # Playwright browser path
+    env["PLAYWRIGHT_BROWSERS_PATH"] = os.path.join(
+        PROJECT_ROOT, "playwright-browsers"
     )
 
-    threading.Thread(target=read_stdout, args=(log,), daemon=True).start()
-    threading.Thread(target=read_stderr, args=(log,), daemon=True).start()
+    try:
+        node_process = subprocess.Popen(
+            [node_path, os.path.join(PROJECT_ROOT, "src", "index.js")],
+            cwd=PROJECT_ROOT,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            env=env
+        )
+    except Exception as e:
+        log(f"❌ Failed to start Node: {e}")
+        return
+
+    threading.Thread(
+        target=read_stdout,
+        args=(node_process, log),
+        daemon=True
+    ).start()
+
+    threading.Thread(
+        target=read_stderr,
+        args=(node_process, log),
+        daemon=True
+    ).start()
+
+    log("▶ Automation started")
+
 
 def pause_automation(log):
     set_state(paused=True)
     log("⏸ Pause signal sent")
 
+
 def resume_automation(log):
     set_state(paused=False)
     log("▶ Resume signal sent")
 
+
 def stop_automation(log):
     global node_process
+
     set_state(stop=True, paused=False)
 
     if node_process:
-        node_process.terminate()
+        try:
+            node_process.terminate()
+        except:
+            pass
+
         node_process = None
 
-    log("⏹ Node process terminated")
+    log("⏹ Automation stopped")
 
-def read_stdout(log):
-    for line in node_process.stdout:
-        log("[NODE] " + line.strip())
 
-def read_stderr(log):
-    for line in node_process.stderr:
-        log("[ERR] " + line.strip())
+def read_stdout(process, log):
+    try:
+        for line in process.stdout:
+            log("[NODE] " + line.strip())
+    except:
+        log("⚠ Node stdout closed")
+
+
+def read_stderr(process, log):
+    try:
+        for line in process.stderr:
+            log("[ERR] " + line.strip())
+    except:
+        log("⚠ Node stderr closed")

@@ -4,7 +4,7 @@ const { readSingleTouristsCsv } = require('../utils/readSingleTouristsCsv');
 async function phase8SingleSeatFlow(page) {
   log('🧾 Phase 8 v2 (Single Seat – sequential) started');
 
-  await page.waitForSelector('form#form1', { timeout: 30000 });
+  await page.waitForSelector('form#form1', { timeout: 0 });
 
   // Close popup
   const popup = page.locator('#popupNotice');
@@ -37,7 +37,7 @@ async function phase8SingleSeatFlow(page) {
     seatIndex++;
 
     // Wait for form to unlock
-    await page.waitForSelector('#txtVisitorsName', { timeout: 15000 });
+    await page.waitForSelector('#txtVisitorsName', { timeout: 0 });
 
     // Fill SINGLE tourist form
     await page.fill('#txtVisitorsName', tourist.name);
@@ -52,7 +52,7 @@ async function phase8SingleSeatFlow(page) {
     log(`👤 Tourist added: ${tourist.name}`);
 
     // Trigger ASP.NET internal save
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(500);
   }
 
   // Declaration

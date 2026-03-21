@@ -9,11 +9,11 @@ async function phase8FullVehicleFlow(page) {
 
   // 🛡 HARD GUARD — FORM + ASP.NET STATE
   // ✅ HARD BUT REALISTIC ASP.NET GUARD
-await page.waitForSelector('form#form1', { timeout: 30000 });
+await page.waitForSelector('form#form1', { timeout: 0 });
 
 await page.locator('input[name="__VIEWSTATE"]').waitFor({
   state: 'attached',
-  timeout: 30000
+  timeout: 0
 });
 
 log('🔐 Permit form ready (real-world ASP.NET check)');

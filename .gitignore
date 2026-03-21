@@ -145,3 +145,8 @@ dist
 
 # Playwright persistent browser profile
 forest-browser-profile/
+
+__pycache__/
+*.pyc
+
+package-lock.json

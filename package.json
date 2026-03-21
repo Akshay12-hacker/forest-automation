@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "npm": "^11.10.0",
     "playwright": "^1.58.2",
     "xlsx": "^0.18.5"
   }

@@ -5,7 +5,7 @@ async function permitSearchFlow(page) {
 
   // Wait until we arrive at the quick search page
   await page.waitForURL(/Search\.aspx\?park=\d+/, {
-    timeout: 60000
+    timeout: 0,
   });
 
   log('🔹 Quick search page loaded — please click either Single Seat or Premium Tatkal manually');
@@ -46,7 +46,7 @@ async function permitSearchFlow(page) {
   log('🔎 Search button clicked');
 
   // Wait for results
-  await page.waitForSelector('#searchResult', { timeout: 30000 });
+  await page.waitForSelector('#searchResult', { timeout: 0 });
   log('✅ Permit search executed successfully');
 }
 

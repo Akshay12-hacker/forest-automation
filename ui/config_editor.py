@@ -1,8 +1,11 @@
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QSpinBox,
-    QCheckBox, QPushButton, QMessageBox
+    QCheckBox, QPushButton, QMessageBox, QLineEdit
 )
 import json
+import os
+from security.license_manager import verify_license
+from ui.state_helper import app_path
 import os
 
 CONFIG_PATH = "src/config/app.config.json"
@@ -11,6 +14,19 @@ class ConfigEditor(QWidget):
     def __init__(self):
         super().__init__()
         self.layout = QVBoxLayout()
+        # Title
+        self.layout.addWidget(QLabel("License Management"))
+
+        # Input
+        self.license_input = QLineEdit()
+        self.license_input.setPlaceholderText("Paste License Key")
+
+        # Button
+        btn_activate = QPushButton("Activate License")
+        btn_activate.clicked.connect(self.activate_license)
+
+        self.layout.addWidget(self.license_input)
+        self.layout.addWidget(btn_activate)
 
         self.delay = QSpinBox()
         self.delay.setRange(100, 5000)
@@ -53,3 +69,21 @@ class ConfigEditor(QWidget):
             json.dump(cfg, f, indent=2)
 
         QMessageBox.information(self, "Saved", "Config saved successfully")
+
+    def activate_license(self):
+        key = self.license_input.text().strip()
+
+        if not key:
+            QMessageBox.warning(self, "Error", "Enter license key")
+            return
+
+        if not verify_license(key):
+            QMessageBox.critical(self, "Error", "Invalid license")
+            return
+
+        license_path = app_path("config", "license.key")
+
+        with open(license_path, "w") as f:
+            f.write(key)
+
+        QMessageBox.information(self, "Success", "License Activated")
