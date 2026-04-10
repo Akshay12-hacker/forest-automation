@@ -32,11 +32,10 @@ def start_automation(log):
         return
 
     env = os.environ.copy()
+    env["PROJECT_ROOT"] = PROJECT_ROOT
 
-    # Playwright browser path
-    env["PLAYWRIGHT_BROWSERS_PATH"] = os.path.join(
-        PROJECT_ROOT, "playwright-browsers"
-    )
+    # Let Playwright use its default browser cache location.
+    # Forcing a custom path requires bundling browser binaries there.
 
     try:
         node_process = subprocess.Popen(
@@ -63,6 +62,12 @@ def start_automation(log):
         daemon=True
     ).start()
 
+    threading.Thread(
+        target=monitor_process_exit,
+        args=(node_process, log),
+        daemon=True
+    ).start()
+
     log("▶ Automation started")
 
 
@@ -84,7 +89,7 @@ def stop_automation(log):
     if node_process:
         try:
             node_process.terminate()
-        except:
+        except Exception:
             pass
 
         node_process = None
@@ -94,15 +99,30 @@ def stop_automation(log):
 
 def read_stdout(process, log):
     try:
+        if process.stdout is None:
+            return
         for line in process.stdout:
             log("[NODE] " + line.strip())
-    except:
+    except Exception:
         log("⚠ Node stdout closed")
 
 
 def read_stderr(process, log):
     try:
+        if process.stderr is None:
+            return
         for line in process.stderr:
             log("[ERR] " + line.strip())
-    except:
+    except Exception:
         log("⚠ Node stderr closed")
+
+
+def monitor_process_exit(process, log):
+    global node_process
+    try:
+        code = process.wait()
+        if node_process is process:
+            node_process = None
+        log(f"ℹ Automation process exited with code {code}")
+    except Exception as e:
+        log(f"⚠ Failed to monitor automation process: {e}")
