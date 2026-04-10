@@ -1,5 +1,6 @@
 {
   "paused": false,
-  "stop": true,
-  "resume_phase": null
+  "stop": false,
+  "resume_phase": null,
+  "signature": "a8c4ee8d9883035a5110ef21d3713bb7cad75136fd14ddb5f9c98c248c94724c"
 }

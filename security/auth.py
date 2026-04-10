@@ -1,31 +1,59 @@
-import os
-import pickle
 from security.crypto import hash_password, verify_password
+from security.db import get_connection, init_db
 
-USER_FILE = "config/users.sec"
+
+def _normalized_username(username: str) -> str:
+    return (username or "").strip()
+
 
 def create_user(username: str, password: str):
-    if os.path.exists(USER_FILE):
-        raise Exception("User already exists")
+    user = _normalized_username(username)
+    if not user:
+        raise ValueError("Username is required")
+    if not password:
+        raise ValueError("Password is required")
 
-    data = {
-        "username": username,
-        "password": hash_password(password)
-    }
+    init_db()
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute("SELECT 1 FROM users WHERE username = ?", (user,))
+        if cursor.fetchone():
+            raise Exception("User already exists")
 
-    with open(USER_FILE, "wb") as f:
-        pickle.dump(data, f)
+        password_hash = hash_password(password).decode("utf-8")
+        cursor.execute(
+            "INSERT INTO users (username, password) VALUES (?, ?)",
+            (user, password_hash),
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
 
 def authenticate(username: str, password: str) -> bool:
-    if not os.path.exists(USER_FILE):
+    user = _normalized_username(username)
+    if not user or not password:
         return False
 
-    with open(USER_FILE, "rb") as f:
-        data = pickle.load(f)
+    init_db()
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT password FROM users WHERE username = ? LIMIT 1",
+            (user,),
+        )
+        row = cursor.fetchone()
+    finally:
+        conn.close()
 
-    if data["username"] != username:
+    if not row:
         return False
 
-    return verify_password(password, data["password"])
+    stored_hash = row[0]
+    if isinstance(stored_hash, str):
+        stored_hash = stored_hash.encode("utf-8")
+    return verify_password(password, stored_hash)
 
 

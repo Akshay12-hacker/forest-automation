@@ -1,31 +1,45 @@
 const { log } = require('./logger');
+const LOGIN_TIMEOUT_MS = 5 * 60 * 1000;
 
 async function ensureLoggedIn(page) {
+  if (!page) {
+    throw new Error('ensureLoggedIn called without page');
+  }
+
   const loginButton = page.locator('a.myButton:has-text("WANT TO LOGIN?")');
 
-  // 🔍 HARD CHECK — if login button exists, user is NOT logged in
+  // ✅ Already logged in
   if (await loginButton.count() === 0) {
     log('✅ User already logged in');
     return true;
   }
 
-  // ❌ NOT LOGGED IN → MUST LOGIN
   log('🔐 User not logged in, login required');
 
-  // Open login UI
   await loginButton.click();
   await page.locator('span.redButton:has-text("User Login")').click();
 
-  // Wait for login page
-  await page.waitForURL(/LoginUserProfilePage\.aspx/, { timeout: 0 });
-  log('🧑‍💻 Login page opened — please login manually (captcha)');
+  await page.waitForURL(/LoginUserProfilePage\.aspx/, { timeout: 60000 });
+  log('🧑‍💻 Login page opened — waiting for manual login...');
 
+  const start = Date.now();
+  while (true) {
+    try {
+      const stillExists = await page.locator('a.myButton').count();
 
+      if (stillExists === 0) {
+        break;
+      }
 
-  // 🔒 REAL CONFIRMATION — login button disappears
-  await page.waitForFunction(() => {
-    return !document.querySelector('a.myButton');
-  }, { timeout: 0 });
+      await page.waitForTimeout(1000); // check every 1 sec
+    } catch (e) {
+      log("⚠ Error checking login state: " + e.message);
+    }
+
+    if (Date.now() - start > LOGIN_TIMEOUT_MS) {
+      throw new Error('Login timeout exceeded while waiting for manual login');
+    }
+  }
 
   log('✅ Login completed, session active');
   return true;

@@ -38,6 +38,9 @@ class CsvEditor(QWidget):
 
         with open(path, newline='', encoding='utf-8') as f:
             reader = list(csv.reader(f))
+        if not reader:
+            QMessageBox.critical(self, "Invalid CSV", "CSV file is empty")
+            return
 
         self.table.setRowCount(len(reader) - 1)
         self.table.setColumnCount(len(reader[0]))
@@ -61,13 +64,17 @@ class CsvEditor(QWidget):
 
             for r in range(self.table.rowCount()):
                 writer.writerow([
-                    self.table.item(r, c).text()
+                    self.table.item(r, c).text() if self.table.item(r, c) else ""
                     for c in range(self.table.columnCount())
                 ])
 
         QMessageBox.information(self, "Saved", "CSV saved successfully")
 
     def validate_csv(self):
+        if self.table.columnCount() == 0:
+            QMessageBox.critical(self, "Invalid CSV", "Load a CSV before validation")
+            return
+
         required = {"name", "age", "gender", "guardian", "nationality", "idType", "idNumber"}
         headers = {
             self.table.horizontalHeaderItem(i).text()

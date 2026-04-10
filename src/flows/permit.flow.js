@@ -1,5 +1,6 @@
 const { log } = require('../utils/logger');
-const {waitIfPaused } = require('../utils/control')
+const { waitIfPaused } = require('../utils/control');
+const WAIT_TIMEOUT_MS = 180000;
 
 async function permitFlow(page) {
   await waitIfPaused();
@@ -22,15 +23,12 @@ async function permitFlow(page) {
 
   // 4️⃣ Wait until user reaches ANY permit page
   await page.waitForURL(
-  url => {
-    const u = url.toString();
-    return (
-      u.includes('SingleSeatSearch.aspx') ||
-      u.includes('searchNew.aspx')
-    );
-  },
-  { timeout: 0 }
-);
+    (url) => {
+      const u = url.toString();
+      return u.includes('SingleSeatSearch.aspx') || u.includes('searchNew.aspx');
+    },
+    { timeout: WAIT_TIMEOUT_MS }
+  );
 
 
   const currentUrl = page.url();
@@ -63,9 +61,14 @@ async function permitFlow(page) {
     });
 
     // Date input is readonly → inject
-    await page.evaluate(date => {
-      document.querySelector('#txtdate').value = date;
-      document.querySelector('#hidtempdate').value = date;
+    await page.evaluate((date) => {
+      const dateInput = document.querySelector('#txtdate');
+      const hiddenDateInput = document.querySelector('#hidtempdate');
+      if (!dateInput || !hiddenDateInput) {
+        throw new Error('Date input fields are missing');
+      }
+      dateInput.value = date;
+      hiddenDateInput.value = date;
     }, formattedDate);
 
     log(`📅 Date selected: ${formattedDate}`);

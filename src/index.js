@@ -5,14 +5,18 @@ const { ensureLoggedIn } = require('./utils/sessionController');
 const { dashboardFlow } = require('./flows/dashboard.flow');
 const { permitFlow } = require('./flows/permit.flow');
 const { bookingLoop } = require('./utils/bookingLoop');
-const { zoneFlow} = require('./flows/zone.flow');
-const {phase8FullVehicleFlow} = require('./flows/form.flow.fullVehicle')
-const {phase8SingleSeatFlow} = require('./flows/form.flow.singleSeat')
-const {getResumePhase, clearResumePhase} = require('./utils/control')
+const { zoneFlow } = require('./flows/zone.flow');
+const { phase8FullVehicleFlow } = require('./flows/form.flow.fullVehicle');
+const { phase8SingleSeatFlow } = require('./flows/form.flow.singleSeat');
+const { getResumePhase, clearResumePhase } = require('./utils/control');
 
 
 
 const bookingFlow = async (page) => {
+  if (!page || typeof page.url !== 'function') {
+    throw new Error('Invalid page object provided to bookingFlow');
+  }
+
   const resumePhase = getResumePhase();
 
   if (resumePhase === "PHASE_7") {
@@ -35,7 +39,7 @@ const bookingFlow = async (page) => {
     await phase8SingleSeatFlow(page);
     return;
   }
-  const url = page.url();
+  const url = await page.url();
 
   if (url.includes('DashBoardHome.aspx')) {
     await dashboardFlow(page);
@@ -45,7 +49,7 @@ const bookingFlow = async (page) => {
   const slotSelected = await zoneFlow(page); // Phase 7
   if (!slotSelected) return;
 
-  let nextUrl = page.url();
+  const nextUrl = await page.url();
 
   // 🔄 Handle intermediate profile page
   if (nextUrl.includes('LoginUserProfilePage.aspx')) {
@@ -83,24 +87,36 @@ const bookingFlow = async (page) => {
 
 
 (async () => {
-  log('🟢 Application started');
+  try {
+    log('🟢 Application started');
 
-  const { page } = await launchBrowser();
-
-  const homeState = await homeFlow(page);
-
-  // 🔒 SINGLE LOGIN GATE
-  if (homeState.needsLogin) {
-    const loggedIn = await ensureLoggedIn(page);
-    if (!loggedIn) {
-      log('❌ Login failed. Exiting.');
-      process.exit(1);
+    const launchResult = await launchBrowser();
+    if (!launchResult || !launchResult.page) {
+      throw new Error('launchBrowser did not return a valid page');
     }
-  } else {
-    // Even if login button not visible, still verify session
-    await ensureLoggedIn(page);
-  }
+    const { page } = launchResult;
 
-  // 🚀 ONLY AFTER LOGIN
-  await bookingLoop(page, bookingFlow);
+    const homeState = await homeFlow(page);
+    if (!homeState || typeof homeState.needsLogin !== 'boolean') {
+      throw new Error('homeFlow returned an invalid state');
+    }
+
+    // 🔒 SINGLE LOGIN GATE
+    if (homeState.needsLogin) {
+      const loggedIn = await ensureLoggedIn(page);
+      if (!loggedIn) {
+        log('❌ Login failed. Exiting.');
+        process.exit(1);
+      }
+    } else {
+      // Even if login button not visible, still verify session
+      await ensureLoggedIn(page);
+    }
+
+    // 🚀 ONLY AFTER LOGIN
+    await bookingLoop(page, bookingFlow);
+  } catch (err) {
+    log(`❌ Fatal Error: ${err && err.message ? err.message : err}`);
+    process.exit(1);
+  }
 })();

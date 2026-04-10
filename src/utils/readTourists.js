@@ -1,7 +1,12 @@
 const xlsx = require('xlsx');
+const path = require('path');
+const projectRoot = process.env.PROJECT_ROOT
+  ? path.resolve(process.env.PROJECT_ROOT)
+  : path.resolve(__dirname, '../..');
 
 function readTourists() {
-  const wb = xlsx.readFile('data/tourists.xlsx');
+  const filePath = path.join(projectRoot, 'src', 'data', 'tourists.xlsx');
+  const wb = xlsx.readFile(filePath);
   const sheet = wb.Sheets['tourists'];
   if (!sheet) throw new Error('❌ tourists sheet missing');
 

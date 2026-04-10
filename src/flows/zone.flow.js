@@ -1,12 +1,13 @@
 const { log } = require('../utils/logger');
-const { waitIfPaused } = require("../utils/control")
+const { waitIfPaused } = require('../utils/control');
+const WAIT_TIMEOUT_MS = 180000;
 
 async function zoneFlow(page) {
   await waitIfPaused();
   log('🧭 Phase 7: Smart slot selection (MAX seats)');
 
   // Wait for result table
-  await page.waitForSelector('#searchResult', { timeout: 30000 });
+  await page.waitForSelector('#searchResult', { timeout: WAIT_TIMEOUT_MS });
   log('📊 Search result table loaded');
 
   // Handle manual retry if no slots
@@ -19,7 +20,7 @@ async function zoneFlow(page) {
 
     await page.waitForFunction(() => {
       return document.querySelectorAll('.avail a').length > 0;
-    }, { timeout: 0 });
+    }, { timeout: WAIT_TIMEOUT_MS });
 
     log('🔄 New slots detected after manual change');
     slots = page.locator('.avail a');
