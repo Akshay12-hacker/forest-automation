@@ -1,89 +1,190 @@
-from PySide6.QtWidgets import (
-    QWidget, QVBoxLayout, QLabel, QSpinBox,
-    QCheckBox, QPushButton, QMessageBox, QLineEdit
-)
 import json
 import os
+import re
+
+from PySide6.QtWidgets import (
+    QCheckBox,
+    QFormLayout,
+    QLabel,
+    QLineEdit,
+    QMessageBox,
+    QPushButton,
+    QSpinBox,
+    QVBoxLayout,
+    QWidget,
+)
+
 from security.license_manager import verify_license
 from ui.state_helper import app_path
-import os
 
-CONFIG_PATH = "src/config/app.config.json"
+
+CONFIG_PATH = app_path("src", "config", "app.config.js")
+
 
 class ConfigEditor(QWidget):
     def __init__(self):
         super().__init__()
-        self.layout = QVBoxLayout()
-        # Title
-        self.layout.addWidget(QLabel("License Management"))
 
-        # Input
+        self.license_label = QLabel("License Management")
+        self.license_label.setObjectName("editorTitle")
+
+        self.license_help = QLabel(
+            "Use this panel to activate the app license and adjust browser run settings."
+        )
+        self.license_help.setWordWrap(True)
+        self.license_help.setObjectName("mutedLabel")
+
         self.license_input = QLineEdit()
-        self.license_input.setPlaceholderText("Paste License Key")
-
-        # Button
-        btn_activate = QPushButton("Activate License")
-        btn_activate.clicked.connect(self.activate_license)
-
-        self.layout.addWidget(self.license_input)
-        self.layout.addWidget(btn_activate)
+        self.license_input.setPlaceholderText("Paste license key")
 
         self.delay = QSpinBox()
-        self.delay.setRange(100, 5000)
+        self.delay.setRange(0, 5000)
+        self.delay.setSingleStep(10)
         self.delay.setSuffix(" ms")
 
-        self.retry = QCheckBox("Auto Retry Slots")
-        self.headless = QCheckBox("Headless Mode")
+        self.page_load_timeout = QSpinBox()
+        self.page_load_timeout.setRange(5000, 180000)
+        self.page_load_timeout.setSingleStep(1000)
+        self.page_load_timeout.setSuffix(" ms")
 
-        self.btn_save = QPushButton("Save Config")
+        self.retry = QCheckBox("Auto retry slots")
+        self.headless = QCheckBox("Headless mode")
+
+        self.btn_activate = QPushButton("Activate License")
+        self.btn_save = QPushButton("Save Settings")
+
+        self.btn_activate.clicked.connect(self.activate_license)
         self.btn_save.clicked.connect(self.save)
 
-        self.layout.addWidget(QLabel("Action Delay"))
-        self.layout.addWidget(self.delay)
-        self.layout.addWidget(self.retry)
-        self.layout.addWidget(self.headless)
-        self.layout.addWidget(self.btn_save)
+        form = QFormLayout()
+        form.addRow("Browser delay", self.delay)
+        form.addRow("Page timeout", self.page_load_timeout)
+        form.addRow("", self.retry)
+        form.addRow("", self.headless)
 
-        self.setLayout(self.layout)
+        layout = QVBoxLayout()
+        layout.addWidget(self.license_label)
+        layout.addWidget(self.license_help)
+        layout.addWidget(self.license_input)
+        layout.addWidget(self.btn_activate)
+        layout.addSpacing(12)
+        layout.addLayout(form)
+        layout.addWidget(self.btn_save)
+        layout.addStretch(1)
+        self.setLayout(layout)
+
         self.load()
 
     def load(self):
-        if not os.path.exists(CONFIG_PATH):
-            return
+        cfg = self._read_config()
+        browser = cfg.get("browser", {})
+        timeouts = cfg.get("timeouts", {})
 
-        with open(CONFIG_PATH) as f:
-            cfg = json.load(f)
-
-        self.delay.setValue(cfg.get("delay", 500))
-        self.retry.setChecked(cfg.get("autoRetry", True))
-        self.headless.setChecked(cfg.get("headless", False))
+        self.delay.setValue(int(browser.get("slowMo", 100)))
+        self.headless.setChecked(bool(browser.get("headless", False)))
+        self.page_load_timeout.setValue(int(timeouts.get("pageLoad", 58000)))
+        self.retry.setChecked(bool(cfg.get("features", {}).get("autoRetry", True)))
 
     def save(self):
         cfg = {
-            "delay": self.delay.value(),
-            "autoRetry": self.retry.isChecked(),
-            "headless": self.headless.isChecked()
+            "browser": {
+                "headless": self.headless.isChecked(),
+                "slowMo": self.delay.value(),
+                "args": [
+                    "--start-maximized",
+                    "--disable-blink-features=AutomationControlled",
+                ],
+            },
+            "utils": {
+                "base": "https://forest.mponline.gov.in/",
+            },
+            "timeouts": {
+                "pageLoad": self.page_load_timeout.value(),
+            },
+            "features": {
+                "autoRetry": self.retry.isChecked(),
+            },
         }
 
-        with open(CONFIG_PATH, 'w') as f:
-            json.dump(cfg, f, indent=2)
+        content = (
+            "module.exports = "
+            + json.dumps(cfg, indent=2)
+            + ";\n"
+        )
 
-        QMessageBox.information(self, "Saved", "Config saved successfully")
+        try:
+            os.makedirs(os.path.dirname(CONFIG_PATH), exist_ok=True)
+            with open(CONFIG_PATH, "w", encoding="utf-8") as f:
+                f.write(content)
+        except Exception as exc:
+            QMessageBox.critical(self, "Save Failed", f"Could not save config:\n{exc}")
+            return
+
+        QMessageBox.information(self, "Saved", "Config saved successfully.")
 
     def activate_license(self):
         key = self.license_input.text().strip()
 
         if not key:
-            QMessageBox.warning(self, "Error", "Enter license key")
+            QMessageBox.warning(self, "Error", "Enter license key.")
             return
 
         if not verify_license(key):
-            QMessageBox.critical(self, "Error", "Invalid license")
+            QMessageBox.critical(self, "Error", "Invalid license.")
             return
 
         license_path = app_path("config", "license.key")
 
-        with open(license_path, "w") as f:
-            f.write(key)
+        try:
+            os.makedirs(os.path.dirname(license_path), exist_ok=True)
+            with open(license_path, "w", encoding="utf-8") as f:
+                f.write(key)
+        except Exception as exc:
+            QMessageBox.critical(self, "Save Failed", f"Could not save license:\n{exc}")
+            return
 
-        QMessageBox.information(self, "Success", "License Activated")
+        self.license_input.clear()
+        QMessageBox.information(self, "Success", "License activated.")
+
+    def _read_config(self):
+        default_config = {
+            "browser": {
+                "headless": False,
+                "slowMo": 100,
+            },
+            "timeouts": {
+                "pageLoad": 58000,
+            },
+            "features": {
+                "autoRetry": True,
+            },
+        }
+
+        if not os.path.exists(CONFIG_PATH):
+            return default_config
+
+        try:
+            with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+                raw = f.read()
+        except Exception:
+            return default_config
+
+        match = re.search(r"module\.exports\s*=\s*(\{.*\})\s*;", raw, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group(1))
+            except json.JSONDecodeError:
+                pass
+
+        slow_mo_match = re.search(r"slowMo\s*:\s*(\d+)", raw)
+        headless_match = re.search(r"headless\s*:\s*(true|false)", raw)
+        timeout_match = re.search(r"pageLoad\s*:\s*(\d+)", raw)
+
+        if slow_mo_match:
+            default_config["browser"]["slowMo"] = int(slow_mo_match.group(1))
+        if headless_match:
+            default_config["browser"]["headless"] = headless_match.group(1) == "true"
+        if timeout_match:
+            default_config["timeouts"]["pageLoad"] = int(timeout_match.group(1))
+
+        return default_config

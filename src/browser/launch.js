@@ -3,14 +3,34 @@ const path = require('path');
 const fs = require('fs');
 const { log } = require('../utils/logger');
 
-const PROFILE_DIR = path.resolve(__dirname, '../../forest-browser-profile');
+function loadAppConfig() {
+  const runtimeProjectRoot = process.env.PROJECT_ROOT
+    ? path.resolve(process.env.PROJECT_ROOT)
+    : null;
+
+  if (runtimeProjectRoot) {
+    const runtimeConfigPath = path.join(runtimeProjectRoot, 'src', 'config', 'app.config.js');
+    if (fs.existsSync(runtimeConfigPath)) {
+      return require(runtimeConfigPath);
+    }
+  }
+
+  return require('../config/app.config');
+}
+
+const appConfig = loadAppConfig();
+const resourceRoot = process.env.RESOURCE_ROOT
+  ? path.resolve(process.env.RESOURCE_ROOT)
+  : path.resolve(__dirname, '../..');
+
+const PROFILE_DIR = path.join(resourceRoot, 'forest-browser-profile');
 
 async function launchBrowser() {
   const launchOptions = {
-    headless: false,
-    slowMo: 40,
+    headless: appConfig.browser?.headless ?? false,
+    slowMo: appConfig.browser?.slowMo ?? 40,
     viewport: null,
-    args: [
+    args: appConfig.browser?.args ?? [
       '--start-maximized',
       '--disable-blink-features=AutomationControlled'
     ]
@@ -31,13 +51,13 @@ async function launchBrowser() {
       throw err;
     }
 
-    const fallbackProfileDir = path.resolve(
-      __dirname,
-      `../../forest-browser-profile-runtime-${Date.now()}`
+    const fallbackProfileDir = path.join(
+      resourceRoot,
+      `forest-browser-profile-runtime-${Date.now()}`
     );
     fs.mkdirSync(fallbackProfileDir, { recursive: true });
 
-    log('⚠ Main browser profile appears locked, using temporary profile');
+    log('Main browser profile appears locked, using temporary profile');
     log(`Using temporary browser profile at: ${fallbackProfileDir}`);
     context = await chromium.launchPersistentContext(fallbackProfileDir, launchOptions);
   }

@@ -12,6 +12,10 @@ def create_user(username: str, password: str):
         raise ValueError("Username is required")
     if not password:
         raise ValueError("Password is required")
+    if len(user) < 3:
+        raise ValueError("Username must be at least 3 characters")
+    if len(password) < 8:
+        raise ValueError("Password must be at least 8 characters")
 
     init_db()
     conn = get_connection()
@@ -19,7 +23,7 @@ def create_user(username: str, password: str):
         cursor = conn.cursor()
         cursor.execute("SELECT 1 FROM users WHERE username = ?", (user,))
         if cursor.fetchone():
-            raise Exception("User already exists")
+            raise ValueError("User already exists")
 
         password_hash = hash_password(password).decode("utf-8")
         cursor.execute(
@@ -55,5 +59,17 @@ def authenticate(username: str, password: str) -> bool:
     if isinstance(stored_hash, str):
         stored_hash = stored_hash.encode("utf-8")
     return verify_password(password, stored_hash)
+
+
+def get_user_count() -> int:
+    init_db()
+    conn = get_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute("SELECT COUNT(*) FROM users")
+        row = cursor.fetchone()
+        return int(row[0]) if row else 0
+    finally:
+        conn.close()
 
 

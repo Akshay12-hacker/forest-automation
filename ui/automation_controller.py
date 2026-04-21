@@ -1,16 +1,12 @@
+import os
 import subprocess
 import threading
-import os
-import sys
-from ui.state_helper import set_state
 
-# Detect root folder (works for EXE and dev)
-if getattr(sys, "frozen", False):
-    PROJECT_ROOT = os.path.dirname(sys.executable)
-else:
-    PROJECT_ROOT = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..")
-    )
+from ui.state_helper import app_path, resource_path, set_state
+
+
+PROJECT_ROOT = app_path()
+RESOURCE_ROOT = resource_path()
 
 node_process = None
 
@@ -21,64 +17,52 @@ def start_automation(log):
     set_state(paused=False, stop=False, resume_phase=None)
 
     if node_process is not None:
-        log("⚠ Automation already running")
+        log("Automation already running")
         return
 
-    # Use bundled node
-    node_path = os.path.join(PROJECT_ROOT, "node", "node.exe")
+    node_path = resource_path("node", "node.exe")
+    entry_script = resource_path("src", "index.js")
 
     if not os.path.exists(node_path):
-        log("❌ Node runtime not found")
+        log(f"Node runtime not found: {node_path}")
+        return
+
+    if not os.path.exists(entry_script):
+        log(f"Automation entry script not found: {entry_script}")
         return
 
     env = os.environ.copy()
     env["PROJECT_ROOT"] = PROJECT_ROOT
-
-    # Let Playwright use its default browser cache location.
-    # Forcing a custom path requires bundling browser binaries there.
+    env["RESOURCE_ROOT"] = RESOURCE_ROOT
 
     try:
         node_process = subprocess.Popen(
-            [node_path, os.path.join(PROJECT_ROOT, "src", "index.js")],
-            cwd=PROJECT_ROOT,
+            [node_path, entry_script],
+            cwd=RESOURCE_ROOT,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
-            env=env
+            env=env,
         )
-    except Exception as e:
-        log(f"❌ Failed to start Node: {e}")
+    except Exception as exc:
+        log(f"Failed to start Node: {exc}")
         return
 
-    threading.Thread(
-        target=read_stdout,
-        args=(node_process, log),
-        daemon=True
-    ).start()
+    threading.Thread(target=read_stdout, args=(node_process, log), daemon=True).start()
+    threading.Thread(target=read_stderr, args=(node_process, log), daemon=True).start()
+    threading.Thread(target=monitor_process_exit, args=(node_process, log), daemon=True).start()
 
-    threading.Thread(
-        target=read_stderr,
-        args=(node_process, log),
-        daemon=True
-    ).start()
-
-    threading.Thread(
-        target=monitor_process_exit,
-        args=(node_process, log),
-        daemon=True
-    ).start()
-
-    log("▶ Automation started")
+    log("Automation started")
 
 
 def pause_automation(log):
     set_state(paused=True)
-    log("⏸ Pause signal sent")
+    log("Pause signal sent")
 
 
 def resume_automation(log):
     set_state(paused=False)
-    log("▶ Resume signal sent")
+    log("Resume signal sent")
 
 
 def stop_automation(log):
@@ -91,10 +75,9 @@ def stop_automation(log):
             node_process.terminate()
         except Exception:
             pass
-
         node_process = None
 
-    log("⏹ Automation stopped")
+    log("Automation stopped")
 
 
 def read_stdout(process, log):
@@ -104,7 +87,7 @@ def read_stdout(process, log):
         for line in process.stdout:
             log("[NODE] " + line.strip())
     except Exception:
-        log("⚠ Node stdout closed")
+        log("Node stdout closed")
 
 
 def read_stderr(process, log):
@@ -114,7 +97,7 @@ def read_stderr(process, log):
         for line in process.stderr:
             log("[ERR] " + line.strip())
     except Exception:
-        log("⚠ Node stderr closed")
+        log("Node stderr closed")
 
 
 def monitor_process_exit(process, log):
@@ -123,6 +106,6 @@ def monitor_process_exit(process, log):
         code = process.wait()
         if node_process is process:
             node_process = None
-        log(f"ℹ Automation process exited with code {code}")
-    except Exception as e:
-        log(f"⚠ Failed to monitor automation process: {e}")
+        log(f"Automation process exited with code {code}")
+    except Exception as exc:
+        log(f"Failed to monitor automation process: {exc}")

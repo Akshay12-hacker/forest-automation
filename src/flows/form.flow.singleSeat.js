@@ -2,71 +2,137 @@ const { log } = require('../utils/logger');
 const { readSingleTouristsCsv } = require('../utils/readSingleTouristsCsv');
 
 async function phase8SingleSeatFlow(page) {
-  log('🧾 Phase 8 v2 (Single Seat – sequential) started');
+  log('Phase 8 (Full Multi-Vehicle Flow) started');
 
+  // Wait for main form
   await page.waitForSelector('form#form1', { timeout: 0 });
 
-  // Close popup
+  // Wait until site JS is ready
+  await page.waitForFunction(() => typeof addRemoveVisitors === 'function');
+
+  // Close popup if present
   const popup = page.locator('#popupNotice');
   if (await popup.isVisible().catch(() => false)) {
     await popup.locator('.closePopUp').click();
     await page.waitForTimeout(500);
   }
 
-  // Entry Gate (mandatory)
+  // Select entry gate
   await page.selectOption('#DDLEntryGate', { index: 1 });
-  log('Entry gate selected')
+  log('Entry gate selected');
 
-
-  // Load tourists from CSV
+  // Load tourists
   const tourists = readSingleTouristsCsv();
   if (!tourists || tourists.length === 0) {
-    throw new Error('❌ No tourists in singleTourist.csv');
+    throw new Error('No tourists found in CSV');
   }
 
-  // Seat Selector through jeep img 
+  // ================================
+  // 🔥 STEP 1: SELECT ALL SEATS
+  // ================================
+  const seatCodes = ['FR', 'FC', 'RR', 'FL', 'RC', 'RL'];
 
-  const seats = page.locator('.jeep_divd img[onclick], .jeep_divd div[onclick]');
-  let seatIndex = 0;
+  let touristIndex = 0;
+  let vehicle = 1;
 
-  for (const tourist of tourists) {
-    log(`🎫 Selecting seat for ${tourist.name}`);
+  while (touristIndex < tourists.length) {
+    let seatsAddedThisVehicle = 0;
 
-    await seats.nth(seatIndex).scrollIntoViewIfNeeded();
-    await seats.nth(seatIndex).click();
-    seatIndex++;
+    for (let i = 0; i < seatCodes.length; i++) {
+      if (touristIndex >= tourists.length) break;
 
-    // Wait for form to unlock
-    await page.waitForSelector('#txtVisitorsName', { timeout: 0 });
+      const seat = `V${vehicle}:${seatCodes[i]}`;
+      log(`Trying seat: ${seat}`);
 
-    // Fill SINGLE tourist form
-    await page.fill('#txtVisitorsName', tourist.name);
-    await page.selectOption('#drpGender', tourist.gender);
-    await page.fill('#txtAge', String(tourist.age));
-    await page.fill('#txtFatherHusbandName', tourist.guardian);
-    await page.selectOption('#DrpNationality', tourist.nationality);
+      const beforeRows = await page.locator('#VisitorTable tr').count();
 
-    await page.selectOption('#textIdProof', tourist.idType);
-    await page.fill('#textIdProofNo', tourist.idNumber);
+      const success = await page.evaluate((seat) => {
+        try {
+          return addRemoveVisitors('Add', seat);
+        } catch {
+          return false;
+        }
+      }, seat);
 
-    log(`👤 Tourist added: ${tourist.name}`);
+      if (!success) {
+        log(`Seat blocked/unavailable: ${seat}`);
+        continue;
+      }
 
-    // Trigger ASP.NET internal save
-    await page.waitForTimeout(500);
+      try {
+        await page.waitForFunction(
+          (prev) => document.querySelectorAll('#VisitorTable tr').length > prev,
+          beforeRows,
+          { timeout: 2000 }
+        );
+
+        log(`Seat added: ${seat}`);
+
+        touristIndex++;
+        seatsAddedThisVehicle++;
+
+      } catch {
+        log(`Seat click ignored: ${seat}`);
+      }
+
+      await page.waitForTimeout(150);
+    }
+
+    // Prevent infinite loop
+    if (seatsAddedThisVehicle === 0) {
+      log(`No seats worked in vehicle V${vehicle}, stopping`);
+      break;
+    }
+
+    vehicle++;
   }
 
-  // Declaration
+  // ================================
+  // 🔥 STEP 2: FILL TOURIST DETAILS
+  // ================================
+  const rows = page.locator('#VisitorTable tr');
+  const rowCount = await rows.count();
+
+  if (rowCount <= 2) {
+    throw new Error('No tourist rows created');
+  }
+
+  const max = Math.min(tourists.length, rowCount - 2);
+
+  for (let i = 0; i < max; i++) {
+    const tourist = tourists[i];
+    const row = rows.nth(i + 2);
+
+    log(`Filling tourist ${i + 1}: ${tourist.name}`);
+
+    await row.locator('input[id^="txtVisitorsName"]').fill(tourist.name);
+    await row.locator('select[id^="drpGender"]').selectOption(tourist.gender);
+    await row.locator('input[id^="txtAge"]').fill(String(tourist.age));
+    await row.locator('input[id^="txtFatherHusbandName"]').fill(tourist.guardian);
+    await row.locator('select[id^="DrpNationality"]').selectOption(tourist.nationality);
+    await row.locator('select[id^="textIdProof"]').selectOption(tourist.idType);
+    await row.locator('input[id^="textIdProofNo"]').fill(tourist.idNumber);
+
+    await page.waitForTimeout(150);
+  }
+
+  // ================================
+  // 🔥 STEP 3: DECLARATION
+  // ================================
   const declaration = page.locator('#ChkDeclaration');
   if (!(await declaration.isChecked())) {
     await declaration.check();
   }
 
+  // ================================
+  // 🔥 STEP 4: HANDLE ALERTS
+  // ================================
   page.once('dialog', async dialog => {
-    log(`⚠️ Alert: ${dialog.message()}`);
+    log(`Alert: ${dialog.message()}`);
     await dialog.accept();
   });
 
-  log('🛑 CAPTCHA + OTP manual');
+  log('CAPTCHA + OTP manual step remaining');
 }
 
 module.exports = { phase8SingleSeatFlow };

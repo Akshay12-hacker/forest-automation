@@ -1,12 +1,20 @@
+import hashlib
+import hmac
 import json
 import os
 import sys
-import hmac
-import hashlib
 import tempfile
 from datetime import datetime
 
-# ⭐ SAFE PATH FOR DEV + EXE
+
+def resource_path(*parts):
+    if getattr(sys, "frozen", False):
+        base = getattr(sys, "_MEIPASS", os.path.dirname(sys.executable))
+    else:
+        base = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    return os.path.join(base, *parts)
+
+
 def app_path(*parts):
     if getattr(sys, "frozen", False):
         base = os.path.dirname(sys.executable)
@@ -14,17 +22,18 @@ def app_path(*parts):
         base = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     return os.path.join(base, *parts)
 
+
 STATE_FILE = app_path("config", "state.json")
 AUDIT_LOG_FILE = app_path("logs", "security_audit.log")
 
 DEFAULT_STATE = {
     "paused": False,
     "stop": False,
-    "resume_phase": None
+    "resume_phase": None,
 }
 ALLOWED_RESUME_PHASES = {None, "PHASE_7", "PHASE_8_FULL", "PHASE_8_SINGLE"}
 STATE_SECRET = os.environ.get("FOREST_STATE_SECRET", "forest_state_dev_secret")
-DEFAULT_SECRET_IN_USE = (STATE_SECRET == "forest_state_dev_secret")
+DEFAULT_SECRET_IN_USE = STATE_SECRET == "forest_state_dev_secret"
 _default_secret_warned = False
 
 
@@ -35,7 +44,6 @@ def _audit(event: str, detail: str):
         with open(AUDIT_LOG_FILE, "a", encoding="utf-8") as f:
             f.write(line)
     except Exception:
-        # Never break runtime due to audit logging issues.
         pass
 
 
@@ -71,7 +79,7 @@ def _sign_state(state: dict) -> str:
     return hmac.new(
         STATE_SECRET.encode("utf-8"),
         payload.encode("utf-8"),
-        hashlib.sha256
+        hashlib.sha256,
     ).hexdigest()
 
 

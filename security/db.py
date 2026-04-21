@@ -1,8 +1,19 @@
+import os
 import sqlite3
+import sys
 
-DB_PATH = "users.db"
+
+def _app_base_path():
+    if getattr(sys, "frozen", False):
+        return os.path.dirname(sys.executable)
+    return os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+
+DB_PATH = os.path.join(_app_base_path(), "users.db")
+
 
 def get_connection():
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     return sqlite3.connect(DB_PATH)
 
 def init_db():
