@@ -1,121 +1,92 @@
-# Forest Automation
+# 🌲 FOREST AUTOMATION
 
-Forest Automation is a Windows-focused desktop application for managing and running permit-booking automation for the MP Online forest portal. It combines:
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║    ███████╗ ██████╗ ██████╗ ███████╗███████╗████████╗                       ║
+║    ██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝╚══██╔══╝                       ║
+║    █████╗  ██║   ██║██████╔╝█████╗  ███████╗   ██║                          ║
+║    ██╔══╝  ██║   ██║██╔══██╗██╔══╝  ╚════██║   ██║                          ║
+║    ██║     ╚██████╔╝██║  ██║███████╗███████║   ██║                          ║
+║    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝                          ║
+║                                                                              ║
+║          A U T O M A T I O N  ·  E N G I N E                                ║
+║          MP Online Forest Permit Booking · Windows Desktop                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
 
-- a Python `PySide6` desktop UI
-- a Node.js + Playwright browser automation engine
-- local user authentication with SQLite
-- machine-bound license validation
+> **Prepare. Authenticate. Automate. Book.**  
+> A desktop operator tool that transforms the forest permit booking grind into a streamlined, semi-automated workflow — powered by Python, Playwright, and a node automation engine running under the hood.
 
-The app is designed for an operator workflow: prepare visitor data, activate a license, sign in, launch automation, and complete any required manual steps such as portal login, CAPTCHA, OTP, and payment.
+---
 
-## What This Repository Contains
+## ⚡ What Is This?
 
-This repository includes both the desktop app and the browser automation logic.
+**Forest Automation** is a Windows desktop application built for operators who manage MP Online forest portal permit bookings. Instead of manually filling in visitor data and navigating the portal over and over, this tool does the heavy lifting — you handle only the parts that _must_ be human: login, CAPTCHA, OTP, and payment.
 
-- `ui/`: PySide6 windows, editors, dashboard, styling, runtime bootstrap
-- `security/`: authentication, password hashing, database, licensing, machine locking
-- `src/`: Node.js automation entry point, Playwright flows, config, CSV readers
-- `config/`: runtime state and license files
-- `tools/`: build helpers and license-generation utilities
-- `installer/`: Inno Setup installer script
-- `assets/`: application icon and static assets
-- `docs/`: packaging and internal phase notes
+```
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   OPERATOR                      MP ONLINE PORTAL           │
+│                                                             │
+│   [Prepare CSV Data]  ──────►  [Automated Playwright]       │
+│   [Activate License]           [Zone/Slot Selection]        │
+│   [Sign In Locally]            [Form Fill — Full/Single]    │
+│                                                             │
+│   ← You handle CAPTCHA, OTP, Login, Payment →               │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
 
-## How It Works
+---
 
-At a high level, the system works like this:
+## 🛠️ Tech Stack
 
-1. The Python app starts from `main.py`.
-2. `ui/bootstrap.py` creates required runtime files if they do not exist yet.
-3. The user signs in through the local login screen.
-4. The dashboard lets the user:
-   - manage CSV booking data
-   - activate a license
-   - change browser settings
-   - start, pause, resume, or stop automation
-5. When automation starts, Python launches the bundled `node/node.exe` process and runs `src/index.js`.
-6. The Node/Playwright side opens the forest booking portal, checks session state, and continues through the booking phases.
-7. The operator still handles manual portal login, CAPTCHA, OTP, and payment when needed.
+| Layer | Technology |
+|---|---|
+| 🖥️ Desktop UI | Python · PySide6 |
+| 🤖 Browser Automation | Node.js · Playwright |
+| 🔒 Auth & Security | SQLite · HMAC signing · Machine-bound licensing |
+| 📦 Packaging | PyInstaller · Inno Setup |
+| 🪟 Platform | Windows |
 
-## Main Features
+---
 
-- Local officer login with hashed passwords
-- User registration from the login window
-- SQLite-backed local user database (`users.db`)
-- Machine-bound license verification
-- Single-seat and full-vehicle CSV editors
-- Settings editor for browser delay, headless mode, timeout, and auto-retry
-- Live log panel in the desktop dashboard
-- Pause/resume/stop control through a signed shared state file
-- Windows packaging support with PyInstaller and Inno Setup
+## 🚀 Quick Start
 
-## Authentication And Security
+### 1 · Python Environment
 
-### Local users
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-- Users are stored in `users.db`
-- Passwords are hashed before storage
-- Login is local to the machine/app, not tied to the forest portal account
-- The login UI applies a temporary lockout after repeated failed attempts
+### 2 · Node Dependencies
 
-### License system
+```powershell
+npm install
+```
 
-- Licenses are stored in `config/license.key`
-- A license is validated against the current machine ID
-- The machine ID is derived from host-specific values and hashed
-- The dashboard blocks automation if the license is missing, invalid, or expired
-
-### Runtime control state
-
-- The Python UI and Node automation communicate through `config/state.json`
-- That state file is HMAC-signed to detect tampering
-- Audit-style security events are written to `logs/security_audit.log`
-
-## Data Files
-
-The app creates or uses these important runtime files:
-
-- `users.db`: local application users
-- `config/license.key`: activated license key
-- `config/state.json`: pause/stop/resume state shared with Node
-- `src/config/app.config.js`: automation/browser settings
-- `src/data/tourists.csv`: visitor data for the full-vehicle flow
-- `src/data/singleTourist.csv`: visitor data for the single-seat UI editor
-- `logs/app.log`: Node automation log file
-- `logs/security_audit.log`: state-file and security audit events
-
-Default CSV columns:
-
-- `name`
-- `age`
-- `gender`
-- `guardian`
-- `nationality`
-- `idType`
-- `idNumber`
-
-## User Workflow
-
-### 1. Start the app
-
-Run:
+### 3 · Launch
 
 ```powershell
 python main.py
 ```
 
-The first launch will create missing runtime folders and starter files automatically.
+> 💡 First launch auto-creates all required runtime folders and starter files. Nothing to configure manually upfront.
 
-### 2. Create the first user
+---
 
-From the login screen:
+## 👤 First-Time Setup
 
-- click `Register User`
-- enter a username and password
-- sign in with that local account
+### Register a User
 
-You can also create a user from environment variables:
+From the login screen → click **Register User** → enter credentials → sign in.
+
+Or bootstrap an admin via environment variables:
 
 ```powershell
 $env:FOREST_ADMIN_USERNAME="admin"
@@ -123,186 +94,241 @@ $env:FOREST_ADMIN_PASSWORD="StrongPassword123"
 python security/create_admin.py
 ```
 
-### 3. Activate the license
+### Activate Your License
 
-Inside the dashboard:
+1. Open **Settings** inside the dashboard  
+2. Click **Show Machine ID** → send it to the license issuer  
+3. Paste the received key → click **Activate License**
 
-- open `Settings`
-- paste a valid license key
-- click `Activate License`
+> ⚠️ Automation is fully blocked until a valid, machine-bound license is activated.
 
-If a license is not available yet, use `Show Machine ID` and send that machine ID to the license issuer.
+---
 
-### 4. Prepare booking data
+## 🗂️ Repository Structure
 
-In the dashboard tabs:
-
-- `Single Seat`: manage single-seat booking rows
-- `Full Vehicle`: manage shared vehicle booking rows
-- `Settings`: edit runtime configuration
-
-Use `Validate` before starting automation.
-
-### 5. Start automation
-
-Click `Start Booking`.
-
-The app will:
-
-- validate that a license exists
-- start the Node automation process
-- stream Node logs into the dashboard
-- open the portal in Playwright using a persistent browser profile
-
-### 6. Complete manual portal steps
-
-Some actions are intentionally manual and not fully automated:
-
-- portal login
-- CAPTCHA
-- OTP
-- final payment-related actions
-
-## Automation Flow
-
-The Node entry point is `src/index.js`. The current phase flow is roughly:
-
-1. Open browser
-2. Open home page
-3. Check whether portal login is needed
-4. Wait for manual login if required
-5. Enter booking loop
-6. Open permit selection flow
-7. Select zone/slot
-8. Continue into either:
-   - full vehicle flow
-   - single seat flow
-9. Stop for CAPTCHA / OTP / payment/manual confirmation as required
-
-Documented internal phases in `docs/PHASES.md`:
-
-- `LOGIN`
-- `DASHBOARD`
-- `PERMIT_SELECT`
-- `ZONE_SELECT`
-- `PHASE_8_FULL`
-- `PHASE_8_SINGLE`
-- `OTP`
-- `PAYMENT`
-
-## Run From Source
-
-### Python requirements
-
-The UI needs Python plus the packages in `requirements.txt`.
-
-Example setup:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+```
+forest-automation/
+│
+├── main.py                     ← App entry point
+│
+├── ui/                         ← PySide6 windows & dashboard
+│   ├── bootstrap.py
+│   ├── dashboard_window.py
+│   ├── login_window.py
+│   └── automation_controller.py
+│
+├── security/                   ← Auth, licensing, machine binding
+│   ├── auth.py
+│   ├── license_manager.py
+│   └── create_admin.py
+│
+├── src/                        ← Node.js automation engine
+│   ├── index.js                ← Entry point
+│   ├── flows/
+│   │   ├── form.flow.fullVehicle.js
+│   │   └── form.flow.singleSeat.js
+│   ├── config/app.config.js
+│   └── data/
+│       ├── tourists.csv
+│       └── singleTourist.csv
+│
+├── config/                     ← Runtime state & license
+│   ├── state.json              ← HMAC-signed pause/resume/stop state
+│   └── license.key
+│
+├── logs/
+│   ├── app.log                 ← Node automation logs
+│   └── security_audit.log      ← Security & state-file audit events
+│
+├── tools/                      ← Build helpers & license generators
+├── installer/                  ← Inno Setup script
+└── docs/                       ← Packaging notes & phase docs
 ```
 
-### Node requirements
+---
 
-The repo already contains a local `node/` runtime and Playwright/browser assets for packaged execution, but when developing from source you should also have the JS dependencies installed:
+## 🔄 Automation Flow
 
-```powershell
-npm install
+```
+  START
+    │
+    ▼
+┌─────────────┐     ┌──────────────────┐     ┌─────────────────────┐
+│ Open Browser│────►│  Load Home Page  │────►│ Check Portal Login? │
+└─────────────┘     └──────────────────┘     └──────────┬──────────┘
+                                                         │
+                                          YES ◄──────────┘──────────► NO
+                                           │                           │
+                                    ┌──────▼──────┐             ┌─────▼──────┐
+                                    │ Wait: Manual│             │  Enter     │
+                                    │ Portal Login│             │  Booking   │
+                                    └──────┬──────┘             │  Loop      │
+                                           │                    └─────┬──────┘
+                                           └──────────────────────────┘
+                                                         │
+                                                         ▼
+                                              ┌──────────────────┐
+                                              │  Permit Select   │
+                                              │  Zone / Slot     │
+                                              └────────┬─────────┘
+                                                       │
+                                         ┌─────────────┴─────────────┐
+                                         ▼                           ▼
+                               ┌──────────────────┐       ┌──────────────────┐
+                               │  Full Vehicle    │       │  Single Seat     │
+                               │  Flow            │       │  Flow            │
+                               └────────┬─────────┘       └────────┬─────────┘
+                                        └──────────┬───────────────┘
+                                                   ▼
+                                        ┌──────────────────────┐
+                                        │  🛑 MANUAL REQUIRED  │
+                                        │  CAPTCHA / OTP /     │
+                                        │  Payment Confirm     │
+                                        └──────────────────────┘
 ```
 
-Run the Node side directly with:
+**Documented Phases** (see `docs/PHASES.md`):
+`LOGIN` → `DASHBOARD` → `PERMIT_SELECT` → `ZONE_SELECT` → `PHASE_8_FULL` / `PHASE_8_SINGLE` → `OTP` → `PAYMENT`
 
-```powershell
-npm run dev
+---
+
+## 📋 CSV Data Format
+
+Both single-seat and full-vehicle flows read from CSV files with these columns:
+
+| Column | Description |
+|---|---|
+| `name` | Visitor full name |
+| `age` | Visitor age |
+| `gender` | Gender |
+| `guardian` | Guardian name |
+| `nationality` | Nationality |
+| `idType` | ID document type |
+| `idNumber` | ID document number |
+
+> Use the **Single Seat** and **Full Vehicle** tabs in the dashboard to manage rows visually — no manual CSV editing required.
+
+---
+
+## ⚙️ Configuration
+
+Runtime configuration lives in `src/config/app.config.js`. The dashboard **Settings** tab rewrites this file for you.
+
+| Setting | Description |
+|---|---|
+| `browser.headless` | Run browser visibly or in background |
+| `browser.slowMo` | Delay (ms) between Playwright actions |
+| `timeouts.pageLoad` | Page-load timeout |
+| `features.autoRetry` | Enable automatic retry on failure |
+| `utils.base` | Base portal URL |
+
+---
+
+## 🔐 Security Model
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                    SECURITY LAYERS                       │
+│                                                          │
+│  ① Local Auth    → SQLite users.db + hashed passwords    │
+│                    Lockout after repeated failures        │
+│                                                          │
+│  ② License       → Machine ID bound · HMAC validated     │
+│                    Expires · Blocks automation if invalid │
+│                                                          │
+│  ③ State File    → config/state.json is HMAC-signed      │
+│                    Tamper detection for pause/stop/resume │
+│                                                          │
+│  ④ Audit Log     → logs/security_audit.log               │
+│                    All security events written here       │
+└──────────────────────────────────────────────────────────┘
 ```
 
-## Configuration
+> 🔑 The machine ID is derived from host-specific hardware values and hashed — licenses cannot be transferred between machines.
 
-The runtime config file is `src/config/app.config.js`.
+---
 
-Important settings:
+## 📦 Build for Windows
 
-- `browser.headless`: run with or without visible browser window
-- `browser.slowMo`: delay between Playwright actions
-- `timeouts.pageLoad`: page-load timeout
-- `features.autoRetry`: whether automatic retry behavior is enabled from the UI config writer
-- `utils.base`: base portal URL
-
-The desktop `Settings` tab rewrites this config file for normal usage.
-
-## Logging
-
-- Dashboard log panel shows live output from the Node process
-- `logs/app.log` stores automation logs
-- `logs/security_audit.log` stores state-file/security events
-
-## Packaging For Windows
-
-This project supports building a standalone Windows desktop app.
-
-Basic build flow:
-
-```powershell
-python -m venv .venv-build
-.venv-build\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r runtime-requirements.txt pyinstaller
-pyinstaller --noconfirm forest_automation.spec
-```
-
-Or use:
+### Quick Build
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tools\build-windows.ps1
 ```
 
-Build output:
+### Manual Build
 
-- `dist/ForestAutomation/ForestAutomation.exe`
+```powershell
+python -m venv .venv-build
+.venv-build\Scripts\Activate.ps1
+pip install -r runtime-requirements.txt pyinstaller
+pyinstaller --noconfirm forest_automation.spec
+```
 
-Installer script:
+**Outputs:**
 
-- `installer/forest-automation.iss`
+| File | Description |
+|---|---|
+| `dist/ForestAutomation/ForestAutomation.exe` | Standalone executable |
+| `dist-installer/ForestAutomationSetup.exe` | Full installer via Inno Setup |
 
-Installer output target:
+> See `docs/WINDOWS_PACKAGING.md` for detailed packaging notes.
 
-- `dist-installer/ForestAutomationSetup.exe`
+---
 
-See `docs/WINDOWS_PACKAGING.md` for the existing packaging notes.
+## 📁 Key Runtime Files
 
-## Important Implementation Notes
+| File | Purpose |
+|---|---|
+| `users.db` | Local operator accounts |
+| `config/license.key` | Activated license key |
+| `config/state.json` | Pause / Resume / Stop state (HMAC-signed) |
+| `src/config/app.config.js` | Browser & automation settings |
+| `src/data/tourists.csv` | Full-vehicle visitor data |
+| `src/data/singleTourist.csv` | Single-seat visitor data |
+| `logs/app.log` | Node automation output |
+| `logs/security_audit.log` | Security event audit trail |
 
-- The app is built for Windows packaging and uses bundled `node.exe`
-- The Playwright browser launches with a persistent profile in `forest-browser-profile`
-- If the main profile is locked, the automation falls back to a temporary runtime profile
-- Pause/resume/stop are controlled through the signed `config/state.json` file
-- Runtime files are auto-created on first launch if missing
+---
 
-## Current Limitations / Notes
+## ⚠️ Known Limitations
 
-- Manual intervention is still required for login, CAPTCHA, OTP, and payment
-- The repository currently includes both development and packaging-oriented assets, so it is larger than a typical Python desktop app
-- The single-seat Node CSV reader in `src/utils/readSingleTouristsCsv.js` currently reads `src/data/tourists.csv`; maintainers should verify whether that is intentional or should be changed to `src/data/singleTourist.csv`
-- `security/license_manager.py` contains a hardcoded signing secret; that is acceptable for local development, but production distribution should protect or externalize licensing secrets more carefully
+- **Manual steps required:** Portal login, CAPTCHA, OTP, and payment are intentionally left to the operator.
+- **CSV reader mismatch:** `src/utils/readSingleTouristsCsv.js` currently reads `tourists.csv` — maintainers should verify if it should read `singleTourist.csv` instead.
+- **Hardcoded signing secret:** `security/license_manager.py` contains a hardcoded secret — acceptable for local dev, but **externalize it before production distribution**.
+- **Windows only:** The bundled `node.exe` and packaging setup target Windows exclusively.
 
-## Recommended First Files To Read
+---
 
-If you want to understand the repository quickly, start here:
+## 🗺️ Where To Start Reading
 
-1. `main.py`
-2. `ui/main.py`
-3. `ui/login_window.py`
-4. `ui/dashboard_window.py`
-5. `ui/automation_controller.py`
-6. `src/index.js`
-7. `src/flows/form.flow.fullVehicle.js`
-8. `src/flows/form.flow.singleSeat.js`
-9. `security/auth.py`
-10. `security/license_manager.py`
+New to the codebase? Start here, in order:
 
-## Repository Purpose In One Sentence
+1. `main.py` — app entry point
+2. `ui/main.py` — UI bootstrap
+3. `ui/login_window.py` — local auth flow
+4. `ui/dashboard_window.py` — main operator dashboard
+5. `ui/automation_controller.py` — Python ↔ Node bridge
+6. `src/index.js` — Node automation entry
+7. `src/flows/form.flow.fullVehicle.js` — full vehicle booking
+8. `src/flows/form.flow.singleSeat.js` — single seat booking
+9. `security/auth.py` — authentication logic
+10. `security/license_manager.py` — machine-bound licensing
 
-This repository is a desktop operator tool that prepares visitor data, enforces local access and licensing, and launches a Playwright-based browser workflow to assist with forest permit booking on the MP Online portal.
+---
+
+## 📄 License
+
+This project is intended for authorized operator use only. License keys are machine-bound and non-transferable.
+
+---
+
+<div align="center">
+
+```
+Built for the forests. Run by operators. Powered by automation.
+```
+
+**🌲 Forest Automation — MP Online Permit Booking Engine**
+
+</div>
