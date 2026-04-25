@@ -19,6 +19,9 @@ yarn-error.log*
 # Environment / secrets
 .env
 .env.*
+config/credentials.json
+config/token.json
+config/license_status.json
 config/license.key
 *.pem
 *.crt
@@ -34,6 +37,7 @@ installer/dist-installer/
 # Runtime data / logs / local databases
 logs/
 *.log
+*.jsonl
 *.pid
 *.seed
 users.db

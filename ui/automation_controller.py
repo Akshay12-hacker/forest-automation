@@ -2,6 +2,7 @@ import os
 import subprocess
 import threading
 
+from security.machine_lock import get_machine_id
 from ui.state_helper import app_path, resource_path, set_state
 
 
@@ -34,6 +35,7 @@ def start_automation(log):
     env = os.environ.copy()
     env["PROJECT_ROOT"] = PROJECT_ROOT
     env["RESOURCE_ROOT"] = RESOURCE_ROOT
+    env["FOREST_MACHINE_ID"] = get_machine_id()
 
     try:
         node_process = subprocess.Popen(

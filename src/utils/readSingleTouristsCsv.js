@@ -5,21 +5,21 @@ const projectRoot = process.env.PROJECT_ROOT
   : path.resolve(__dirname, '../..');
 
 function readSingleTouristsCsv() {
-  const filePath = path.join(projectRoot, 'src', 'data', 'tourists.csv');
+  const filePath = path.join(projectRoot, 'src', 'data', 'singleTourist.csv');
   let raw;
   try {
     raw = fs.readFileSync(filePath, 'utf8');
   } catch (err) {
-    throw new Error(`Failed to read tourists CSV: ${err.message}`);
+    throw new Error(`Failed to read single tourist CSV: ${err.message}`);
   }
 
   if (!raw || !raw.trim()) {
-    throw new Error('tourists.csv is empty');
+    throw new Error('singleTourist.csv is empty');
   }
 
   const lines = raw.trim().split('\n');
   if (lines.length < 2) {
-    throw new Error('tourists.csv must contain headers and at least one row');
+    throw new Error('singleTourist.csv must contain headers and at least one row');
   }
   const headers = lines.shift().split(',');
 

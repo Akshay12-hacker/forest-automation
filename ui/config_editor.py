@@ -1,6 +1,8 @@
 import json
 import os
 import re
+import threading
+import traceback
 
 from PySide6.QtWidgets import (
     QCheckBox,
@@ -52,9 +54,23 @@ class ConfigEditor(QWidget):
 
         self.btn_activate = QPushButton("Activate License")
         self.btn_save = QPushButton("Save Settings")
+        
+        self.gmail_label = QLabel("Gmail API Integration")
+        self.gmail_label.setObjectName("editorTitle")
+        self.gmail_help = QLabel(
+            "Connect your Gmail account to enable automatic OTP fetching via the secure Google API. Requires credentials.json in the config folder."
+        )
+        self.gmail_help.setWordWrap(True)
+        self.gmail_help.setObjectName("mutedLabel")
+        
+        self.btn_gmail = QPushButton("Connect Gmail")
+        self.btn_gmail.setObjectName("gmailButton")
+        self.gmail_status = QLabel("Checking Gmail connection...")
+        self.gmail_status.setObjectName("mutedLabel")
 
         self.btn_activate.clicked.connect(self.activate_license)
         self.btn_save.clicked.connect(self.save)
+        self.btn_gmail.clicked.connect(self.connect_gmail)
 
         form = QFormLayout()
         form.addRow("Browser delay", self.delay)
@@ -67,13 +83,21 @@ class ConfigEditor(QWidget):
         layout.addWidget(self.license_help)
         layout.addWidget(self.license_input)
         layout.addWidget(self.btn_activate)
-        layout.addSpacing(12)
+        layout.addSpacing(20)
+        
+        layout.addWidget(self.gmail_label)
+        layout.addWidget(self.gmail_help)
+        layout.addWidget(self.btn_gmail)
+        layout.addWidget(self.gmail_status)
+        layout.addSpacing(20)
+        
         layout.addLayout(form)
         layout.addWidget(self.btn_save)
         layout.addStretch(1)
         self.setLayout(layout)
 
         self.load()
+        self.check_gmail_status()
 
     def load(self):
         cfg = self._read_config()
@@ -145,6 +169,55 @@ class ConfigEditor(QWidget):
 
         self.license_input.clear()
         QMessageBox.information(self, "Success", "License activated.")
+
+    def check_gmail_status(self):
+        token_path = app_path("config", "token.json")
+        if os.path.exists(token_path):
+            self.gmail_status.setText("✅ Gmail is connected and ready.")
+            self.btn_gmail.setText("Reconnect Gmail")
+        else:
+            self.gmail_status.setText("❌ Gmail is not connected. OTPs will not fetch.")
+            self.btn_gmail.setText("Connect Gmail")
+
+    def connect_gmail(self):
+        self.btn_gmail.setEnabled(False)
+        self.gmail_status.setText("Opening browser for Google Login...")
+        threading.Thread(target=self._run_oauth_flow, daemon=True).start()
+
+    def _run_oauth_flow(self):
+        try:
+            from google_auth_oauthlib.flow import InstalledAppFlow
+        except ImportError:
+            self._update_gmail_status_ui("❌ Missing dependencies. Please run 'pip install google-auth-oauthlib'")
+            return
+
+        SCOPES = ['https://www.googleapis.com/auth/gmail.readonly', 'https://www.googleapis.com/auth/gmail.modify']
+        creds_path = app_path("config", "credentials.json")
+        token_path = app_path("config", "token.json")
+
+        if not os.path.exists(creds_path):
+            self._update_gmail_status_ui("❌ Missing config/credentials.json. Please download it from Google Cloud Console.")
+            return
+
+        try:
+            flow = InstalledAppFlow.from_client_secrets_file(creds_path, SCOPES)
+            creds = flow.run_local_server(port=0)
+            
+            os.makedirs(os.path.dirname(token_path), exist_ok=True)
+            with open(token_path, 'w') as token:
+                token.write(creds.to_json())
+                
+            self._update_gmail_status_ui("✅ Gmail successfully connected!", success=True)
+        except Exception as e:
+            self._update_gmail_status_ui(f"❌ Failed to connect: {str(e)}")
+
+    def _update_gmail_status_ui(self, msg, success=False):
+        # Update UI from worker thread safely
+        from PySide6.QtCore import QMetaObject, Qt, Q_ARG
+        QMetaObject.invokeMethod(self.gmail_status, "setText", Qt.QueuedConnection, Q_ARG(str, msg))
+        if success:
+            QMetaObject.invokeMethod(self.btn_gmail, "setText", Qt.QueuedConnection, Q_ARG(str, "Reconnect Gmail"))
+        QMetaObject.invokeMethod(self.btn_gmail, "setEnabled", Qt.QueuedConnection, Q_ARG(bool, True))
 
     def _read_config(self):
         default_config = {

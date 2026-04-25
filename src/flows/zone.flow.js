@@ -61,7 +61,7 @@ async function zoneFlow(page) {
   ]);
 
   log('✅ Slot clicked successfully');
-  return true;
+  return { selected: true, maxSeats };
 }
 
 module.exports = { zoneFlow };

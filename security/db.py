@@ -30,5 +30,14 @@ def init_db():
     )
     """)
 
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS login_attempts (
+        username TEXT PRIMARY KEY,
+        failed_count INTEGER NOT NULL DEFAULT 0,
+        locked_until INTEGER NOT NULL DEFAULT 0,
+        last_failed_at INTEGER NOT NULL DEFAULT 0
+    )
+    """)
+
     conn.commit()
     conn.close()

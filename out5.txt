@@ -1,0 +1,2152 @@
+var CounterRow = 1;
+
+function setIDCardType(objNationality, IDCardTypeid) {
+    // debugger;
+    calculateFeeOnNationalitySelect(objNationality);
+    if ($(objNationality).val() == 'in' || $(objNationality).val() == 'np') {
+        $('#' + IDCardTypeid).val('PAN Card');
+        $('#' + IDCardTypeid).prop("disabled", false);
+
+
+    }
+    else if ($(objNationality).val() != 'in' && $(objNationality).val() != 'np') {
+        $('#' + IDCardTypeid).val('Passport');
+        $('#' + IDCardTypeid).prop("disabled", true);
+    }
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+/******** Calculate Fee (Base Amount) (SINGLE SEAT) ***********/
+function calculateFeeOnNationalitySelect(objNationality) {
+   /* debugger;*/
+    var totalSeatsSelected = 0;
+    var totalFee = 0;
+    var IsIndian = 1;
+    var IsPremiumTicket = $('#IsPremiumTicket').val();
+    $('#VisitorTable tr').each(function () {
+        var age = $(this).find("input[id^='txtAge_']").val();
+        var Nationality = $(this).find('select[id^="DrpNationality"]');
+
+
+        if (age != undefined) {
+            //if ($(objNationality).val() == "in")
+            if (Nationality.val() == "0" || Nationality.val() == "in") {
+                IsIndian = 1;
+            }
+            else
+            { IsIndian = 0; }
+            /***** PREMIUM PERMIT    ********************/
+            if (IsPremiumTicket == 'Y') {
+                /***** FOREIGNER TOURIST ********/
+                if (IsIndian == 0) {
+                    if (age == '') {
+                        totalFee = totalFee + parseFloat($('#ForeignerAdultFee_Premium').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age < 5) {
+                        totalFee = totalFee + parseFloat($('#HidToddlerFee').val());
+                    }
+                    else if (age >= 5 && age <= 12) {
+                        totalFee = totalFee + parseFloat($('#ForeignerMinorFee_Premium').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age > 12) {
+                        totalFee = totalFee + parseFloat($('#ForeignerAdultFee_Premium').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                }
+                /***** INDIAN TOURIST ********/
+                else {
+                    if (age == '') {
+                        totalFee = totalFee + parseFloat($('#IndianAdultFee_Premium').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age < 5) {
+                        totalFee = totalFee + parseFloat($('#HidToddlerFee').val());
+
+                    }
+                    else if (age >= 5 && age <= 12) {
+                        totalFee = totalFee + parseFloat($('#IndianMinorFee_Premium').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age > 12) {
+                        totalFee = totalFee + parseFloat($('#IndianAdultFee_Premium').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                }
+
+            }
+            /***** NORMAL PERMIT  ********************/
+            else {
+                /***** FOREIGNER TOURIST ********/
+                if (IsIndian == 0) {
+                    if (age == '') {
+                        totalFee = totalFee + parseFloat($('#ForeignerAdultFee_Normal').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age < 5) {
+                        totalFee = totalFee + parseFloat($('#HidToddlerFee').val());
+                    }
+                    else if (age >= 5 && age <= 12) {
+                        totalFee = totalFee + parseFloat($('#ForeignerMinorFee_Normal').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age > 12) {
+                        totalFee = totalFee + parseFloat($('#ForeignerAdultFee_Normal').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                }
+                /***** INDIAN TOURIST ********/
+                else {
+                    if (age == '') {
+                        totalFee = totalFee + parseFloat($('#IndianAdultFee_Normal').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age < 5) {
+                        totalFee = totalFee + parseFloat($('#HidToddlerFee').val());
+
+                    }
+                    else if (age >= 5 && age <= 12) {
+                        totalFee = totalFee + parseFloat($('#IndianMinorFee_Normal').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                    else if (age > 12) {
+                        totalFee = totalFee + parseFloat($('#IndianAdultFee_Normal').val());
+                        totalSeatsSelected = totalSeatsSelected + 1;
+                    }
+                }
+            }
+        }
+    });
+    $('#SpnNoOfSeats').html(totalSeatsSelected.toString());
+    $('#SpnTotalFare').html(totalFee.toString());
+}
+
+
+//function calculateFee() {
+//    debugger;
+//    var totalSeatsSelected = 0;
+//    var totalFee = 0;
+//    var IsPremiumTicket = $('#IsPremiumTicket').val();
+//    $('#VisitorTable tr').each(function () {
+//        var age = $(this).find("input[id^='txtAge_']").val(); 
+//        if (age != undefined) {
+
+//            if (IsPremiumTicket == 'Y') {
+//                totalFee = totalFee + parseFloat($('#IndianAdultFee_Premium').val());
+//                totalSeatsSelected = totalSeatsSelected + 1;
+
+//                //        if (age == '') {
+//                //            totalFee = totalFee + parseFloat($('#HidAdultFee').val());
+//                //            totalSeatsSelected = totalSeatsSelected + 1;
+//                //        }
+//                //        else if (age < 5) {
+//                //            totalFee = totalFee + parseFloat($('#HidToddlerFee').val());
+
+//                //        }
+//                //        else if (age >= 5 && age <= 12) {
+//                //            totalFee = totalFee + parseFloat($('#HidMinorFee').val());
+//                //            totalSeatsSelected = totalSeatsSelected + 1;
+//                //        }
+//                //        else if (age > 12) {
+//                //            totalFee = totalFee + parseFloat($('#HidAdultFee').val());
+//                //            totalSeatsSelected = totalSeatsSelected + 1;
+//                //        }
+//            }
+//            else {
+//                totalFee = totalFee + parseFloat($('#IndianAdultFee_Normal').val());
+//                totalSeatsSelected = totalSeatsSelected + 1;
+//            }
+//        }
+//    });
+//    $('#SpnNoOfSeats').html(totalSeatsSelected.toString());
+//    $('#SpnTotalFare').html(totalFee.toString());
+
+//}
+function calculateFee() {
+    /*debugger;*/
+    var totalSeatsSelected = 0;
+    var totalFee = 0;
+    var IsPremiumTicket = $('#IsPremiumTicket').val();
+    $('#VisitorTable tr').each(function () {
+
+        var age = $(this).find("input[id^='txtAge_']").val();
+        if (age != undefined) {
+
+            if (IsPremiumTicket == 'Y') {
+                totalFee = totalFee + parseFloat($('#IndianAdultFee_Premium').val());
+                totalSeatsSelected = totalSeatsSelected + 1;
+
+                //            if (age == '') {
+                //                totalFee = totalFee + parseFloat($('#IndianAdultFee_Premium').val());
+                //                totalSeatsSelected = totalSeatsSelected + 1;
+                //            }
+                //            else if (age < 5) {
+                //                totalFee = totalFee + parseFloat($('#HidToddlerFee').val());
+
+                //            }
+                //            else if (age >= 5 && age <= 12) {
+                //                totalFee = totalFee + parseFloat($('#IndianMinorFee_Premium').val());
+                //                totalSeatsSelected = totalSeatsSelected + 1;
+                //            }
+                //            else if (age > 12) {
+                //                totalFee = totalFee + parseFloat($('#IndianAdultFee_Premium').val());
+                //                totalSeatsSelected = totalSeatsSelected + 1;
+                //            }
+            }
+            else {
+                totalFee = totalFee + parseFloat($('#IndianAdultFee_Normal').val());
+                totalSeatsSelected = totalSeatsSelected + 1;
+                //            if (age == '') {
+                //                totalFee = totalFee + parseFloat($('#IndianAdultFee_Normal').val());
+                //                totalSeatsSelected = totalSeatsSelected + 1;
+                //            }
+                //            else if (age < 5) {
+                //                totalFee = totalFee + parseFloat($('#HidToddlerFee').val());
+
+                //            }
+                //            else if (age >= 5 && age <= 12) {
+                //                totalFee = totalFee + parseFloat($('#IndianMinorFee_Normal').val());
+                //                totalSeatsSelected = totalSeatsSelected + 1;
+                //            }
+                //            else if (age > 12) {
+                //                totalFee = totalFee + parseFloat($('#IndianAdultFee_Normal').val());
+                //                totalSeatsSelected = totalSeatsSelected + 1;
+                //            }
+            }
+        }
+
+    });
+    $('#SpnNoOfSeats').html(totalSeatsSelected.toString());
+    $('#SpnTotalFare').html(totalFee.toString());
+
+}
+/******** Check Seat Availability (SINGLE SEAT) [OBSOLETE]***********/
+function checkSeat() {
+    var s = document.getElementById("hdnV1").value + document.getElementById("hdnV2").value + document.getElementById("hdnV3").value;
+    var counter = s.split(",", -1).length - 1;
+
+    if (counter >= 0) {
+
+        $('#divVisitorDtls').show();
+        $('#Visitorrowheader').show();
+        $('#tblchild').show();
+    }
+
+    if (counter > 5) {
+        alert("Only 6 seats allowed per Permit 1...!!!");
+    }
+}
+
+/******** Check Seat Availability (SINGLE SEAT) ***********/
+function checkSeatAvailability(action) {
+    if (action == "Add") {
+        var counter = parseInt($('#VisitorTable tr').length) - 2;
+
+        if (counter <= 0) {
+            $('#divVisitorDtls').slideDown('slow');
+            $('#Visitorrowheader').slideDown('slow');
+            $('#tblchild').slideDown('slow');
+        }
+
+        if (counter > 5) {
+            alert("Only 6 seats allowed per Permit...!!!");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    else { return false; }
+}
+
+///////////////  FOR FIRST VECHILE
+function ds1(id) {
+
+    if (document.getElementById("hdnV1").value.indexOf('FR') > -1 && id == "MyMainDiv1") {
+        addRemoveVisitors('Remove', 'V1:FR');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",FR", "");
+        document.getElementById("MyMainDiv1").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv1") {
+        // document.getElementById("hdnV1").value = null;
+        // document.getElementById("hdnV1").value = 'v1';
+        if (document.getElementById("MyMainDiv1").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V1:FR') == true) {
+
+            document.getElementById("MyMainDiv1").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'FR';
+
+        }
+    }
+
+
+    if (document.getElementById("hdnV1").value.indexOf('FC') > -1 && id == "MyMainDiv2") {
+        addRemoveVisitors('Remove', 'V1:FC');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",FC", "");
+        document.getElementById("MyMainDiv2").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv2") {
+        // document.getElementById("hdnV1").value = null;
+        //  document.getElementById("hdnV1").value = 'v1';
+        if (document.getElementById("MyMainDiv2").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V1:FC') == true) {
+
+            document.getElementById("MyMainDiv2").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'FC';
+        }
+    }
+
+
+    if (document.getElementById("hdnV1").value.indexOf('RR') > -1 && id == "MyMainDiv3") {
+        addRemoveVisitors('Remove', 'V1:RR');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",RR", "");
+        document.getElementById("MyMainDiv3").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv3") {
+        //document.getElementById("hdnV1").value = null;
+        //document.getElementById("hdnV1").value = 'v1';
+        if (document.getElementById("MyMainDiv3").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+
+        else if (addRemoveVisitors('Add', 'V1:RR') == true) {
+
+            document.getElementById("MyMainDiv3").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'RR';
+
+        }
+
+    }
+
+
+    if (document.getElementById("hdnV1").value.indexOf('FL') > -1 && id == "MyMainDiv4") {
+        addRemoveVisitors('Remove', 'V1:FL');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",FL", "");
+        document.getElementById("MyMainDiv4").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv4") {
+        //document.getElementById("hdnV1").value = null;
+        //document.getElementById("hdnV1").value = 'v1';
+        if (document.getElementById("MyMainDiv4").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V1:FL') == true) {
+
+            document.getElementById("MyMainDiv4").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'FL';
+
+        }
+    }
+
+
+    if (document.getElementById("hdnV1").value.indexOf('RC') > -1 && id == "MyMainDiv5") {
+        addRemoveVisitors('Remove', 'V1:RC');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",RC", "");
+        document.getElementById("MyMainDiv5").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv5") {
+        //document.getElementById("hdnV1").value = null;
+        //document.getElementById("hdnV1").value = 'v1';
+        if (document.getElementById("MyMainDiv5").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V1:RC') == true) {
+
+            document.getElementById("MyMainDiv5").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'RC';
+
+        }
+    }
+
+
+    if (document.getElementById("hdnV1").value.indexOf('RL') > -1 && id == "MyMainDiv6") {
+        addRemoveVisitors('Remove', 'V1:RL');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",RL", "");
+        document.getElementById("MyMainDiv6").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv6") {
+        // document.getElementById("hdnV1").value = null;
+        // document.getElementById("hdnV1").value = 'v1';
+        if (document.getElementById("MyMainDiv6").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+
+        else if (addRemoveVisitors('Add', 'V1:RL') == true) {
+
+            document.getElementById("MyMainDiv6").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'RL';
+
+            // document.getElementById("txtTicketStatus").value = "";
+        }
+    }
+
+    //var totalRows = parseInt($('#VisitorTable tr').length);
+    //var previousRowNumber = totalRows - 2;
+    //document.getElementById("txtTicketStatus").value = "Total Seats :" + previousRowNumber + "        Total Amount:" + previousRowNumber * 250;
+}
+
+///////////////  FOR SECOND VECHILE
+function SecondVechile(id) {
+    //checkSeat();
+    // alert(2);
+
+    if (document.getElementById("hdnV2").value.indexOf('FR') > -1 && id == "MySecondDiv1") {
+        addRemoveVisitors('Remove', 'V2:FR');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",FR", "");
+        document.getElementById("MySecondDiv1").style.backgroundColor = "white";
+    }
+    else if (id == "MySecondDiv1") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MySecondDiv1").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V2:FR') == true) {
+            document.getElementById("MySecondDiv1").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'FR';  //Green
+        }
+    }
+
+
+    if (document.getElementById("hdnV2").value.indexOf('FC') > -1 && id == "MySecondDiv2") {
+        addRemoveVisitors('Remove', 'V2:FC');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",FC", "");
+        document.getElementById("MySecondDiv2").style.backgroundColor = "white";
+    }
+    else if (id == "MySecondDiv2") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MySecondDiv2").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V2:FC') == true) {
+            document.getElementById("MySecondDiv2").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'FC';
+        }
+    }
+
+
+    if (document.getElementById("hdnV2").value.indexOf('RR') > -1 && id == "MySecondDiv3") {
+        addRemoveVisitors('Remove', 'V2:RR');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",RR", "");
+        document.getElementById("MySecondDiv3").style.backgroundColor = "white";
+
+    }
+    else if (id == "MySecondDiv3") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MySecondDiv3").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V2:RR') == true) {
+            document.getElementById("MySecondDiv3").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'RR';
+        }
+    }
+
+
+    if (document.getElementById("hdnV2").value.indexOf('FL') > -1 && id == "MySecondDiv4") {
+        addRemoveVisitors('Remove', 'V2:FL');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",FL", "");
+        document.getElementById("MySecondDiv4").style.backgroundColor = "white";
+    }
+    else if (id == "MySecondDiv4") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MySecondDiv4").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V2:FL') == true) {
+            document.getElementById("MySecondDiv4").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'FL';
+        }
+
+    }
+
+
+    if (document.getElementById("hdnV2").value.indexOf('RC') > -1 && id == "MySecondDiv5") {
+        addRemoveVisitors('Remove', 'V2:RC');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",RC", "");
+        document.getElementById("MySecondDiv5").style.backgroundColor = "white";
+    }
+    else if (id == "MySecondDiv5") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MySecondDiv5").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V2:RC') == true) {
+            document.getElementById("MySecondDiv5").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'RC';
+        }
+
+    }
+
+
+    if (document.getElementById("hdnV2").value.indexOf('RL') > -1 && id == "MySecondDiv6") {
+        addRemoveVisitors('Remove', 'V2:RL');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",RL", "");
+        document.getElementById("MySecondDiv6").style.backgroundColor = "white";
+    }
+    else if (id == "MySecondDiv6") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MySecondDiv6").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V2:RL') == true) {
+            document.getElementById("MySecondDiv6").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'RL';
+        }
+    }
+
+    //var totalRows = parseInt($('#VisitorTable tr').length);
+    //var previousRowNumber = totalRows - 2;
+    //document.getElementById("txtTicketStatus").value = "Total Seats :" + previousRowNumber + "     Total Amount:" + previousRowNumber * 250;
+
+}
+
+
+function ds3(id) {
+
+    if (document.getElementById("hdnV3").value.indexOf('FR') > -1 && id == "MythirdhDiv1") {
+        addRemoveVisitors('Remove', 'V3:FR');
+        document.getElementById("hdnV3").value = document.getElementById("hdnV3").value.replace(",FR", "");
+        document.getElementById("MythirdhDiv1").style.backgroundColor = "white";
+    }
+    else if (id == "MythirdhDiv1") {
+        //document.getElementById("hdnV3").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MythirdhDiv1").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V3:FR') == true) {
+            document.getElementById("MythirdhDiv1").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV3").value = document.getElementById("hdnV3").value + ',' + 'FR';  //Green
+        }
+    }
+
+
+    if (document.getElementById("hdnV3").value.indexOf('FC') > -1 && id == "MythirdhDiv2") {
+        addRemoveVisitors('Remove', 'V3:FC');
+        document.getElementById("hdnV3").value = document.getElementById("hdnV3").value.replace(",FC", "");
+        document.getElementById("MythirdhDiv2").style.backgroundColor = "white";
+    }
+    else if (id == "MythirdhDiv2") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MythirdhDiv2").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V3:FC') == true) {
+            document.getElementById("MythirdhDiv2").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV3").value = document.getElementById("hdnV3").value + ',' + 'FC';
+        }
+    }
+
+
+    if (document.getElementById("hdnV3").value.indexOf('RR') > -1 && id == "MythirdhDiv3") {
+        addRemoveVisitors('Remove', 'V3:RR');
+        document.getElementById("hdnV3").value = document.getElementById("hdnV3").value.replace(",RR", "");
+        document.getElementById("MythirdhDiv3").style.backgroundColor = "white";
+
+    }
+    else if (id == "MythirdhDiv3") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MythirdhDiv3").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V3:RR') == true) {
+            document.getElementById("MythirdhDiv3").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV3").value = document.getElementById("hdnV3").value + ',' + 'RR';
+        }
+    }
+
+
+    if (document.getElementById("hdnV3").value.indexOf('FL') > -1 && id == "MythirdhDiv4") {
+        addRemoveVisitors('Remove', 'V3:FL');
+        document.getElementById("hdnV3").value = document.getElementById("hdnV3").value.replace(",FL", "");
+        document.getElementById("MythirdhDiv4").style.backgroundColor = "white";
+    }
+    else if (id == "MythirdhDiv4") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MythirdhDiv4").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V3:FL') == true) {
+            document.getElementById("MythirdhDiv4").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV3").value = document.getElementById("hdnV3").value + ',' + 'FL';
+        }
+
+    }
+
+
+    if (document.getElementById("hdnV3").value.indexOf('RC') > -1 && id == "MythirdhDiv5") {
+        addRemoveVisitors('Remove', 'V3:RC');
+        document.getElementById("hdnV3").value = document.getElementById("hdnV3").value.replace(",RC", "");
+        document.getElementById("MythirdhDiv5").style.backgroundColor = "white";
+    }
+    else if (id == "MythirdhDiv5") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MythirdhDiv5").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V3:RC') == true) {
+            document.getElementById("MythirdhDiv5").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV3").value = document.getElementById("hdnV3").value + ',' + 'RC';
+        }
+
+    }
+
+
+    if (document.getElementById("hdnV3").value.indexOf('RL') > -1 && id == "MythirdhDiv6") {
+        addRemoveVisitors('Remove', 'V3:RL');
+        document.getElementById("hdnV3").value = document.getElementById("hdnV3").value.replace(",RL", "");
+        document.getElementById("MythirdhDiv6").style.backgroundColor = "white";
+    }
+    else if (id == "MythirdhDiv6") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MythirdhDiv6").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V3:RL') == true) {
+            document.getElementById("MythirdhDiv6").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV3").value = document.getElementById("hdnV3").value + ',' + 'RL';
+        }
+    }
+
+    //var totalRows = parseInt($('#VisitorTable tr').length);
+    //var previousRowNumber = totalRows - 2;
+    //document.getElementById("txtTicketStatus").value = "Total Seats :" + previousRowNumber + "     Total Amount:" + previousRowNumber * 250;
+
+}
+
+function ds4(id) {
+
+    if (document.getElementById("hdnV4").value.indexOf('FR') > -1 && id == "MyfourthDiv1") {
+        addRemoveVisitors('Remove', 'V4:FR');
+        document.getElementById("hdnV4").value = document.getElementById("hdnV4").value.replace(",FR", "");
+        document.getElementById("MyfourthDiv1").style.backgroundColor = "white";
+    }
+    else if (id == "MyfourthDiv1") {
+        //document.getElementById("hdnV3").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MyfourthDiv1").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V4:FR') == true) {
+            document.getElementById("MyfourthDiv1").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV4").value = document.getElementById("hdnV4").value + ',' + 'FR';  //Green
+        }
+    }
+
+
+    if (document.getElementById("hdnV4").value.indexOf('FC') > -1 && id == "MyfourthDiv2") {
+        addRemoveVisitors('Remove', 'V4:FC');
+        document.getElementById("hdnV4").value = document.getElementById("hdnV4").value.replace(",FC", "");
+        document.getElementById("MyfourthDiv2").style.backgroundColor = "white";
+    }
+    else if (id == "MyfourthDiv2") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MyfourthDiv2").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V4:FC') == true) {
+            document.getElementById("MyfourthDiv2").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV4").value = document.getElementById("hdnV4").value + ',' + 'FC';
+        }
+    }
+
+
+    if (document.getElementById("hdnV4").value.indexOf('RR') > -1 && id == "MyfourthDiv3") {
+        addRemoveVisitors('Remove', 'V4:RR');
+        document.getElementById("hdnV4").value = document.getElementById("hdnV4").value.replace(",RR", "");
+        document.getElementById("MyfourthDiv3").style.backgroundColor = "white";
+
+    }
+    else if (id == "MyfourthDiv3") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MyfourthDiv3").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V4:RR') == true) {
+            document.getElementById("MyfourthDiv3").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV4").value = document.getElementById("hdnV4").value + ',' + 'RR';
+        }
+    }
+
+
+    if (document.getElementById("hdnV4").value.indexOf('FL') > -1 && id == "MyfourthDiv4") {
+        addRemoveVisitors('Remove', 'V4:FL');
+        document.getElementById("hdnV4").value = document.getElementById("hdnV4").value.replace(",FL", "");
+        document.getElementById("MyfourthDiv4").style.backgroundColor = "white";
+    }
+    else if (id == "MyfourthDiv4") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MyfourthDiv4").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V4:FL') == true) {
+            document.getElementById("MyfourthDiv4").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV4").value = document.getElementById("hdnV4").value + ',' + 'FL';
+        }
+
+    }
+
+
+    if (document.getElementById("hdnV4").value.indexOf('RC') > -1 && id == "MyfourthDiv5") {
+        addRemoveVisitors('Remove', 'V4:RC');
+        document.getElementById("hdnV4").value = document.getElementById("hdnV4").value.replace(",RC", "");
+        document.getElementById("MyfourthDiv5").style.backgroundColor = "white";
+    }
+    else if (id == "MyfourthDiv5") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MyfourthDiv5").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V4:RC') == true) {
+            document.getElementById("MyfourthDiv5").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV4").value = document.getElementById("hdnV4").value + ',' + 'RC';
+        }
+
+    }
+
+
+    if (document.getElementById("hdnV4").value.indexOf('RL') > -1 && id == "MyfourthDiv6") {
+        addRemoveVisitors('Remove', 'V4:RL');
+        document.getElementById("hdnV4").value = document.getElementById("hdnV4").value.replace(",RL", "");
+        document.getElementById("MyfourthDiv6").style.backgroundColor = "white";
+    }
+    else if (id == "MyfourthDiv6") {
+        //document.getElementById("hdnV2").value = null;
+        //document.getElementById("hdnV2").value = 'v2';
+        if (document.getElementById("MyfourthDiv6").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'V4:RL') == true) {
+            document.getElementById("MyfourthDiv6").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV4").value = document.getElementById("hdnV4").value + ',' + 'RL';
+        }
+    }
+
+    //var totalRows = parseInt($('#VisitorTable tr').length);
+    //var previousRowNumber = totalRows - 2;
+    //document.getElementById("txtTicketStatus").value = "Total Seats :" + previousRowNumber + "     Total Amount:" + previousRowNumber * 250;
+
+}
+
+/******** Add Remove Visitors Rows (SINGLE SEAT) ***********/
+function addRemoveVisitors(action, seatLocation) {
+
+    var returnVal = checkSeatAvailability(action);
+    if (action == "Add" && returnVal == true) {
+        CounterRow = CounterRow + 1;
+        var VisitorTable = $('#VisitorTable');
+        var totalRows = parseInt($('#VisitorTable tr').length);
+        var previousRowNumber = totalRows - 1;
+
+        // document.getElementById("txtTicketStatus").value = previousRowNumber * 250;
+        var newDirectorRow = $('<tr>');
+        newDirectorRow.attr('id', 'DirectorRow' + totalRows);
+
+        $('<td>').text(seatLocation).appendTo(newDirectorRow);
+
+
+        var txtVisitorName = $('<input>').attr({ type: 'text', id: 'txtVisitorsName' + totalRows + CounterRow, maxlength: 100, onkeypress: 'return CreateStringTextBox(this,event)' }).addClass('txtCss');
+        $('<td>').append(txtVisitorName).appendTo(newDirectorRow);
+
+        var ddlGenderCtrl = $('#drpGender2').clone().attr('id', 'drpGender' + totalRows + CounterRow).val('00').addClass("txtCss2").show();
+        $('<td>').append(ddlGenderCtrl).appendTo(newDirectorRow);
+
+        var AgeCtrl = $('<input>').attr({ type: 'text', id: 'txtAge_' + totalRows + CounterRow, maxlength: 3 }).addClass('txtCss').css('width', '60px').keypress(function (event) { return CreateNumericTextBox(document.getElementById('txtAge' + totalRows + CounterRow), event, true); }).blur(function (event) {
+            calculateFeeOnNationalitySelect(document.getElementById('txtAge' + totalRows));
+        });
+        $('<td>').append(AgeCtrl).appendTo(newDirectorRow);
+
+        var txtFatherName = $('<input>').attr({ type: 'text', id: 'txtFatherHusbandName' + totalRows + CounterRow, maxlength: 100, onkeypress: 'return CreateStringTextBox(this,event)' }).addClass('txtCss');
+        $('<td>').append(txtFatherName).appendTo(newDirectorRow);
+
+        //var ddlNationalityCtrl = $('#DrpNationality').clone().attr('id', 'DrpNationality' + totalRows).val('0');
+        //$('<td>').append(ddlNationalityCtrl).appendTo(newDirectorRow);
+
+        var ddlNationalityCtrl = $('#DrpNationality2').clone().attr({ 'id': 'DrpNationality' + totalRows + CounterRow, onchange: 'setIDCardType(this,"' + 'textIdProof' + totalRows + CounterRow + '");' }).val('0').addClass("txtCss").show();
+        $('<td>').append(ddlNationalityCtrl).appendTo(newDirectorRow);
+
+        var txtIDTypeCtrl = $('#textIdProof').clone().attr('id', 'textIdProof' + totalRows + CounterRow).val('0');
+        $('<td>').append(txtIDTypeCtrl).appendTo(newDirectorRow);
+
+        //var txtIDTypeCtrl = $('<input>').attr({ type: 'text', id: 'textIdProof' + totalRows, maxlength: 20,  onkeypress: 'return CreateStringTextBox(this,event)' }).addClass('txtCss');
+        //$('<td>').append(txtIDTypeCtrl).appendTo(newDirectorRow);
+
+
+        $('<td>').append($('<input>').attr({ type: 'text', id: 'textIdProofNo' + totalRows + CounterRow, maxlength: 20, onkeypress: 'return CreateAlphaNumericTextBox(this,event)' }).addClass('txtCss')).appendTo(newDirectorRow);
+
+        VisitorTable.append(newDirectorRow);
+
+        if ($('#VisitorTable tr').length > 1) {
+            $('#VisitorTable').show();
+            $('#tblchild').show();
+
+
+        }
+    }
+    else if (action == "Remove") {
+
+        $('#VisitorTable tr').each(function () {
+            if ($(this).find('td:first').text() == seatLocation) {
+                $(this).remove();
+            }
+        });
+
+        if ($('#VisitorTable tr').length == 2) {
+            //$('#VisitorTable').slideDown('slow');
+            //$('#tblchild').slideDown('slow');
+            $('#divVisitorDtls').slideUp('slow');
+            $('#Visitorrowheader').slideUp();
+            $('#tblchild').slideUp();
+            //document.getElementById("txtTicketStatus").value = '';
+        }
+        else {
+            var totalRows = parseInt($('#VisitorTable tr').length);
+            var previousRowNumber = totalRows - 1;
+            // document.getElementById("txtTicketStatus").value = previousRowNumber * 250;
+        }
+    }
+
+  //  calculateFee();
+    calculateFeeOnNationalitySelect(0);
+    return returnVal;
+}
+
+/******** Add Remove Visitors Rows (FULL VEHICLE) ***********/
+function addFullVisitors() {
+    if ($('#hidTicketType').val() == "N") {
+        var VisitorTable = $('#VisitorTableFull');
+        var totalRows = parseInt($('#VisitorTableFull tr').length);
+        var previousRowNumber = totalRows - 1;
+        for (var i = 0; i <= 5; i++) {
+
+            var newDirectorRow = $('<tr>');
+            newDirectorRow.attr('id', 'DirectorRowFull1' + totalRows);
+
+            $('<td>').text(seatLocation).appendTo(newDirectorRow);
+
+
+            var txtVisitorsNameFullCtrl = $('<input>').attr({ type: 'text', id: 'txtVisitorsNameFull' + totalRows, maxlength: 100, onkeypress: 'return CreateStringTextBox(this,event)' }).addClass('txtCss');
+            $('<td>').append(txtVisitorsNameFullCtrl).appendTo(newDirectorRow);
+
+
+            var drpGenderfULLCtrl = $('#drpGenderfULL').clone().attr('id', 'drpGenderfULL' + totalRows).val('0');
+            $('<td>').append(drpGenderfULLCtrl).appendTo(newDirectorRow);
+
+            var txtAgefULLCtrl = $('<input>').attr({ type: 'text', id: 'txtAgefULL' + totalRows, maxlength: 3, readonly: true }).addClass('txtCss').css('width', '60px').keypress(function (event) {
+                return CreateNumericTextBox(document.getElementById('txtAgefULLCtrl' + totalRows), event, true);
+            });
+
+            $('<td>').append(AgeCtrl).appendTo(newDirectorRow);
+
+            var txtFatherHusbandNamefULLCtr = $('<input>').attr({ type: 'text', id: 'txtFatherHusbandNamefULL' + totalRows, maxlength: 100, onkeypress: 'return CreateStringTextBox(this,event)' }).addClass('txtCss');
+            $('<td>').append(txtFatherHusbandNamefULLCtr).appendTo(newDirectorRow);
+
+            var DrpNationalityfULLCtrl = $('#DrpNationalityfULL').clone().attr('id', 'DrpNationalityfULL' + totalRows).val('0');
+            $('<td>').append(DrpNationalityfULLCtrl).appendTo(newDirectorRow);
+
+            var textIdProoffULLCtrl = $('<input>').attr({ type: 'text', id: 'textIdProoffULL' + totalRows, maxlength: 20, onkeypress: 'return CreateStringTextBox(this,event)' }).addClass('txtCss');
+            $('<td>').append(textIdProoffULLCtrl).appendTo(newDirectorRow);
+
+            $('<td>').append($('<input>').attr({ type: 'text', id: 'textIdProofNofULL' + totalRows, maxlength: 20 }).addClass('txtCss')).appendTo(newDirectorRow);
+
+            VisitorTable.append(newDirectorRow);
+        }
+    }
+}
+
+
+/******** Get Data of Visitors from Visitor's Table (SINGLE SEAT & FULL VEHICLE) ***********/
+function getTableData() {
+
+    var TicketType = getParameterByName("TicketType");
+    var errorMsg = new Array();
+    var count = 0;
+    var error = '';
+
+    if ($.trim($('#DDLEntryGate').val()) == '0') {
+
+        errorMsg[count] = "Please select Entry Gate.";
+        count = count + 1;
+    }
+    function validateidno0(idno) {
+
+        var val = parseFloat($('#lblBankAccountNumber').val());
+        if (val == 0) { return false; }
+        else { return true; }
+    }
+    function validateidno1(idno) {
+
+        var val = parseFloat($('#lblBankIFSC').val());
+        if (val == 0) { return false; }
+        else { return true; }
+    }
+    if (TicketType == 'S') {
+        TouristValidationError = validateTourist();
+        if (TouristValidationError != '') {
+            errorMsg[count] = TouristValidationError;
+            count = count + 1;
+        }
+    }
+    if (TicketType == 'N') {
+        TouristValidationErrorFull = validateTouristFull();
+        if (TouristValidationErrorFull != '') {
+            errorMsg[count] = TouristValidationErrorFull;
+            count = count + 1;
+        }
+    }
+   /* debugger;*/
+    var a = 1;
+    var visitorDtls = '';
+    $('#VisitorTable > tbody > tr:gt(1)').each(function (index) {
+
+        //first column
+        var tsno = $(this).find("td:nth-child(1)").html();
+
+        //second column
+        var tname = $(this).find("td:nth-child(2)").children('Input').val();
+        // alert("TextBox Value=  " + tname);
+
+        var tgen = $(this).find('td:nth-child(3) select').val();
+        // alert("Gen= " + tgen);
+
+
+        var tage = $(this).find("td:nth-child(4)").children('Input').val();
+        //alert("age= " + tage);
+
+        var thus = $(this).find("td:nth-child(5)").children('Input').val();
+        //alert("hus= " + thus);
+
+        var tnat = $(this).find('td:nth-child(6) select').val();
+        // alert("nat= " + tnat);
+        var tidtype = $(this).find('td:nth-child(7) select').val();
+        //alert("type= " + tidtype);
+        var tidno = $(this).find("td:nth-child(8)").children('Input').val();
+        // alert("Age= " + tidno);
+
+        if (visitorDtls == '') {
+            visitorDtls = tsno + '~' + tname + '~' + tgen + '~' + tage + '~' + thus + '~' + tnat + '~' + tidtype + '~' + tidno;
+        }
+        else {
+            visitorDtls = visitorDtls + '#' + tsno + '~' + tname + '~' + tgen + '~' + tage + '~' + thus + '~' + tnat + '~' + tidtype + '~' + tidno;
+        }
+
+        //$("#hidrow1").val(tsno);
+        //$("#hidrow2").val(tname);
+        //$("#hidrow3").val(tgen);
+        //$("#hidrow4").val(tage);
+        //$("#hidrow5").val(thus);
+        //$("#hidrow6").val(tnat);
+        //$("#hidrow7").val(tidtype);
+        //$("#hidrow8").val(tidno);
+
+        a++;
+    });
+    $('#hdnvisitorDtls').val(visitorDtls);
+
+    //if ($.trim($('#lblBankAccountNumber').val()) == '') {
+
+    //    errorMsg[count] = "Please Enter Bank Account Number.";
+    //    count = count + 1;
+    //}
+    //else if (!validateidno0($('#lblBankAccountNumber').val())) {
+
+    //    errorMsg[count] = "Please Enter Correct Bank Account Number.";
+    //    count = count + 1;
+    //}
+    //if ($.trim($('#lblBankAccountName').val()) == '') {
+
+    //    errorMsg[count] = "Please Enter Bank Account Holder Name.";
+    //    count = count + 1;
+    //}
+    //if ($.trim($('#lblBankName').val()) == '') {
+
+    //    errorMsg[count] = "Please Enter Bank Name";
+    //    count = count + 1;
+    //}
+    //if ($.trim($('#lblBankIFSC').val()) == '') {
+
+    //    errorMsg[count] = "Please Enter Bank IFSC Code.";
+    //    count = count + 1;
+    //}
+    //else if (!validateidno1($('#lblBankIFSC').val())) {
+
+    //    errorMsg[count] = "Please Enter Correct Bank IFSC Code.";
+    //    count = count + 1;
+    //}
+
+    if ($.trim($('#txtAlertMobileNumber').val()) == '') {
+
+        errorMsg[count] = "Please Enter Mobile Number.";
+        count = count + 1;
+    }
+    else if (!validateMobileNumber($('#txtAlertMobileNumber').val())) {
+        errorMsg[count] = 'Please Enter Valid Mobile Number.';
+        count = count + 1;
+    }
+    if (!(document.getElementById('ChkDeclaration').checked == true)) {
+        errorMsg[count] = 'Please Read & Check Declaration Carefully, if you agree with the terms and conditions.';
+        count = count + 1;
+    }
+    var counter = 1;
+    for (var i = 0; i < errorMsg.length; i++) {
+        if (i == 0) { error = counter + '. ' + errorMsg[i]; }
+        else { error = error + '<br />' + counter + '. ' + errorMsg[i]; }
+        counter = counter + 1;
+    }
+    if (error.length > 0) {
+        //alert(error);
+        if ($.trim(error) != '1.') {
+            $('[id$="dvErr"]').html('<b>Below are the validation error(s), please rectify !</b><br/><br/>' + error).css('display', 'block');
+        }
+        return false;
+    }
+    $('[id$="dvErr"]').html('').css('display', 'none');
+    return true;
+}
+
+function validateTourist() {
+    //debugger;
+    var errorMsg = new Array();
+    var count = 0;
+    var error = '';
+
+    var VisitorTable = $('#VisitorTable');
+    var totalRows = parseInt($('#VisitorTable tr').length);
+    var atLeastOneTourist = false;
+    if (totalRows > 2) {
+        atLeastOneTourist = true;
+    }
+
+    if (!atLeastOneTourist) {
+        errorMsg[count] = "Please specify at least one Tourist details.";
+        count = count + 1;
+    }
+    else {
+        var rowCounter = 1;
+        var currentRow = 0;
+        $('#VisitorTable tr').each(function () {
+
+            if (currentRow >= 2) {
+                var txtVisitorsName = $(this).find('input[id^="txtVisitorsName"]');
+                var drpGender = $(this).find('select[id^="drpGender"]');
+                var txtAge = $(this).find('input[id^="txtAge"]');
+                var txtFatherHusbandName = $(this).find('input[id^="txtFatherHusbandName"]');
+                var DrpNationality = $(this).find('select[id^="DrpNationality"]');
+                var textIdProof = $(this).find('select[id^="textIdProof"]');
+                var textIdProofNo = $(this).find('input[id^="textIdProofNo"]');
+
+
+                if (txtVisitorsName.val() != undefined) {
+
+                    if ($.trim(drpGender.val()) == '00' || $.trim(txtAge.val()) == '' || $.trim(txtFatherHusbandName.val()) == '' || $.trim(txtVisitorsName.val()) == ''
+                        || $.trim(DrpNationality.val()) == '0' || $.trim(textIdProof.val()) == '0' || $.trim(textIdProofNo.val()) == '') {
+                        //rowCounter = rowCounter + 1;
+                        errorMsg[count] = "Please fill all fields of Tourist Details at row " + rowCounter + '.';
+                        count = count + 1;
+                    }
+                    //else if ($.trim(DrpNationality.val()) == 'in' && $.trim(textIdProof.val()) != 'Aadhaar Card') {
+                    //    errorMsg[count] = "Aadhaar Card is mandatory for Indian National at row" + rowCounter + '.';
+                    //    count = count + 1;
+                    //}
+                    //else if ($.trim(DrpNationality.val()) != 'in' && $.trim(textIdProof.val()) == 'Aadhaar Card') {
+                    //    errorMsg[count] = "Passport is mandatory for Foreign National at row " + rowCounter + '.';
+                    //    count = count + 1;
+                    //}
+                    if ($.trim(txtAge.val()) != '' && $.trim(txtAge.val()) < 5) {
+                        errorMsg[count] = "Please Age Should be Greater than Four Year!!!";
+                        count = count + 1;
+                    }
+                    //COVID19 Check
+                    //                    if ($.trim(txtAge.val()) < 11 || $.trim(txtAge.val())>64) {
+                    //                        errorMsg[count] = "Tourist of age group 11 to 64 are only allowed!!!";
+                    //                        count = count + 1;
+                    //                    }
+
+                    var val = parseFloat($.trim(textIdProofNo.val()));
+                    if (val == 0) {
+                        errorMsg[count] = "Please enter valid id Number!!!";
+                        count = count + 1;
+                    }
+
+
+                    //if ($.trim(textIdProofNo.val()) != '0') {
+                    //    errorMsg[count] = "Please enter correct id proof";
+                    //    count = count + 1;
+                    //}
+
+                }
+                rowCounter = rowCounter + 1;
+            }
+            currentRow = currentRow + 1;
+        });
+    }
+
+    //if ($('#drpChild').val() == 'Y') {
+    //    validateChildTouristError = validateChildTourist();
+    //    if (validateChildTouristError != '') {
+    //        errorMsg[count] = validateChildTouristError;
+    //        count = count + 1;
+    //    }
+
+    //}
+
+
+    for (var i = 0; i < errorMsg.length; i++) {
+        if (i == 0) { error = errorMsg[i]; }
+        else { error = error + ' ' + errorMsg[i]; }
+    }
+    return error;
+
+}
+
+//function validateChildTourist() {
+//    debugger;
+//    var errorMsg = new Array();
+//    var count = 0;
+//    var error = '';
+
+//    var VisitorTable = $('#VisitorTableChild');
+//    var totalRows = parseInt($('#VisitorTableChild tr').length);
+//    var atLeastOneTourist = false;
+//    if (totalRows > 2) {
+//        var rowCounterChaild = 0;
+//        var currentRow = 0;
+//        var isAtleastOne = false;
+//        $('#VisitorTableChild tr').each(function () {
+//            debugger;
+
+//            var txtVisitorsName = $(this).find('input[id^="txtVisitorsNamechild"]');
+//            var drpGender = $(this).find('select[id^="drpGenderchild"]');
+//            var txtAge = $(this).find('input[id^="txtAgechild"]');
+//            var txtFatherHusbandName = $(this).find('input[id^="txtFatherHusbandNamechild"]');
+//            var DrpNationality = $(this).find('select[id^="DrpNationalitychild"]');
+//            var textIdProof = $(this).find('input[id^="textIdProofchild"]');
+//            var textIdProofNo = $(this).find('input[id^="textIdProofNochild"]');
+//            //if (txtVisitorsName.val() != '') {
+//            //    isAtleastOne = true;
+//            //}
+//            if (txtVisitorsName.val() != undefined && txtVisitorsName.val() != '') {
+//                isAtleastOne = true;
+
+//                if ($.trim(drpGender.val()) == '00' || $.trim(txtAge.val()) == '' || $.trim(txtFatherHusbandName.val()) == ''
+//                    || $.trim(DrpNationality.val()) == '0' || $.trim(textIdProof.val()) == '' || $.trim(textIdProofNo.val()) == '') {
+
+//                    errorMsg[count] = "Please fill all fields of Child Tourist Details at row " + rowCounterChaild + '.';
+//                    count = count + 1;
+//                }
+//                if ($.trim(txtAge.val()) != '' && $.trim(txtAge.val()) > 4) {
+//                    errorMsg[count] = "Please Child Age Should be less than Five Year!!!";
+//                    count = count + 1;
+//                }
+
+//            }
+
+//            rowCounterChaild = rowCounterChaild + 1;
+
+//        });
+//        //if (isAtleastOne == false) {
+//        //    errorMsg[count] = "Please fill at least one child details.";
+//        //    count = count + 1;
+//        //}
+//    }
+
+//    for (var i = 0; i < errorMsg.length; i++) {
+//        if (i == 0) { error = errorMsg[i]; }
+//        else { error = error + '<br />' + errorMsg[i]; }
+//    }
+//    return error;
+
+//}
+
+function validateTouristFull() {
+    // debugger;
+    var errorMsg = new Array();
+    var count = 0;
+    var error = '';
+
+    var VisitorTable = $('#VisitorTableFull');
+    var totalRows = parseInt($('#VisitorTableFull tr').length);
+    var atLeastOneTourist = false;
+    if (totalRows > 2) {
+        var rowCounter = 0;
+        var currentRow = 0;
+        var atLeastOneTourist = false;
+        $('#VisitorTableFull tr').each(function () {
+            // debugger;
+            //if (currentRow >= 2) {
+            var txtVisitorsName = $(this).find('input[id^="txtVisitorsNameFull"]');
+            var drpGender = $(this).find('select[id^="drpGenderfULL"]');
+            var txtAge = $(this).find('input[id^="txtAgefULL"]');
+            var txtFatherHusbandName = $(this).find('input[id^="txtFatherHusbandNamefULL"]');
+            var DrpNationality = $(this).find('select[id^="DrpNationalityfULL"]');
+            var textIdProof = $(this).find('select[id^="textIdProoffULL"]');
+            var textIdProofNo = $(this).find('input[id^="textIdProofNofULL"]');
+            if (txtVisitorsName.val() != undefined && txtVisitorsName.val() != '') {
+                currentRow = currentRow + 1;
+
+
+                //if (txtVisitorsName.val() != undefined) {
+                if ($.trim(drpGender.val()) == '00' || $.trim(txtAge.val()) == '' || $.trim(txtFatherHusbandName.val()) == '' || $.trim(txtVisitorsName.val()) == ''
+                    || $.trim(DrpNationality.val()) == '0' || $.trim(textIdProof.val()) == '0' || $.trim(textIdProofNo.val()) == '') {
+
+                    errorMsg[count] = "Please fill all fields of Tourist Details at row " + rowCounter + '.';
+                    count = count + 1;
+                }
+                //else if ($.trim(DrpNationality.val()) == 'in' && $.trim(textIdProof.val()) != 'Aadhaar Card') {
+                //    errorMsg[count] = "Aadhaar Card is mandatory for Indian National at row" + rowCounter + '.';
+                //    count = count + 1;
+                //}
+                //else if ($.trim(DrpNationality.val()) != 'in' && $.trim(textIdProof.val()) == 'Aadhaar Card') {
+                //    errorMsg[count] = "Passport is mandatory for Foreign National at row " + rowCounter + '.';
+                //    count = count + 1;
+                //}
+                if ($.trim(txtAge.val()) != '' && $.trim(txtAge.val()) < 5) {
+                    errorMsg[count] = "Please Age Should be Greater than Four Year !!!";
+                    count = count + 1;
+                }
+
+                //COVID19 Check
+                //                if ($.trim(txtAge.val()) < 11 || $.trim(txtAge.val()) > 64) {
+                //                    errorMsg[count] = "Tourist of age group 11 to 64 are only allowed!!!";
+                //                    count = count + 1;
+                //                }
+
+
+                var val = parseFloat($.trim(textIdProofNo.val()));
+                if (val == 0) {
+                    errorMsg[count] = "Please enter valid id Number!!!";
+                    count = count + 1;
+                }
+                if (currentRow > 0) { atLeastOneTourist = true; }
+            }
+            rowCounter = rowCounter + 1;
+            //}
+            //currentRow = currentRow + 1;
+        });
+        if (atLeastOneTourist == false) {
+            errorMsg[count] = "Please fill at least One Tourist details.";
+            count = count + 1;
+        }
+
+
+            //New Logic write in 14 sep 2023 at 7.20pm
+        else {
+
+            var Common = confirm('Dear Customer, Forest has proposed for rate increase if same get approved you will required to pay the difference amount at time of your safari at the park counter.');
+            if (Common == false) {
+                //return true;
+                errorMsg[count] = 'Dear Customer, Forest has proposed for rate increase if same get approved you will required to pay the difference amount at time of your safari at the park counter."';
+                count = count + 1;
+            }
+            
+        }
+    }
+
+    //if ($('#drpChild').val() == 'Y') {
+    //    validateChildTouristError = validateChildTouristFull();
+    //    if (validateChildTouristError != '') {
+    //        errorMsg[count] = validateChildTouristError;
+    //        count = count + 1;
+    //    }
+
+    // }
+
+    if (currentRow == 1) {
+        var addon = confirm('Add-On facility will not be possible on single person booking.');
+        if (addon == false) {
+            //return true;
+            errorMsg[count] = 'Action denied by user as "Add-On facility will not be possible on single person booking." ';
+            count = count + 1;
+        }
+        else { 
+            //return false;
+            errorMsg[count] = '';
+            count = count + 1;
+        }
+    }
+
+   
+
+
+    //if (currentRow == 1) {
+    //    var addon = confirm('Add-On facility will not be possible on single person booking.');
+    //    if (addon == false) {
+    //        //return true;
+    //        errorMsg[count] = 'Action denied by user as "Add-On facility will not be possible on single person booking." ';
+    //        count = count + 1;
+    //    }
+    //    else {
+
+    //        //return false;
+    //        errorMsg[count] = '';
+    //        count = count + 1;
+    //    }
+    //}
+
+
+    for (var i = 0; i < errorMsg.length; i++) {
+        if (i == 0) {
+            error = errorMsg[i];
+        }
+        else {
+            error = error + '   ' + errorMsg[i];
+        }
+    }
+    return error;
+
+}
+
+
+//function validateChildTouristFull() {
+//    debugger;
+//    var errorMsg = new Array();
+//    var count = 0;
+//    var error = '';
+
+//    var VisitorTable = $('#VisitorTableChild');
+//    var totalRows = parseInt($('#VisitorTableChild tr').length);
+//    var atLeastOneTourist = false;
+//    if (totalRows > 2) {
+//        var rowCounterChaild = 0;
+//        var currentRow = 0;
+//        var isAtleastOne = false;
+//        $('#VisitorTableChild tr').each(function () {
+//            debugger;
+
+//            var txtVisitorsName = $(this).find('input[id^="txtVisitorsNamechild"]');
+//            var drpGender = $(this).find('select[id^="drpGenderchild"]');
+//            var txtAge = $(this).find('input[id^="txtAgechild"]');
+//            var txtFatherHusbandName = $(this).find('input[id^="txtFatherHusbandNamechild"]');
+//            var DrpNationality = $(this).find('select[id^="DrpNationalitychild"]');
+//            var textIdProof = $(this).find('input[id^="textIdProofchild"]');
+//            var textIdProofNo = $(this).find('input[id^="textIdProofNochild"]');
+//            //if (txtVisitorsName.val() != '') {
+//            //    isAtleastOne = true;
+//            //}
+//            if (txtVisitorsName.val() != undefined && txtVisitorsName.val() != '') {
+//                isAtleastOne = true;
+
+//                if ($.trim(drpGender.val()) == '00' || $.trim(txtAge.val()) == '' || $.trim(txtFatherHusbandName.val()) == ''
+//                    || $.trim(DrpNationality.val()) == '0' || $.trim(textIdProof.val()) == '' || $.trim(textIdProofNo.val()) == '') {
+
+//                    errorMsg[count] = "Please fill all fields of Child Tourist Details at row " + rowCounterChaild + '.';
+//                    count = count + 1;
+//                }
+//                if ($.trim(txtAge.val()) != '' && $.trim(txtAge.val()) > 4) {
+//                    errorMsg[count] = "Please Child Age Should be less than Five Year!!!";
+//                    count = count + 1;
+//                }
+
+//            }
+
+//            rowCounterChaild = rowCounterChaild + 1;
+
+//        });
+//        //if (isAtleastOne == false) {
+//        //    errorMsg[count] = "Please fill at least one child details.";
+//        //    count = count + 1;
+//        //}
+//    }
+
+//    for (var i = 0; i < errorMsg.length; i++) {
+//        if (i == 0) { error = errorMsg[i]; }
+//        else { error = error + '<br />' + errorMsg[i]; }
+//    }
+//    return error;
+
+//}
+
+function clearimage1() {
+    //debugger;
+    $('#txtVisitorsNameFull').val('');
+    $('#drpGenderfULL').val('00');
+    $('#txtAgefULL').val('');
+    $('#txtFatherHusbandNamefULL').val('');
+    $('#DrpNationalityfULL').val('0');
+    $('#textIdProoffULL').val('0');
+    $('#textIdProofNofULL').val('');
+    return false;
+}
+function clearimage2() {
+
+    $('#txtVisitorsNameFull0').val('');
+    $('#drpGenderfULL0').val('00');
+    $('#txtAgefULL0').val('');
+    $('#txtFatherHusbandNamefULL0').val('');
+    $('#DrpNationalityfULL0').val('0');
+    $('#textIdProoffULL0').val('0');
+    $('#textIdProofNofULL0').val(''); return false;
+}
+function clearimage3() {
+
+    $('#txtVisitorsNameFull1').val('');
+    $('#drpGenderfULL1').val('00');
+    $('#txtAgefULL1').val('');
+    $('#txtFatherHusbandNamefULL1').val('');
+    $('#DrpNationalityfULL1').val('0');
+    $('#textIdProoffULL1').val('0');
+    $('#textIdProofNofULL1').val(''); return false;
+}
+function clearimage4() {
+
+    $('#txtVisitorsNameFull2').val('');
+    $('#drpGenderfULL2').val('00');
+    $('#txtAgefULL2').val('');
+    $('#txtFatherHusbandNamefULL2').val('');
+    $('#DrpNationalityfULL2').val('0');
+    $('#textIdProoffULL2').val('0');
+    $('#textIdProofNofULL2').val(''); return false;
+}
+function clearimage5() {
+
+    $('#txtVisitorsNameFull3').val('');
+    $('#drpGenderfULL3').val('00');
+    $('#txtAgefULL3').val('');
+    $('#txtFatherHusbandNamefULL3').val('');
+    $('#DrpNationalityfULL3').val('0');
+    $('#textIdProoffULL3').val('0');
+    $('#textIdProofNofULL3').val(''); return false;
+}
+function clearimage6() {
+
+    $('#txtVisitorsNameFull4').val('');
+    $('#drpGenderfULL4').val('00');
+    $('#txtAgefULL4').val('');
+    $('#txtFatherHusbandNamefULL4').val('');
+    $('#DrpNationalityfULL4').val('0');
+    $('#textIdProoffULL4').val('0');
+    $('#textIdProofNofULL4').val(''); return false;
+}
+
+function validateMobileNumber(mobile) {
+    var re = /^[6789]\d{9}$/; // /^(\+\d)*\s*(\(\d{3}\)\s*)*\d{3}(-{0,1}|\s{0,1})\d{2}(-{0,1}|\s{0,1})\d{2}$/;
+    if (re.test(mobile)) { return true; }
+    else { return false; }
+
+}
+function Busds1(id) {
+    debugger;
+    //checkSeat1();
+
+
+    ///////////////////////////////////////////MyMainDiv1Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('AA') > -1 && id == "MyMainDiv1Bus") {
+        addRemoveVisitors('Remove', 'BU:AA');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",AA", "");
+        document.getElementById("MyMainDiv1Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv1Bus") {
+        if (document.getElementById("MyMainDiv1Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:AA') == true) {
+
+            document.getElementById("MyMainDiv1Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'AA';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv2Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('BB') > -1 && id == "MyMainDiv2Bus") {
+        addRemoveVisitors('Remove', 'BU:BB');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",BB", "");
+        document.getElementById("MyMainDiv2Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv2Bus") {
+        if (document.getElementById("MyMainDiv2Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:BB') == true) {
+
+            document.getElementById("MyMainDiv2Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'BB';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv3Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('CC') > -1 && id == "MyMainDiv3Bus") {
+        addRemoveVisitors('Remove', 'BU:CC');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",CC", "");
+        document.getElementById("MyMainDiv3Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv3Bus") {
+        if (document.getElementById("MyMainDiv3Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:CC') == true) {
+
+            document.getElementById("MyMainDiv3Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'CC';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv4Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('DD') > -1 && id == "MyMainDiv4Bus") {
+        addRemoveVisitors('Remove', 'BU:DD');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",DD", "");
+        document.getElementById("MyMainDiv4Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv4Bus") {
+        if (document.getElementById("MyMainDiv4Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:DD') == true) {
+
+            document.getElementById("MyMainDiv4Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'DD';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv5Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('EE') > -1 && id == "MyMainDiv5Bus") {
+        addRemoveVisitors('Remove', 'BU:EE');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",EE", "");
+        document.getElementById("MyMainDiv5Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv5Bus") {
+        if (document.getElementById("MyMainDiv5Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:EE') == true) {
+
+            document.getElementById("MyMainDiv5Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'EE';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv6Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('FF') > -1 && id == "MyMainDiv6Bus") {
+        addRemoveVisitors('Remove', 'BU:FF');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",FF", "");
+        document.getElementById("MyMainDiv6Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv6Bus") {
+        if (document.getElementById("MyMainDiv6Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:FF') == true) {
+
+            document.getElementById("MyMainDiv6Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'FF';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv7Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('GG') > -1 && id == "MyMainDiv7Bus") {
+        addRemoveVisitors('Remove', 'BU:GG');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",GG", "");
+        document.getElementById("MyMainDiv7Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv7Bus") {
+        if (document.getElementById("MyMainDiv7Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:GG') == true) {
+
+            document.getElementById("MyMainDiv7Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'GG';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv8Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('HH') > -1 && id == "MyMainDiv8Bus") {
+        addRemoveVisitors('Remove', 'BU:HH');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",HH", "");
+        document.getElementById("MyMainDiv8Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv8Bus") {
+        if (document.getElementById("MyMainDiv8Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:HH') == true) {
+
+            document.getElementById("MyMainDiv8Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'HH';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv9Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('II') > -1 && id == "MyMainDiv9Bus") {
+        addRemoveVisitors('Remove', 'BU:II');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",II", "");
+        document.getElementById("MyMainDiv9Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv9Bus") {
+        if (document.getElementById("MyMainDiv9Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:II') == true) {
+
+            document.getElementById("MyMainDiv9Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'II';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv10Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('JJ') > -1 && id == "MyMainDiv10Bus") {
+        addRemoveVisitors('Remove', 'BU:JJ');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",JJ", "");
+        document.getElementById("MyMainDiv10Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv10Bus") {
+        if (document.getElementById("MyMainDiv10Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:JJ') == true) {
+
+            document.getElementById("MyMainDiv10Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'JJ';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv11Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('KK') > -1 && id == "MyMainDiv11Bus") {
+        addRemoveVisitors('Remove', 'BU:KK');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",KK", "");
+        document.getElementById("MyMainDiv11Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv11Bus") {
+        if (document.getElementById("MyMainDiv11Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:KK') == true) {
+
+            document.getElementById("MyMainDiv11Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'KK';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv12Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('LL') > -1 && id == "MyMainDiv12Bus") {
+        addRemoveVisitors('Remove', 'BU:LL');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",LL", "");
+        document.getElementById("MyMainDiv12Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv12Bus") {
+        if (document.getElementById("MyMainDiv12Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:LL') == true) {
+
+            document.getElementById("MyMainDiv12Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'LL';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv13Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('MM') > -1 && id == "MyMainDiv13Bus") {
+        addRemoveVisitors('Remove', 'BU:MM');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",MM", "");
+        document.getElementById("MyMainDiv13Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv13Bus") {
+        if (document.getElementById("MyMainDiv13Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:MM') == true) {
+
+            document.getElementById("MyMainDiv13Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'MM';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv14Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('NN') > -1 && id == "MyMainDiv14Bus") {
+        addRemoveVisitors('Remove', 'BU:NN');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",NN", "");
+        document.getElementById("MyMainDiv14Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv14Bus") {
+        if (document.getElementById("MyMainDiv14Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:NN') == true) {
+
+            document.getElementById("MyMainDiv14Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'NN';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv15Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('OO') > -1 && id == "MyMainDiv15Bus") {
+        addRemoveVisitors('Remove', 'BU:OO');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",OO", "");
+        document.getElementById("MyMainDiv15Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv15Bus") {
+        if (document.getElementById("MyMainDiv15Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:OO') == true) {
+
+            document.getElementById("MyMainDiv15Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'OO';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv16Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('PP') > -1 && id == "MyMainDiv16Bus") {
+        addRemoveVisitors('Remove', 'BU:PP');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",PP", "");
+        document.getElementById("MyMainDiv16Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv16Bus") {
+        if (document.getElementById("MyMainDiv16Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:PP') == true) {
+
+            document.getElementById("MyMainDiv16Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'PP';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv17Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('QQ') > -1 && id == "MyMainDiv17Bus") {
+        addRemoveVisitors('Remove', 'BU:QQ');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",QQ", "");
+        document.getElementById("MyMainDiv17Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv17Bus") {
+        if (document.getElementById("MyMainDiv17Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:QQ') == true) {
+
+            document.getElementById("MyMainDiv17Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'QQ';
+
+        }
+    }
+
+
+
+    ///////////////////////////////////////////MyMainDiv18Bus
+
+    if (document.getElementById("hdnV1").value.indexOf('SS') > -1 && id == "MyMainDiv18Bus") {
+        addRemoveVisitors('Remove', 'BU:SS');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV1").value.replace(",SS", "");
+        document.getElementById("MyMainDiv18Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv18Bus") {
+        if (document.getElementById("MyMainDiv18Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU:SS') == true) {
+
+            document.getElementById("MyMainDiv18Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV1").value = document.getElementById("hdnV1").value + ',' + 'SS';
+
+        }
+    }
+
+
+
+    //FOR VEHICLE TWO
+
+    ///////////////////////////////////////////MyMainDiv19Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('AA') > -1 && id == "MyMainDiv19Bus") {
+        addRemoveVisitors('Remove', 'BU1:AA');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",AA", "");
+        document.getElementById("MyMainDiv19Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv19Bus") {
+        if (document.getElementById("MyMainDiv19Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:AA') == true) {
+
+            document.getElementById("MyMainDiv19Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'AA';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv20Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('BB') > -1 && id == "MyMainDiv20Bus") {
+        addRemoveVisitors('Remove', 'BU1:BB');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",BB", "");
+        document.getElementById("MyMainDiv20Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv20Bus") {
+        if (document.getElementById("MyMainDiv20Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:BB') == true) {
+
+            document.getElementById("MyMainDiv20Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'BB';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv21Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('CC') > -1 && id == "MyMainDiv21Bus") {
+        addRemoveVisitors('Remove', 'BU1:CC');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",CC", "");
+        document.getElementById("MyMainDiv21Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv21Bus") {
+        if (document.getElementById("MyMainDiv21Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:CC') == true) {
+
+            document.getElementById("MyMainDiv21Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'CC';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv22Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('DD') > -1 && id == "MyMainDiv22Bus") {
+        addRemoveVisitors('Remove', 'BU1:DD');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",DD", "");
+        document.getElementById("MyMainDiv22Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv22Bus") {
+        if (document.getElementById("MyMainDiv22Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:DD') == true) {
+
+            document.getElementById("MyMainDiv22Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'DD';
+
+        }
+    }
+
+
+    ///////////////////////////////////////////MyMainDiv23Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('EE') > -1 && id == "MyMainDiv23Bus") {
+        addRemoveVisitors('Remove', 'BU1:EE');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",EE", "");
+        document.getElementById("MyMainDiv23Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv23Bus") {
+        if (document.getElementById("MyMainDiv23Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:EE') == true) {
+
+            document.getElementById("MyMainDiv23Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'EE';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv24Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('FF') > -1 && id == "MyMainDiv24Bus") {
+        addRemoveVisitors('Remove', 'BU1:FF');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",FF", "");
+        document.getElementById("MyMainDiv24Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv24Bus") {
+        if (document.getElementById("MyMainDiv24Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:FF') == true) {
+
+            document.getElementById("MyMainDiv24Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'FF';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv25Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('GG') > -1 && id == "MyMainDiv25Bus") {
+        addRemoveVisitors('Remove', 'BU1:GG');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",GG", "");
+        document.getElementById("MyMainDiv25Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv25Bus") {
+        if (document.getElementById("MyMainDiv25Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:GG') == true) {
+
+            document.getElementById("MyMainDiv25Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'GG';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv26Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('HH') > -1 && id == "MyMainDiv26Bus") {
+        addRemoveVisitors('Remove', 'BU1:HH');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",HH", "");
+        document.getElementById("MyMainDiv26Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv26Bus") {
+        if (document.getElementById("MyMainDiv26Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:HH') == true) {
+
+            document.getElementById("MyMainDiv26Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'HH';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv27Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('II') > -1 && id == "MyMainDiv27Bus") {
+        addRemoveVisitors('Remove', 'BU1:II');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",II", "");
+        document.getElementById("MyMainDiv27Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv27Bus") {
+        if (document.getElementById("MyMainDiv27Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:II') == true) {
+
+            document.getElementById("MyMainDiv27Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'II';
+
+        }
+    }
+
+
+
+    ///////////////////////////////////////////MyMainDiv28Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('JJ') > -1 && id == "MyMainDiv28Bus") {
+        addRemoveVisitors('Remove', 'BU1:JJ');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",JJ", "");
+        document.getElementById("MyMainDiv28Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv28Bus") {
+        if (document.getElementById("MyMainDiv28Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:JJ') == true) {
+
+            document.getElementById("MyMainDiv28Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'JJ';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv29Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('KK') > -1 && id == "MyMainDiv29Bus") {
+        addRemoveVisitors('Remove', 'BU1:KK');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",KK", "");
+        document.getElementById("MyMainDiv29Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv29Bus") {
+        if (document.getElementById("MyMainDiv29Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:KK') == true) {
+
+            document.getElementById("MyMainDiv29Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'KK';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv30Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('LL') > -1 && id == "MyMainDiv30Bus") {
+        addRemoveVisitors('Remove', 'BU1:LL');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",LL", "");
+        document.getElementById("MyMainDiv30Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv30Bus") {
+        if (document.getElementById("MyMainDiv30Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:LL') == true) {
+
+            document.getElementById("MyMainDiv30Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'LL';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv31Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('MM') > -1 && id == "MyMainDiv31Bus") {
+        addRemoveVisitors('Remove', 'BU1:MM');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",MM", "");
+        document.getElementById("MyMainDiv31Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv31Bus") {
+        if (document.getElementById("MyMainDiv31Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:MM') == true) {
+
+            document.getElementById("MyMainDiv31Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'MM';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv32Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('NN') > -1 && id == "MyMainDiv32Bus") {
+        addRemoveVisitors('Remove', 'BU1:NN');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",NN", "");
+        document.getElementById("MyMainDiv32Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv32Bus") {
+        if (document.getElementById("MyMainDiv32Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:NN') == true) {
+
+            document.getElementById("MyMainDiv32Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'NN';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv33Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('OO') > -1 && id == "MyMainDiv33Bus") {
+        addRemoveVisitors('Remove', 'BU1:OO');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",OO", "");
+        document.getElementById("MyMainDiv33Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv33Bus") {
+        if (document.getElementById("MyMainDiv33Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:OO') == true) {
+
+            document.getElementById("MyMainDiv33Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'OO';
+
+        }
+    }
+    ///////////////////////////////////////////MyMainDiv34Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('PP') > -1 && id == "MyMainDiv34Bus") {
+        addRemoveVisitors('Remove', 'BU1:PP');
+        document.getElementById("hdnV1").value = document.getElementById("hdnV2").value.replace(",PP", "");
+        document.getElementById("MyMainDiv34Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv34Bus") {
+        if (document.getElementById("MyMainDiv34Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:PP') == true) {
+
+            document.getElementById("MyMainDiv34Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'PP';
+
+        }
+    }
+
+    ///////////////////////////////////////////MyMainDiv35Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('QQ') > -1 && id == "MyMainDiv35Bus") {
+        addRemoveVisitors('Remove', 'BU1:QQ');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",QQ", "");
+        document.getElementById("MyMainDiv35Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv35Bus") {
+        if (document.getElementById("MyMainDiv35Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:QQ') == true) {
+
+            document.getElementById("MyMainDiv35Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'QQ';
+
+        }
+    }
+
+
+
+    ///////////////////////////////////////////MyMainDiv36Bus
+
+    if (document.getElementById("hdnV2").value.indexOf('SS') > -1 && id == "MyMainDiv36Bus") {
+        addRemoveVisitors('Remove', 'BU1:SS');
+        document.getElementById("hdnV2").value = document.getElementById("hdnV2").value.replace(",SS", "");
+        document.getElementById("MyMainDiv18Bus").style.backgroundColor = "white";
+    }
+    else if (id == "MyMainDiv36Bus") {
+        if (document.getElementById("MyMainDiv36Bus").style.backgroundColor == "rgb(255, 0, 0)") {
+
+        }
+        else if (addRemoveVisitors('Add', 'BU1:SS') == true) {
+
+            document.getElementById("MyMainDiv36Bus").style.backgroundColor = "#1dc01d";
+            document.getElementById("hdnV2").value = document.getElementById("hdnV2").value + ',' + 'SS';
+
+        }
+    }
+
+    //else {
+
+    //   // document.getElementById("txtTicketStatus1").value = "";
+    //}
+
+    //// setStatusB();
+
+}
